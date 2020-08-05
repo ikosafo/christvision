@@ -43,14 +43,14 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-warning edit_adminuser"
+                                    class="btn btn-sm btn-warning edit_adminuser"
                                     i_index="<?php echo $fetch['id'] ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-2" style="color:#fff !important;"></i>
                             </button>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_adminuser"
+                                    class="btn btn-sm btn-danger delete_adminuser"
                                     i_index="<?php echo $fetch['id'] ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>

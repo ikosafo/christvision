@@ -39,14 +39,14 @@ $pinq = $mysqli->query("select * from mnotify where branch = 'Admin'");
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-warning edit_smskey"
+                                    class="btn btn-sm btn-warning edit_smskey"
                                     i_index="<?php echo $fetch['id'] ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-2" style="color:#fff !important;"></i>
                             </button>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_smskey"
+                                    class="btn btn-sm btn-danger delete_smskey"
                                     i_index="<?php echo $fetch['id'] ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
