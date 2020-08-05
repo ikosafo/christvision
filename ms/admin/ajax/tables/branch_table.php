@@ -41,20 +41,29 @@ $pinq = $mysqli->query("select * from branch ORDER BY name");
                         <td><?php echo $fetch['location']; ?></td>
                         <td><?php echo $fetch['code']; ?></td>
                         <td>
-                            <button type="button"
-                                    data-type="confirm"
-                                    class="btn btn-sm btn-warning edit_branch"
-                                    i_index="<?php echo $fetch['id'] ?>"
-                                    title="Edit">
-                                <i class="flaticon2-edit ml-2" style="color:#fff !important;"></i>
-                            </button>
-                            <button type="button"
-                                    data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_branch"
-                                    i_index="<?php echo $fetch['id'] ?>"
-                                    title="Delete">
-                                <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            <span>
+                                <div class="dropdown"><a data-toggle="dropdown"
+                                                         class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
+                                            class="flaticon-more-1"></i> </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <ul class="kt-nav">
+                                            <li class="kt-nav__item">
+                                                <a class="kt-nav__link edit_branch"
+                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
+                                                        class="kt-nav__link-icon flaticon2-edit"></i>
+                                                    <span class="kt-nav__link-text">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="kt-nav__item">
+                                                <a class="kt-nav__link delete_branch"
+                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
+                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
+                                                        class="kt-nav__link-text">Delete</span> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </span>
                         </td>
                     </tr>
                 <?php } ?>

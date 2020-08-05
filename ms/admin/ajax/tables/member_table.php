@@ -28,7 +28,7 @@ $select_branch = $_POST['select_branch'];
                         <th>Branch</th>
                         <th>Full Name</th>
                         <th>Gender</th>
-                        <th>Email Address</th>
+                        <!--<th>Email Address</th>-->
                         <th>Telephone</th>
                         <th>Residence</th>
                         <th>Marital Status</th>
@@ -59,7 +59,7 @@ $select_branch = $_POST['select_branch'];
             {data: 'branchid'},
             {data: 'fullname'},
             {data: 'gender'},
-            {data: 'emailaddress'},
+            /*{data: 'emailaddress'},*/
             {data: 'telephone'},
             {data: 'residence'},
             {data: 'maritalstatus'},
