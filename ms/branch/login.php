@@ -8,7 +8,7 @@ session_destroy();
     <meta charset="utf-8"/>
 
     <title>Login | Church Admin</title>
-    <meta name="description" content="Login page example">
+    <meta name="description" content="<?php echo $churcht ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--begin::Fonts -->
