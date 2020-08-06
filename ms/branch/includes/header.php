@@ -33,6 +33,7 @@ if (!isset($_SESSION['username'])) {
     <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/jquery-confirm/css/jquery-confirm.css" rel="stylesheet" type="text/css"/>
     <link href="../assets/uploadify/uploadifive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/countrySelect.css" rel="stylesheet" type="text/css"/>
 
     <!--end::Global Theme Styles -->
 

@@ -65,6 +65,7 @@
 <script src="../assets/js/pages/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="../assets/jquery-confirm/js/jquery-confirm.js" type="text/javascript"></script>
 <script src="../assets/uploadify/jquery.uploadifive.js" type="text/javascript"></script>
+<script src="../assets/js/countrySelect.js" type="text/javascript"></script>
 
 
 <!--end::Page Scripts -->
