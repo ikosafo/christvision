@@ -7,7 +7,7 @@ session_destroy();
 <head>
     <meta charset="utf-8"/>
 
-    <title>Login | Branch</title>
+    <title>Login | Church Admin</title>
     <meta name="description" content="Login page example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,13 +15,14 @@ session_destroy();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
     <!--end::Fonts -->
 
+
     <!--begin::Page Custom Styles(used by this page) -->
     <link href="../assets/css/login.css" rel="stylesheet" type="text/css"/>
     <!--end::Page Custom Styles -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="../newassets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
-    <link href="../newassets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles -->
 
     <link rel="shortcut icon" href="../assets/img/logo.png"/>
@@ -30,7 +31,7 @@ session_destroy();
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body style="background-image: url('../assets/img/header.jpg'); background-position: center top;
+<body style="background-image: url(newassets/media/demos/demo4/header.jpg); background-position: center top;
 background-size: 100% 350px;" class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right
 kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-menu kt-header-mobile--fixed
 kt-subheader--enabled kt-subheader--transparent kt-page--loading">
@@ -41,17 +42,15 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 <!-- begin:: Page -->
 <div class="kt-grid kt-grid--ver kt-grid--root kt-page">
     <div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v6 kt-login--signin" id="kt_login">
-        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile">
+        <div
+            class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile">
+
 
             <div class="kt-grid__item kt-grid__item--fluid kt-grid__item--center kt-grid kt-grid--ver kt-login__content"
                  style="background-image: url('../assets/img/bg-1.jpg');">
                 <div class="kt-login__section">
                     <div class="kt-login__block">
-                        <h3 class="kt-login__title"><?php echo $churchname ?></h3>
-
-                        <div class="kt-login__desc">
-                            <?php echo $churchlogo; ?>
-                        </div>
+                        <h3 class="kt-login__title"><?php echo $churchname; ?></h3>
                     </div>
                 </div>
             </div>
@@ -69,7 +68,7 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
                             <div class="kt-login__signin">
                                 <div class="kt-login__head">
-                                    <h3 class="kt-login__title">Sign In To Branch Portal</h3>
+                                    <h3 class="kt-login__title">Sign In To Branch Admin Portal</h3>
                                 </div>
                                 <div class="kt-login__form">
                                     <form class="kt-form" action="">
@@ -95,46 +94,18 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
                         </div>
                     </div>
-                    <div class="kt-login__account">
-                        <span class="kt-login__account-msg">
-                             <a href="mailto:https://ikosafo@gmail.com">Contact Developer</a>
-                        </span>&nbsp;&nbsp;
-                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
-<!-- end:: Page -->
-
-
-<!-- begin::Global Config(global config for global JS sciprts) -->
-<script>
-    var KTAppOptions = {
-        "colors": {
-            "state": {
-                "brand": "#366cf3",
-                "light": "#ffffff",
-                "dark": "#282a3c",
-                "primary": "#5867dd",
-                "success": "#34bfa3",
-                "info": "#36a3f7",
-                "warning": "#ffb822",
-                "danger": "#fd3995"
-            },
-            "base": {
-                "label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
-                "shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
-            }
-        }
-    };
-</script>
-<!-- end::Global Config -->
 
 <!--begin::Global Theme Bundle(used by all pages) -->
-<script src="../newassets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-<script src="../newassets/js/scripts.bundle.js" type="text/javascript"></script>
+<script src="../assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+<script src="../assets/js/scripts.bundle.js" type="text/javascript"></script>
 <!--end::Global Theme Bundle -->
 
 
@@ -153,8 +124,6 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
         return {
             init: function () {
                 n(), $("#login_btn").click(function (i) {
-                    alert('hi');
-                    Console.log('hi');
                     var username = $('#username').val();
                     var password = $('#password').val();
                     i.preventDefault();
@@ -172,20 +141,20 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                                 username: username,
                                 password: password
                             },
-                            success: function (text) {
-                                //alert(text)
-                                if (text == 1) {
-                                    window.location.href = "/";
-                                }
-                                else {
-                                    setTimeout(function () {
-                                        e.removeClass("kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light").attr("disabled", !1),
-                                            t(n, "danger", "Incorrect username or password. Please try again.")
-                                    }, 2e3)
-                                }
-
+                        success: function (text) {
+                            //alert(text)
+                            if (text == 1) {
+                                window.location.href = "/ms/branch/";
                             }
-                        }))
+                            else {
+                                setTimeout(function () {
+                                    e.removeClass("kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light").attr("disabled", !1),
+                                        t(n, "danger", "Incorrect username or password. Please try again.")
+                                }, 2e3)
+                            }
+
+                        }
+                    }))
                 })
             }
         }
