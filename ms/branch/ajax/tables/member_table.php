@@ -37,10 +37,10 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td class="kt-datatable__cell">
+                        <td class="kt-datatable__member">
                             <span style="width: 294px;">
                                 <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic"><img alt="N/A" style="width: 40px;height: 40px"
+                                    <div class="kt-user-card-v2__pic"><img style="width: 40px;height: 40px"
                                                                            src="../<?php echo $fetch['image_location'] ?>">
                                     </div>
                                     <div class="kt-user-card-v2__details">
@@ -61,7 +61,7 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                                         <ul class="kt-nav">
                                             <li class="kt-nav__item">
                                                 <a class="kt-nav__link view_member"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-file"></i>
                                                     <span class="kt-nav__link-text">View</span>
                                                 </a>
@@ -102,18 +102,19 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_cell').on('click', '.edit_cell', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
+
+    $(document).off('click', '.view_member').on('click', '.view_member', function () {
+        var member_index = $(this).attr('member_index');
+        //alert(member_index);
         $.ajax({
             type: "POST",
-            url: "ajax/forms/editform_cell.php",
+            url: "ajax/forms/viewdetails_member.php",
             data: {
-                i_index: theindex
+                member_index: member_index
             },
             dataType: "html",
             success: function (text) {
-                $('#cellform_div').html(text);
+                $('#memberform_div').html(text);
             },
             complete: function () {
             },
@@ -123,11 +124,33 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
         });
     });
 
-    $(document).off('click', '.delete_cell').on('click', '.delete_cell', function () {
+
+    $(document).off('click', '.edit_member').on('click', '.edit_member', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex)
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/editform_member.php",
+            data: {
+                i_index: theindex
+            },
+            dataType: "html",
+            success: function (text) {
+                $('#memberform_div').html(text);
+            },
+            complete: function () {
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            }
+        });
+    });
+
+    $(document).off('click', '.delete_member').on('click', '.delete_member', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Cell!',
+            title: 'Delete Member!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -145,14 +168,14 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_cell.php",
+                            url: "ajax/queries/delete_member.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/cell_table.php",
+                                    url: "ajax/tables/member_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -162,7 +185,7 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                                         })
                                     },
                                     success: function (text) {
-                                        $('#celltable_div').html(text);
+                                        $('#membertable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
