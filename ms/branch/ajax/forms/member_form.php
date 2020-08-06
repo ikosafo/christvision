@@ -406,7 +406,12 @@ $memberid = date('ymdhis') . rand(1, 10000);
                         type: "POST",
                         url: "ajax/queries/save_member.php",
                         beforeSend: function () {
-                            $.blockUI({ message: '<h2 class="mt-2"><img src="assets/img/busy.gif"/> Just a moment...</h2>' });
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
                         },
                         data: {
                             member_id: member_id,
@@ -450,7 +455,7 @@ $memberid = date('ymdhis') . rand(1, 10000);
                             alert(xhr.status + " " + thrownError);
                         },
                         complete: function () {
-                            $.unblockUI();
+                            KTApp.unblockPage();
                         },
                     });
                 }

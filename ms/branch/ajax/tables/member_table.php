@@ -40,7 +40,7 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                         <td class="kt-datatable__cell">
                             <span style="width: 294px;">
                                 <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic"><img alt="photo" style="width: 40px;height: 40px"
+                                    <div class="kt-user-card-v2__pic"><img alt="N/A" style="width: 40px;height: 40px"
                                                                            src="../<?php echo $fetch['image_location'] ?>">
                                     </div>
                                     <div class="kt-user-card-v2__details">
