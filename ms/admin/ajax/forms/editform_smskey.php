@@ -24,7 +24,7 @@ $result = $query->fetch_assoc();
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
                 <button type="button" class="btn btn-primary" id="editsmskey">Edit</button>
-                <button type="button" class="btn btn-secondary" id="cancelbranch">Cancel</button>
+                <button type="button" class="btn btn-secondary" id="cancelkey">Cancel</button>
             </div>
         </div>
     </div>
@@ -127,9 +127,9 @@ $result = $query->fetch_assoc();
     });
 
 
-    $('#cancelbranch').click(function () {
+    $('#cancelkey').click(function () {
         $.ajax({
-            url: "ajax/forms/branchuser_form.php",
+            url: "ajax/forms/smskey_form.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -139,7 +139,7 @@ $result = $query->fetch_assoc();
                 })
             },
             success: function (text) {
-                $('#branchform_div').html(text);
+                $('#smskeyform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
