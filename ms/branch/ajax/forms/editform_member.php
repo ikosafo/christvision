@@ -1,5 +1,7 @@
 <?php include ('../../../../config.php');
-$memberid = date('ymdhis') . rand(1, 10000);
+$memberid = $_POST['member_index'];
+$getmember = $mysqli->query("select * from `member` where memberid = '$memberid'");
+$re_profile = $getmember->fetch_assoc();
 ?>
 
 <script>
@@ -124,24 +126,24 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                             <label for="title">Title</label>
                                             <select id="title" style="width: 100%" onchange='SelectTitle(this.value);'>
                                                 <option value=""> Select Title&nbsp;</option>
-                                                <option value="Mr">Mr</option>
-                                                <option value="Ms">Ms</option>
-                                                <option value="Mrs">Mrs</option>
-                                                <option value="Dr">Dr</option>
-                                                <option value="Professor">Professor</option>
-                                                <option value="Pastor">Pastor</option>
-                                                <option value="Rev">Rev</option>
-                                                <option value="Bishop">Bishop</option>
-                                                <option value="Prophet">Prophet</option>
-                                                <option value="Other">Other</option>
+                                                <option <?php if (@$re_profile['title'] == "Mr") echo "selected" ?>>Mr</option>
+                                                <option <?php if (@$re_profile['title'] == "Ms") echo "selected" ?>>Ms</option>
+                                                <option <?php if (@$re_profile['title'] == "Mrs") echo "selected" ?>>Mrs</option>
+                                                <option <?php if (@$re_profile['title'] == "Dr") echo "selected" ?>>Dr</option>
+                                                <option <?php if (@$re_profile['title'] == "Professor") echo "selected" ?>>Professor</option>
+                                                <option <?php if (@$re_profile['title'] == "Pastor") echo "selected" ?>>Pastor</option>
+                                                <option <?php if (@$re_profile['title'] == "Rev") echo "selected" ?>>Rev</option>
+                                                <option <?php if (@$re_profile['title'] == "Bishop") echo "selected" ?>>Bishop</option>
+                                                <option <?php if (@$re_profile['title'] == "Other") echo "selected" ?>>Other</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group" id="divtitle" style="display: none;">
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1">Specify title</label>
                                             <div><input type="text" id="othertitle" class="form-control"
-                                                        placeholder="Specify Title"/></div>
+                                                        placeholder="Specify Title"
+                                                        value="<?php echo $re_profile['othertitle']; ?>"/></div>
 
                                         </div>
                                     </div>
@@ -149,22 +151,22 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Surname</label>
                                     <input type="text" class="form-control" id="surname"
-                                           placeholder="Enter Surname">
+                                           placeholder="Enter Surname" value="<?php echo $re_profile['surname']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">First Name</label>
                                     <input type="text" class="form-control" id="firstname"
-                                           placeholder="Enter First Name">
+                                           placeholder="Enter First Name" value="<?php echo $re_profile['firstname']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Other Name(s)</label>
                                     <input type="text" class="form-control" id="othername"
-                                           placeholder="Enter Other Name(s)">
+                                           placeholder="Enter Other Name(s)" value="<?php echo $re_profile['othername']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email Address</label>
                                     <input type="text" class="form-control" id="email_address"
-                                           placeholder="Enter email address">
+                                           placeholder="Enter email address" value="<?php echo $re_profile['emailaddress']; ?>">
                                 </div>
                             </div>
 
@@ -178,7 +180,7 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                         <input type="text" class="form-control"
                                                id="telephone" onkeypress="return isNumber(event)"
                                                minlength="10" autocomplete="off"
-                                               placeholder="Enter telephone">
+                                               placeholder="Enter telephone" value="<?php echo $re_profile['telephone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -190,19 +192,20 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                         <input type="text" class="form-control"
                                                id="alttelephone" onkeypress="return isNumber(event)"
                                                minlength="10" autocomplete="off"
-                                               placeholder="Enter alternative telephone">
+                                               placeholder="Enter alternative telephone"
+                                               value="<?php echo $re_profile['alttelephone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Date of Birth</label>
                                     <input type="text" id="birth_date"
-                                           class="form-control"
+                                           class="form-control" value="<?php echo $re_profile['birthdate']; ?>"
                                            placeholder="Select Date">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nationality</label><br/>
                                     <input type="text" id="nationality" class="form-control countryselect"
-                                           placeholder="Select Country"/>
+                                           placeholder="Select Country" value="<?php echo $re_profile['nationality']; ?>"/>
                                     <input type="hidden" id="country_code"/>
                                 </div>
                             </div>
@@ -211,17 +214,17 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Hometown</label>
                                     <input type="text" class="form-control" id="hometown"
-                                           placeholder="Enter hometown">
+                                           placeholder="Enter hometown" value="<?php echo $re_profile['hometown']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Residence</label>
                                     <input type="text" class="form-control" id="residence"
-                                           placeholder="Enter residence">
+                                           placeholder="Enter residence" value="<?php echo $re_profile['residence']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">House Number</label>
                                     <input type="text" class="form-control" id="house_number"
-                                           placeholder="Enter house number">
+                                           placeholder="Enter house number" value="<?php echo $re_profile['housenumber']; ?>">
                                 </div>
                                 <div class="form-group" id="gender">
                                     <label for="exampleInputPassword1">Gender </label>
@@ -229,20 +232,33 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" id="customRadioInline1"
                                                name="gender" value="Male"
-                                               class="custom-control-input">
+                                               class="custom-control-input" <?php if (@$re_profile['gender'] == "Male") echo "checked" ?>>
                                         <label class="custom-control-label" for="customRadioInline1">Male</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" id="customRadioInline2"
                                                name="gender" value="Female"
-                                               class="custom-control-input">
+                                               class="custom-control-input" <?php if (@$re_profile['gender'] == "Female") echo "checked" ?>>
                                         <label class="custom-control-label" for="customRadioInline2">Female</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Passport Picture</label>
                                     <input type="file" class="form-control" id="member_picture">
-                                    <input type="hidden" id="selected"/>
+
+                                    <p></p>
+                                    <?php
+                                    $img = $mysqli->query("select * from member_images where memberid = '$memberid'");
+                                    $fetch_img = $img->fetch_assoc();
+                                    if (mysqli_num_rows($img) == "1") { ?>
+                                        <input type="hidden" id="selected_img_edit" value="edit_img"/>
+                                        <img src="../<?php echo $fetch_img['image_location'] ?>" style="width: 180px;height: 180px"/>
+                                    <?php }
+                                    else { ?>
+                                        <input type="hidden" id="selected"/>
+                                    <?php }?>
+                                    <p></p>
+
                                 </div>
                             </div>
                         </div>

@@ -44,7 +44,9 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                                                                            src="../<?php echo $fetch['image_location'] ?>">
                                     </div>
                                     <div class="kt-user-card-v2__details">
-                                        <a class="kt-user-card-v2__name" href="#">
+                                        <a class="kt-user-card-v2__name view_member"
+                                           member_index="<?php echo $fetch['memberid'] ?>"
+                                           href="#">
                                             <?php echo $fetch['surname'].' '.$fetch['firstname'].' '.$fetch['othername'] ?>
                                         </a>
                                         <span class="kt-user-card-v2__email"><?php echo $fetch['gender'] ?>, <?php echo $fetch['telephone'] ?></span></div>
@@ -68,14 +70,14 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                                             </li>
                                             <li class="kt-nav__item">
                                                 <a class="kt-nav__link edit_member"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-edit"></i>
                                                     <span class="kt-nav__link-text">Edit</span>
                                                 </a>
                                             </li>
                                             <li class="kt-nav__item">
                                                 <a class="kt-nav__link delete_member"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-trash"></i> <span
                                                         class="kt-nav__link-text">Delete</span> </a></li>
                                         </ul>
@@ -126,13 +128,13 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
 
 
     $(document).off('click', '.edit_member').on('click', '.edit_member', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
+        var member_index = $(this).attr('member_index');
+        //alert(member_index)
         $.ajax({
             type: "POST",
             url: "ajax/forms/editform_member.php",
             data: {
-                i_index: theindex
+                member_index: member_index
             },
             dataType: "html",
             success: function (text) {
@@ -147,8 +149,9 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
     });
 
     $(document).off('click', '.delete_member').on('click', '.delete_member', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
+        var member_index = $(this).attr('member_index');
+        //alert(member_index);
+
         $.confirm({
             title: 'Delete Member!',
             content: 'Are you sure to continue?',
@@ -170,10 +173,11 @@ $pinq = $mysqli->query("SELECT * FROM `member` m JOIN `member_images` i ON m.mem
                             type: "POST",
                             url: "ajax/queries/delete_member.php",
                             data: {
-                                i_index: theindex
+                                member_index: member_index
                             },
                             dataType: "html",
                             success: function (text) {
+                                alert(text);
                                 $.ajax({
                                     url: "ajax/tables/member_table.php",
                                     beforeSend: function () {

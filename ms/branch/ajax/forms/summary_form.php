@@ -27,11 +27,11 @@ $result = $app->fetch_assoc();
                     <div class="row">
 
                         <div class="col-md-2" align="center">
-                            <img src="../../../assets/img/logo.png"
-                                 style="border: 0 !important;"/>
+                            <img src="../assets/img/logo.png"
+                                 style="border: 0 !important;width: 70%"/>
                         </div>
                         <div class="col-md-10" align="center">
-                            <h2 style="font-weight: bold;">CHRIST VISION SANCTUARY INTERNATIONAL</h2>
+                            <h2 style="font-weight: bold;text-transform: uppercase"><?php echo $churcht ?></h2>
                             <h4 style="text-transform: uppercase"><?php $branchid = $result['branch'];
                                 $getb = $mysqli->query("select * from branch where id = '$branchid'");
                                 $resb = $getb->fetch_assoc();

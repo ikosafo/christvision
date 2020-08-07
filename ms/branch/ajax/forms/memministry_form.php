@@ -2,11 +2,14 @@
 
 $memberid = $_POST['member_id'];
 $branch = $_SESSION['branch'];
+$getm = $mysqli->query("select * from `member` where memberid = '$memberid'");
+$resm = $getm->fetch_assoc();
 ?>
 
 <div id="success_loc"></div>
 <div id="error_loc"></div>
-<h5 class="card-header">Field with * are required</h5>
+<h6 style="color: red">Field with * are required</h6><hr/>
+
 <form name="mmemministry_form" method="post" autocomplete="off">
     <div class="card-body">
         <div class="row">
@@ -16,11 +19,13 @@ $branch = $_SESSION['branch'];
                     <select id="mem_department" style="width: 100%">
                         <option value="">Select</option>
                         <?php
+                        $department = $resm['department'];
                         $getd = $mysqli->query("select * from department where branch = '$branch' ORDER BY department_name");
-                        while ($resd = $getd->fetch_assoc()){?>
-                            <option value="<?php echo $resd['id'] ?>"><?php echo $resd['department_name'] ?></option>
+                        while ($result = $getd->fetch_assoc()) { ?>
+                            <option <?php if (@$department == @$result['id']) echo "Selected" ?>>
+                                <?php echo $result['department_name'];?></option>
                         <?php } ?>
-                        <option value="None">None</option>
+                        <option <?php if (@$department == 'None') echo "Selected" ?>>None</option>
                     </select>
                 </div>
             </div>
@@ -31,11 +36,13 @@ $branch = $_SESSION['branch'];
                     <select id="mem_ministry" style="width: 100%">
                         <option value="">Select</option>
                         <?php
-                        $getd = $mysqli->query("select * from ministry where branch = '$branch' ORDER BY ministry_name");
-                        while ($resd = $getd->fetch_assoc()){?>
-                            <option value="<?php echo $resd['id'] ?>"><?php echo $resd['ministry_name'] ?></option>
+                        $ministry = $resm['ministry'];
+                        $getm = $mysqli->query("select * from ministry where branch = '$branch' ORDER BY ministry_name");
+                        while ($result = $getm->fetch_assoc()) { ?>
+                            <option <?php if (@$ministry == @$result['id']) echo "Selected" ?>>
+                                <?php echo $result['ministry_name'];?></option>
                         <?php } ?>
-                        <option value="None">None</option>
+                        <option <?php if (@$ministry == 'None') echo "Selected" ?>>None</option>
                     </select>
                 </div>
             </div>
@@ -46,11 +53,13 @@ $branch = $_SESSION['branch'];
                     <select id="mem_cell" style="width: 100%">
                         <option value="">Select</option>
                         <?php
-                        $getd = $mysqli->query("select * from cell where branch = '$branch' ORDER BY cell_name");
-                        while ($resd = $getd->fetch_assoc()){?>
-                            <option value="<?php echo $resd['id'] ?>"><?php echo $resd['cell_name'] ?></option>
+                        $cell = $resm['cell'];
+                        $getc = $mysqli->query("select * from cell where branch = '$branch' ORDER BY cell_name");
+                        while ($result = $getc->fetch_assoc()) { ?>
+                            <option <?php if (@$cell == @$result['id']) echo "Selected" ?>>
+                                <?php echo $result['cell_name'];?></option>
                         <?php } ?>
-                        <option value="None">None</option>
+                        <option <?php if (@$cell == 'None') echo "Selected" ?>>None</option>
                     </select>
                 </div>
             </div>

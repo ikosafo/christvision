@@ -1,10 +1,12 @@
 <?php include("../../../../config.php");
 $memberid = $_POST['member_id'];
+$geted = $mysqli->query("select * from `member` where memberid = '$memberid'");
+$resed = $geted->fetch_assoc();
 ?>
 
 <div id="success_loc"></div>
 <div id="error_loc"></div>
-<h5 class="card-header">Field with * are required</h5>
+<h6 style="color: red">Field with * are required</h6><hr/>
 <form name="educbus_form" method="post" autocomplete="off">
     <div class="card-body">
 
@@ -14,20 +16,20 @@ $memberid = $_POST['member_id'];
                     <label for="educlevel">Educational Level *</label>
                     <select id="educlevel" style="width: 100%">
                         <option value="">Select</option>
-                        <option value="Tertiary">Tertiary</option>
-                        <option value="A' Levels">'A' Levels</option>
-                        <option value="'O' Levels">'O' Levels</option>
-                        <option value="Certificate">Certificate</option>
-                        <option value="Secondary">Secondary</option>
-                        <option value="Primary">Primary</option>
-                        <option value="None">None</option>
+                        <option <?php if(@$resed['educationallevel'] == "Tertiary") echo "Selected" ?>>Tertiary</option>
+                        <option <?php if(@$resed['educationallevel'] == "'A' Levels") echo "Selected" ?>>'A' Levels</option>
+                        <option <?php if(@$resed['educationallevel'] == "'O' Levels") echo "Selected" ?>>'O' Levels</option>
+                        <option <?php if(@$resed['educationallevel'] == "Certificate") echo "Selected" ?>>Certificate</option>
+                        <option <?php if(@$resed['educationallevel'] == "Secondary") echo "Selected" ?>>Secondary</option>
+                        <option <?php if(@$resed['educationallevel'] == "Primary") echo "Selected" ?>>Primary</option>
+                        <option <?php if(@$resed['educationallevel'] == "None") echo "Selected" ?>>None</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="institution_attended">Last Institution Attended</label>
                     <input type="text" class="form-control" id="institution_attended"
-                           placeholder="Enter institution">
+                           placeholder="Enter institution" value="<?php echo $resed['institutionattended'] ?>">
                 </div>
             </div>
 
@@ -35,12 +37,12 @@ $memberid = $_POST['member_id'];
                 <div class="form-group">
                     <label for="exampleInputEmail1">Qualification</label>
                     <input type="text" class="form-control" id="qualification"
-                           placeholder="Enter qualification">
+                           placeholder="Enter qualification" value="<?php echo $resed['qualification'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Occupation</label>
                     <input type="text" class="form-control" id="occupation"
-                           placeholder="Enter Occupation">
+                           placeholder="Enter Occupation" value="<?php echo $resed['occupation'] ?>">
                 </div>
             </div>
 
@@ -48,12 +50,12 @@ $memberid = $_POST['member_id'];
                 <div class="form-group">
                     <label for="exampleInputEmail1">Place of Work/Company</label>
                     <input type="text" class="form-control" id="workplace"
-                           placeholder="Enter Place of Work">
+                           placeholder="Enter Place of Work" value="<?php echo $resed['workplace'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Job Position</label>
                     <input type="text" class="form-control" id="job_position"
-                           placeholder="Enter Job Position">
+                           placeholder="Enter Job Position" value="<?php echo $resed['jobposition'] ?>">
                 </div>
             </div>
         </div>

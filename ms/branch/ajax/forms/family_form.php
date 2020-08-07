@@ -1,5 +1,7 @@
 <?php include("../../../../config.php");
 $memberid = $_POST['member_id'];
+$getf = $mysqli->query("select * from `member` where memberid = '$memberid'");
+$resf = $getf->fetch_assoc();
 ?>
 
 <style>
@@ -44,7 +46,7 @@ $memberid = $_POST['member_id'];
 
 <div id="success_loc"></div>
 <div id="error_loc"></div>
-<h5 class="card-header">Field with * are required</h5>
+<h6 style="color: red">Field with * are required</h6><hr/>
 
 <form name="educbus_form" method="post" autocomplete="off">
 
@@ -55,39 +57,65 @@ $memberid = $_POST['member_id'];
                     <label for="marital_status">Marital Status *</label>
                     <select id="marital_status" style="width: 100%" onchange='SelectSpouse(this.value);'>
                         <option value="">Select</option>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Divorced">Divorced</option>
-                        <option value="Separated">Separated</option>
-                        <option value="Engaged">Engaged</option>
+                        <option <?php if(@$resf['maritalstatus'] == "Single") echo "Selected" ?>>Single</option>
+                        <option <?php if(@$resf['maritalstatus'] == "Married") echo "Selected" ?>>Married</option>
+                        <option <?php if(@$resf['maritalstatus'] == "Divorced") echo "Selected" ?>>Divorced</option>
+                        <option <?php if(@$resf['maritalstatus'] == "Separated") echo "Selected" ?>>Separated</option>
+                        <option <?php if(@$resf['maritalstatus'] == "Engaged") echo "Selected" ?>>Engaged</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <div id="divspouse" style="display: none">
-                        <label for="spouse">Name of Spouse</label>
-                        <input type="text" class="form-control" id="spouse"
-                               placeholder="Enter name of spouse">
+                <?php $spouse = $resf['spousename'];
+                if ($spouse == "") { ?>
+                    <div class="form-group">
+                        <div id="divspouse" style="display: none">
+                            <label for="spouse">Name of Spouse</label>
+                            <input type="text" class="form-control" id="spouse"
+                                   placeholder="Enter name of spouse">
 
+                        </div>
                     </div>
-                </div>
+                <?php } else {?>
+                    <div class="form-group">
+                        <div>
+                            <label for="spouse">Name of Spouse</label>
+                            <input type="text" class="form-control" id="spouse"
+                                   placeholder="Enter name of spouse" value="<?php echo $spouse ?>">
+
+                        </div>
+                    </div>
+                <?php } ?>
 
                 <div class="form-group">
                     <label for="father_alive">Is your father alive? *</label>
                     <select id="father_alive" style="width: 100%" onchange='SelectFather(this.value);'>
                         <option value="">Select</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option <?php if(@$resf['fatheralive'] == "Yes") echo "Selected" ?>>Yes</option>
+                        <option <?php if(@$resf['fatheralive'] == "No") echo "Selected" ?>>No</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <div id="divfather" style="display: none">
-                        <label for="father">Name of Father</label>
-                        <input type="text" class="form-control" id="father"
-                               placeholder="Enter name of father">
+                <?php $father = $resf['fathername'];
+                if ($father == "") { ?>
+                    <div class="form-group">
+                        <div id="divfather" style="display: none">
+                            <label for="spouse">Name of Father</label>
+                            <input type="text" class="form-control" id="father"
+                                   placeholder="Enter name of father">
+
+                        </div>
                     </div>
-                </div>
+                <?php } else {?>
+                    <div class="form-group">
+                        <div>
+                            <label for="spouse">Name of Father</label>
+                            <input type="text" class="form-control" id="father"
+                                   placeholder="Enter name of father" value="<?php echo $father ?>">
+
+                        </div>
+                    </div>
+                <?php } ?>
+
             </div>
 
             <div class="col-md-4">
@@ -95,46 +123,79 @@ $memberid = $_POST['member_id'];
                     <label for="mother_alive">Is your mother alive? *</label>
                     <select id="mother_alive" style="width: 100%" onchange='SelectMother(this.value);'>
                         <option value="">Select</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option <?php if(@$resf['motheralive'] == "Yes") echo "Selected" ?>>Yes</option>
+                        <option <?php if(@$resf['motheralive'] == "No") echo "Selected" ?>>No</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <div id="divmother" style="display: none">
-                        <label for="mother">Name of Mother</label>
-                        <input type="text" class="form-control" id="mother"
-                               placeholder="Enter name of mother">
+                <?php $mother = $resf['mothername'];
+                if ($mother == "") { ?>
+                    <div class="form-group">
+                        <div id="divmother" style="display: none">
+                            <label for="mother">Name of Mother</label>
+                            <input type="text" class="form-control" id="mother"
+                                   placeholder="Enter name of mother">
 
+                        </div>
                     </div>
-                </div>
+                <?php } else {?>
+                    <div class="form-group">
+                        <div>
+                            <label for="mother">Name of Mother</label>
+                            <input type="text" class="form-control" id="mother"
+                                   placeholder="Enter name of mother" value="<?php echo $mother ?>">
+
+                        </div>
+                    </div>
+                <?php } ?>
 
                 <div class="form-group">
                     <label for="have_children">Do you have children? *</label>
                     <select id="have_children" style="width: 100%" onchange='SelectChildren(this.value);'>
                         <option value="">Select</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option <?php if(@$resf['havechildren'] == "Yes") echo "Selected" ?>>Yes</option>
+                        <option <?php if(@$resf['havechildren'] == "No") echo "Selected" ?>>No</option>
                     </select>
                 </div>
             </div>
 
-
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div id="divchildren" style="display: none">
-                        <label for="child_name">Name of Child</label>
-                        <div class="input-group mb-3">
-                            <input type="text" id="child_name" class="form-control"
-                                   placeholder="Enter name of child">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" id="savechild" type="button">Add</button>
+            <?php $childrennum = $resf['havechildren'];
+            if ($childrennum == 'Yes') { ?>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div id="divchildren">
+                            <label for="child_name">Name of Child</label>
+                            <div class="input-group mb-3">
+                                <input type="text" id="child_name" class="form-control"
+                                       placeholder="Enter name of child">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" id="savechild" type="button">Add</button>
+                                </div>
                             </div>
+                            <div id="child_table_div"></div>
                         </div>
-                        <div id="child_table_div"></div>
                     </div>
                 </div>
-            </div>
+            <?php } else { ?>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div id="divchildren" style="display: none">
+                            <label for="child_name">Name of Child</label>
+                            <div class="input-group mb-3">
+                                <input type="text" id="child_name" class="form-control"
+                                       placeholder="Enter name of child">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" id="savechild" type="button">Add</button>
+                                </div>
+                            </div>
+                            <div id="child_table_div"></div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+
+
         </div>
     </div>
 </form>
@@ -250,6 +311,21 @@ $memberid = $_POST['member_id'];
             $.notify(error, {position: "top center"});
         }
         return false;
+    });
+
+
+    $.ajax({
+        type: "POST",
+        url: "ajax/tables/child_table.php",
+        data: {
+            member_id: '<?php echo $memberid ?>'
+        },
+        success: function (text) {
+            $('#child_table_div').html(text);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status + " " + thrownError);
+        },
     });
 
 
