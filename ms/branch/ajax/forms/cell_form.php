@@ -3,7 +3,6 @@ $random = rand(1,10000).date("Ymd");
 ?>
 <!--begin::Form-->
 
-
 <form class="" autocomplete="off">
 
     <div class="kt-portlet__body" id="error_loc">
@@ -16,7 +15,6 @@ $random = rand(1,10000).date("Ymd");
                        placeholder="Enter Cell Name">
             </div>
         </div>
-
 
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
@@ -34,13 +32,11 @@ $random = rand(1,10000).date("Ymd");
 
     $('#savecell').click(function () {
         var cell_name = $('#cell_name').val();
-
         var error = '';
         if (cell_name == "") {
             error += 'Please enter cell name \n';
             $("#cell_name").focus();
         }
-
 
         if (error == "") {
             $.ajax({

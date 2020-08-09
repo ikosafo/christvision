@@ -437,12 +437,24 @@ $memberid = date('ymdhis') . rand(1, 10000);
 
                             $.ajax({
                                 url: "ajax/tables/member_table.php",
+                                beforeSend: function () {
+                                    KTApp.blockPage({
+                                        overlayColor: "#000000",
+                                        type: "v2",
+                                        state: "success",
+                                        message: "Please wait..."
+                                    })
+                                },
                                 success: function (text) {
                                     $('#membertable_div').html(text);
                                 },
                                 error: function (xhr, ajaxOptions, thrownError) {
                                     alert(xhr.status + " " + thrownError);
                                 },
+                                complete: function () {
+                                    KTApp.unblockPage();
+                                },
+
                             });
 
                             $("#member_form a[href='#educbus']").tab('show');
@@ -461,6 +473,7 @@ $memberid = date('ymdhis') . rand(1, 10000);
                                 },
 
                             });
+
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
