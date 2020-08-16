@@ -20,7 +20,7 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Membership
-                                    <small>Add and View Visitors</small>
+                                    <small>Add and View Church Workers</small>
                                 </h3>
                             </div>
                         </div>
@@ -29,10 +29,10 @@
 
                         <div class="form-group row">
                             <div class="col-md-4 col-xs-12 col-sm-12">
-                                <div id="visitorform_div"></div>
+                                <div id="workerform_div"></div>
                             </div>
                             <div class="col-md-8 col-xs-12 col-sm-12">
-                                <div id="visitortable_div"></div>
+                                <div id="workertable_div"></div>
                             </div>
                         </div>
                         <!--end::Form-->
@@ -54,7 +54,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/visitor_form.php",
+        url: "ajax/forms/worker_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -64,7 +64,7 @@
             })
         },
         success: function (text) {
-            $('#visitorform_div').html(text);
+            $('#workerform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -77,7 +77,7 @@
 
 
     $.ajax({
-        url: "ajax/tables/visitor_table.php",
+        url: "ajax/tables/worker_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -87,7 +87,7 @@
             })
         },
         success: function (text) {
-            $('#visitortable_div').html(text);
+            $('#workertable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

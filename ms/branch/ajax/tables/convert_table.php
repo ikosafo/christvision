@@ -68,7 +68,9 @@ $dep = $mysqli->query("SELECT * FROM `convert` WHERE `branch` = '$branch' ORDER 
                                                 <a class="kt-nav__link delete_convert"
                                                    i_index="<?php echo $resdep['id'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
+                                                        class="kt-nav__link-text">Delete</span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

@@ -1,9 +1,4 @@
-<?php include("../../../../config.php");
-$convertid = $_POST['i_index'];
-$getdetails = $mysqli->query("select * from `convert` where id = '$convertid'");
-$resdetails = $getdetails->fetch_assoc();
-
-?>
+<?php include("../../../../config.php"); ?>
 
 <script>
     function isNumber(evt) {
@@ -25,16 +20,15 @@ $resdetails = $getdetails->fetch_assoc();
 
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="full_name">Full Name of Convert</label>
+                <label for="full_name">Full Name of Visitor</label>
                 <input type="text" class="form-control" id="full_name"
-                       placeholder="Enter Full Name of Convert" value="<?php echo $resdetails['full_name'] ?>">
+                       placeholder="Enter Full Name of Visitor">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
                 <label for="telephone">Telephone</label>
                 <input type="text" class="form-control" id="telephone"
-                       value="<?php echo $resdetails['telephone'] ?>"
                        placeholder="Enter telephone" onkeypress="return isNumber(event);">
             </div>
         </div>
@@ -42,14 +36,14 @@ $resdetails = $getdetails->fetch_assoc();
             <div class="col-lg-12 col-md-12">
                 <label for="residence">Residence</label>
                 <input type="text" class="form-control" id="residence"
-                       placeholder="Enter residence" value="<?php echo $resdetails['residence'] ?>">
+                       placeholder="Enter residence">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="denomination">Previous Denomination</label>
+                <label for="denomination">Current Denomination</label>
                 <input type="text" class="form-control" id="denomination"
-                       placeholder="Enter denomination" value="<?php echo $resdetails['denomination'] ?>">
+                       placeholder="Enter denomination">
             </div>
         </div>
         <div class="form-group row">
@@ -57,13 +51,13 @@ $resdetails = $getdetails->fetch_assoc();
                 <label for="hearing_about">How did you hear about us</label>
                 <select id="hearing_about" style="width: 100%">
                     <option value="">Select</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "A Friend") echo "selected" ?>>A Friend</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "Poster") echo "selected" ?>>Poster</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "Flier") echo "selected" ?>>Flier</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "TV") echo "selected" ?>>TV</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "Radio") echo "selected" ?>>Radio</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "Internet") echo "selected" ?>>Internet</option>
-                    <option <?php if (@$resdetails['hearing_about'] == "Other") echo "selected" ?>>Other</option>
+                    <option value="A Friend">A Friend</option>
+                    <option value="Poster">Poster</option>
+                    <option value="Flier">Flier</option>
+                    <option value="TV">TV</option>
+                    <option value="Radio">Radio</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
         </div>
@@ -71,13 +65,13 @@ $resdetails = $getdetails->fetch_assoc();
             <div class="col-lg-12 col-md-12">
                 <label for="description">Description on your invitation</label>
                 <textarea class="form-control" id="description"
-                          placeholder="Enter description"><?php echo $resdetails['description'] ?></textarea>
+                          placeholder="Enter description"></textarea>
             </div>
         </div>
 
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="edit_convert">Edit</button>
+                <button type="button" class="btn btn-primary" id="save_visitor">Submit</button>
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
@@ -92,14 +86,13 @@ $resdetails = $getdetails->fetch_assoc();
 
     $("#hearing_about").select2();
 
-    $("#edit_convert").click(function () {
+    $("#save_visitor").click(function () {
         var full_name = $("#full_name").val();
         var telephone = $("#telephone").val();
         var residence = $("#residence").val();
         var denomination = $("#denomination").val();
         var hearing_about = $("#hearing_about").val();
         var description = $("#description").val();
-        var convertid = '<?php echo $convertid ?>';
 
         var error = '';
         if (full_name == "") {
@@ -125,7 +118,7 @@ $resdetails = $getdetails->fetch_assoc();
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_convertedit.php",
+                url: "ajax/queries/save_visitor.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -140,15 +133,14 @@ $resdetails = $getdetails->fetch_assoc();
                     denomination: denomination,
                     residence:residence,
                     hearing_about:hearing_about,
-                    description:description,
-                    convertid:convertid
+                    description:description
                 },
                 success: function (text) {
                     //alert(text);
                     if (text == 1) {
                         $('#success_loc').notify("Form submitted","success");
                         $.ajax({
-                            url: "ajax/tables/convert_table.php",
+                            url: "ajax/tables/visitor_table.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -158,7 +150,7 @@ $resdetails = $getdetails->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#converttable_div').html(text);
+                                $('#visitortable_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -170,7 +162,7 @@ $resdetails = $getdetails->fetch_assoc();
                         });
 
                         $.ajax({
-                            url: "ajax/forms/convert_form.php",
+                            url: "ajax/forms/visitor_form.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -180,7 +172,7 @@ $resdetails = $getdetails->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#convertform_div').html(text);
+                                $('#visitorform_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -192,7 +184,7 @@ $resdetails = $getdetails->fetch_assoc();
                         });
 
                     } else {
-                        $('#error_loc').notify("Convert details already exists","error");
+                        $('#error_loc').notify("Visitor details already exists","error");
                     }
 
                 },

@@ -1,6 +1,6 @@
 <?php include("../../../../config.php");
-$convertid = $_POST['i_index'];
-$getdetails = $mysqli->query("select * from `convert` where id = '$convertid'");
+$visitorid = $_POST['i_index'];
+$getdetails = $mysqli->query("select * from `visitor` where id = '$visitorid'");
 $resdetails = $getdetails->fetch_assoc();
 
 ?>
@@ -25,9 +25,9 @@ $resdetails = $getdetails->fetch_assoc();
 
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="full_name">Full Name of Convert</label>
+                <label for="full_name">Full Name of Visitor</label>
                 <input type="text" class="form-control" id="full_name"
-                       placeholder="Enter Full Name of Convert" value="<?php echo $resdetails['full_name'] ?>">
+                       placeholder="Enter Full Name of Visitor" value="<?php echo $resdetails['full_name'] ?>">
             </div>
         </div>
         <div class="form-group row">
@@ -47,7 +47,7 @@ $resdetails = $getdetails->fetch_assoc();
         </div>
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="denomination">Previous Denomination</label>
+                <label for="denomination">Current Denomination</label>
                 <input type="text" class="form-control" id="denomination"
                        placeholder="Enter denomination" value="<?php echo $resdetails['denomination'] ?>">
             </div>
@@ -77,7 +77,7 @@ $resdetails = $getdetails->fetch_assoc();
 
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="edit_convert">Edit</button>
+                <button type="button" class="btn btn-primary" id="edit_visitor">Edit</button>
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
@@ -92,14 +92,14 @@ $resdetails = $getdetails->fetch_assoc();
 
     $("#hearing_about").select2();
 
-    $("#edit_convert").click(function () {
+    $("#edit_visitor").click(function () {
         var full_name = $("#full_name").val();
         var telephone = $("#telephone").val();
         var residence = $("#residence").val();
         var denomination = $("#denomination").val();
         var hearing_about = $("#hearing_about").val();
         var description = $("#description").val();
-        var convertid = '<?php echo $convertid ?>';
+        var visitorid = '<?php echo $visitorid; ?>'
 
         var error = '';
         if (full_name == "") {
@@ -125,7 +125,7 @@ $resdetails = $getdetails->fetch_assoc();
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_convertedit.php",
+                url: "ajax/queries/saveform_visitoredit.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -141,14 +141,14 @@ $resdetails = $getdetails->fetch_assoc();
                     residence:residence,
                     hearing_about:hearing_about,
                     description:description,
-                    convertid:convertid
+                    visitorid:visitorid
                 },
                 success: function (text) {
                     //alert(text);
                     if (text == 1) {
                         $('#success_loc').notify("Form submitted","success");
                         $.ajax({
-                            url: "ajax/tables/convert_table.php",
+                            url: "ajax/tables/visitor_table.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -158,7 +158,7 @@ $resdetails = $getdetails->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#converttable_div').html(text);
+                                $('#visitortable_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -170,7 +170,7 @@ $resdetails = $getdetails->fetch_assoc();
                         });
 
                         $.ajax({
-                            url: "ajax/forms/convert_form.php",
+                            url: "ajax/forms/visitor_form.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -180,7 +180,7 @@ $resdetails = $getdetails->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#convertform_div').html(text);
+                                $('#visitorform_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -192,7 +192,7 @@ $resdetails = $getdetails->fetch_assoc();
                         });
 
                     } else {
-                        $('#error_loc').notify("Convert details already exists","error");
+                        $('#error_loc').notify("Visitor details already exists","error");
                     }
 
                 },
