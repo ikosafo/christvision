@@ -14,7 +14,7 @@ $random = rand(1,10000).date("Ymd");
             </div>
         </div>
 
-
+<i class="flaticon-bell"
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">

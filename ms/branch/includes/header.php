@@ -64,6 +64,49 @@ if (!isset($_SESSION['username'])) {
         .kt-portlet {
             margin-top: 0.5% !important;
         }
+
+        .kt-sticky-toolbar {
+            width: 46px;
+            position: fixed;
+            top: 30%;
+            right: 0;
+            list-style: none;
+            padding: 5px 0;
+            margin: 0;
+            z-index: 50;
+            background: #fff;
+            -webkit-box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+            box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .kt-sticky-toolbar .kt-sticky-toolbar__item.kt-sticky-toolbar__item--demo-toggle > a {
+            padding: 8px 0;
+            height: 90px;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4d5cf2;
+            letter-spacing: 2px;
+        }
     </style>
 
     <script type="text/javascript">
@@ -111,6 +154,23 @@ background-size: 100% 350px;"
                 class="flaticon-more-1"></i></button>
     </div>
 </div>
+
+<ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" id="kt_demo_panel_toggle"
+        data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
+        <a href="sms" class="">SMS</a>
+    </li>
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--builder" data-toggle="kt-tooltip" title="Birthdays for Today"
+        data-placement="left" data-original-title="Birthdays for Today">
+        <a href="birthdaytoday"><i class="flaticon2-bell"></i></a>
+    </li>
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--docs" data-toggle="kt-tooltip" title="https://cvsiworld.net"
+        data-placement="left" data-original-title="Documentation">
+        <a href="../../" target="_blank"><i class="fa fa-globe"></i></a>
+    </li>
+</ul>
+
+
 <!-- end:: Header Mobile -->
 <div class="kt-grid kt-grid--hor kt-grid--root">
     <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
@@ -252,7 +312,7 @@ background-size: 100% 350px;"
                                                     href="church_workers"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                        class="kt-menu__link-text">Church Workers</span></a>
+                                                        class="kt-menu__link-text">Branch Church Workers</span></a>
                                             </li>
 
                                         </ul>
@@ -276,9 +336,9 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/ms/branch/services.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="services"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -286,9 +346,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/attendance_search.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="attendance_search"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -300,10 +360,10 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/branch/admin_staff.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/admin_staffpaydetails.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/admin_staffpaysearch.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/admin_staffpay.php"
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                 $_SERVER['PHP_SELF'] == "/branch/#paydetails.php" ||
+                                 $_SERVER['PHP_SELF'] == "/branch/#paysearch.php" ||
+                                 $_SERVER['PHP_SELF'] == "/branch/#pay.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -317,9 +377,9 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -327,9 +387,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -337,9 +397,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -347,9 +407,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -357,9 +417,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -367,9 +427,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -377,9 +437,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_staff.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staff"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -393,14 +453,14 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/branch/admin_payments.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/admin_accentry.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/admin_cashbook.php"
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                        <span class="kt-menu__link-text">SMS
+                                        <span class="kt-menu__link-text">Accounts
                                             <i class="fa fa-caret-down ml-2"></i> </span>
                                         <i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
@@ -409,9 +469,9 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_payments.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_payments"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -419,9 +479,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_accentry.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_accentry"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -429,33 +489,123 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_cashbook.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_cashbook"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Cash Book</span></a>
                                             </li>
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_accsearch.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_accsearch"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Search</span></a>
                                             </li>
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/admin_accstatement.php"
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_accstatement"
+                                                    href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Account Statement</span></a>
                                             </li>
 
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php"
+
+                                    ? "kt-menu__item--here" : ""); ?>"
+                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                        <span class="kt-menu__link-text">Birthdays
+                                            <i class="fa fa-caret-down ml-2"></i> </span>
+                                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                        <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="#"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">View Celebrants</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="#"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Send Messages</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/branch/#.php"
+
+                                    ? "kt-menu__item--here" : ""); ?>"
+                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                        <span class="kt-menu__link-text">Asset Registry
+                                            <i class="fa fa-caret-down ml-2"></i> </span>
+                                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                        <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="#"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Add Categories</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="#"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Add Assets</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="#"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">View/Search</span></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -467,17 +617,6 @@ background-size: 100% 350px;"
 
                     <!-- end: Header Menu -->        <!-- begin:: Header Topbar -->
                     <div class="kt-header__topbar kt-grid__item">
-                        <!--begin: Search -->
-                        <div class="kt-header__topbar-item">
-                            <div class="kt-header__topbar-wrapper mt-2" data-offset="10px,0px">
-                                <span class="kt-header__topbar-icon">
-                                    <a href="../../">
-                                        <i class="fa fa-globe"></i>
-                                    </a> 				<!--<i class="flaticon2-search-1"></i>-->
-                                </span>
-                            </div>
-                        </div>
-                        <!--end: Search -->
 
                         <!--begin: Search -->
                         <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown"
