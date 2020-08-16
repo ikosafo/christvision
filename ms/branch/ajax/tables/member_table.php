@@ -1,6 +1,7 @@
 <?php include('../../../../config.php');
 $branch = $_SESSION['branch'];
 $pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY surname,firstname,othername");
+
 ?>
 <style>
     .dataTables_filter {

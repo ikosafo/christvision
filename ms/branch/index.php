@@ -1,4 +1,6 @@
-<?php require('includes/header.php') ?>
+<?php require('includes/header.php');
+$branch = $_SESSION['branch'];
+?>
 
     <!-- begin:: Subheader -->
     <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
@@ -26,7 +28,6 @@
 
                                                     <div class="kt-widget__subhead">
                                                         <a href="#"><i class="flaticon2-user-1"></i><?php echo $_SESSION['username']; ?></a>
-                                                        <a href="#"><i class="flaticon2-calendar-3"></i><?php echo $_SESSION['user_type']; ?></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -35,10 +36,24 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Property</span>
-                                                        <span class="kt-widget__value"><span><i class="la la-home"></i> </span>
+                                                        <span class="kt-widget__title">Total Members</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon-users-1"></i> </span>
+                                                            <?php
+                                                            $getperm = $mysqli->query("select * from `member` where
+                                                             branch = '$branch'");
+                                                            echo mysqli_num_rows($getperm);
+                                                            ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="kt-widget__item">
+                                                    <div class="kt-widget__details">
+                                                        <span class="kt-widget__title">Males</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon2-user"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_property`");
+                                                        $getperm = $mysqli->query("select * from `member` where
+                                                             gender = 'Male' and branch = '$branch'");
                                                         echo mysqli_num_rows($getperm);
                                                         ?>
                                                         </span>
@@ -47,10 +62,11 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Tenant</span>
-                                                        <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
+                                                        <span class="kt-widget__title">Females</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon2-user-1"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_tenant`");
+                                                        $getperm = $mysqli->query("select * from `member` where
+                                                              gender = 'Female' and branch = '$branch'");
                                                         echo mysqli_num_rows($getperm);
                                                         ?>
                                                         </span>
@@ -59,10 +75,11 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Staff</span>
-                                                        <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
+                                                        <span class="kt-widget__title">Church Workers</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon-users"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_staff`");
+                                                        $getperm = $mysqli->query("select * from `branchworker`
+                                                                 where branch = '$branch'");
                                                         echo mysqli_num_rows($getperm);
                                                         ?>
                                                         </span>
@@ -71,12 +88,36 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Billing</span>
-                                                        <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
+                                                        <span class="kt-widget__title">Departments</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon-folder-1"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_billing`");
+                                                        $getperm = $mysqli->query("select * from `department` where branch = '$branch'");
                                                         echo mysqli_num_rows($getperm);
                                                         ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="kt-widget__item">
+                                                    <div class="kt-widget__details">
+                                                        <span class="kt-widget__title">Cells</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon-folder-1"></i> </span>
+                                                            <?php
+                                                            $getperm = $mysqli->query("select * from `cell` where branch = '$branch'");
+                                                            echo mysqli_num_rows($getperm);
+                                                            ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="kt-widget__item">
+                                                    <div class="kt-widget__details">
+                                                        <span class="kt-widget__title">Ministries</span>
+                                                        <span class="kt-widget__value"><span><i class="flaticon-folder-1"></i> </span>
+                                                            <?php
+                                                            $getperm = $mysqli->query("select * from `ministry` where branch = '$branch'");
+                                                            echo mysqli_num_rows($getperm);
+                                                            ?>
                                                         </span>
                                                     </div>
                                                 </div>

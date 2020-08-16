@@ -60,6 +60,10 @@ if (!isset($_SESSION['username'])) {
         .my-float{
             margin-top:22px;
         }
+
+        .kt-portlet {
+            margin-top: 0.5% !important;
+        }
     </style>
 
     <script type="text/javascript">
