@@ -41,13 +41,19 @@ $pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY
                             <span style="width: 294px;">
                                 <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
-                                        <img style="width: 40px;height: 40px"
-                                             src="../<?php
-                                             $memberid = $fetch['memberid'];
-                                             $getimage = $mysqli->query("select * from `member_images` where memberid = '$memberid'");
-                                             $resimage = $getimage->fetch_assoc();
-                                             $theimage = $resimage['image_location'];
-                                             echo $theimage ?>">
+                                        <?php
+                                        $memberid = $fetch['memberid'];
+                                        $getimage = $mysqli->query("select * from `member_images` where memberid = '$memberid'");
+                                        $resimage = $getimage->fetch_assoc();
+                                        $theimage = $resimage['image_location'];
+                                        if ($theimage != "") { ?>
+                                            <img style="width: 40px;height: 40px"
+                                             src="../<?php echo $theimage ?>">
+                                       <?php } else {
+                                            echo "";
+                                        }
+                                        ?>
+
                                     </div>
                                     <div class="kt-user-card-v2__details">
                                         <a class="kt-user-card-v2__name view_member"
