@@ -22,7 +22,8 @@ $branch = $_SESSION['branch'];
 
 <?php
 $today = date('Y-m-d H:i:s');
-$chkattendance = $mysqli->query("select * from service_config where branch = '$branch' and datefrom <= '$today' AND dateto >= '$today'");
+$chkattendance = $mysqli->query("select * from service_config where branch = '$branch' and
+                                   datefrom <= '$today' AND dateto >= '$today'");
 $getcount = mysqli_num_rows($chkattendance);
 $resattendance = $chkattendance->fetch_assoc();
 $configid = $resattendance['configid'];
