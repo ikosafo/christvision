@@ -100,9 +100,15 @@ if ($getcount == '1') { ?>
                             </td>
                             <td>
                                 <?php
-                                $getstatus = $mysqli->query("select * from attendance where configid = '$configid'")
+                                $getstatus = $mysqli->query("select * from attendance where configid = '$configid' and
+                                                             memberid = '$memberid' and status = '1'");
+                                if (mysqli_num_rows($getstatus) == '1') { ?>
+                                    <span class="kt-badge  kt-badge--success kt-badge--inline kt-badge--pill">Present</span>
+                               <?php } else { ?>
+                                    <span class="kt-badge  kt-badge--danger kt-badge--inline kt-badge--pill">Absent</span>
+                                <?php }
                                 ?>
-                                <span class="kt-badge  kt-badge--danger kt-badge--inline kt-badge--pill">Absent</span>
+
                             </td>
                             <td>
                             <span>
@@ -112,25 +118,33 @@ if ($getcount == '1') { ?>
 
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="kt-nav">
+                                            <?php
+                                            if (mysqli_num_rows($getstatus) == '1') { ?>
+                                            <li class="kt-nav__item">
+                                                <a class="kt-nav__link mark_absent"
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
+                                                        class="kt-nav__link-icon flaticon2-cross"></i>
+                                                    <span class="kt-nav__link-text">Mark as Absent</span>
+                                                </a>
+                                            </li>
+                                            <?php } else { ?>
+                                                <li class="kt-nav__item">
+                                                    <a class="kt-nav__link mark_present"
+                                                       member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
+                                                            class="kt-nav__link-icon flaticon2-check-mark"></i>
+                                                        <span class="kt-nav__link-text">Mark as Present</span>
+                                                    </a>
+                                                </li>
+                                            <?php }
+                                            ?>
                                             <li class="kt-nav__item">
                                                 <a class="kt-nav__link view_member"
                                                    member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-file"></i>
-                                                    <span class="kt-nav__link-text">View</span>
+                                                    <span class="kt-nav__link-text">View History</span>
                                                 </a>
                                             </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_member"
-                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_member"
-                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -163,55 +177,13 @@ if ($getcount == '1') { ?>
     });
 
 
-    $(document).off('click', '.view_member').on('click', '.view_member', function () {
+    $(document).off('click', '.mark_present').on('click', '.mark_present', function () {
         var member_index = $(this).attr('member_index');
-        //alert(member_index);
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/viewdetails_member.php",
-            data: {
-                member_index: member_index
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#memberform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-
-    $(document).off('click', '.edit_member').on('click', '.edit_member', function () {
-        var member_index = $(this).attr('member_index');
-        //alert(member_index)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_member.php",
-            data: {
-                member_index: member_index
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#memberform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-    $(document).off('click', '.delete_member').on('click', '.delete_member', function () {
-        var member_index = $(this).attr('member_index');
-        //alert(member_index);
+        var configid = '<?php echo $configid ?>';
+        //alert(member_index+' '+configid);
 
         $.confirm({
-            title: 'Delete Member!',
+            title: 'Mark Present!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -220,24 +192,25 @@ if ($getcount == '1') { ?>
                     backdrop: 'static',
                     keyboard: false,
                     action: function () {
-                        $.alert('Data is safe');
+                        $.alert('Still Absent!');
                     }
                 },
                 yes: {
-                    text: 'Yes, Delete it!',
+                    text: 'Yes, Continue!',
                     btnClass: 'btn-blue',
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_member.php",
+                            url: "ajax/queries/mark_present.php",
                             data: {
-                                member_index: member_index
+                                member_index: member_index,
+                                configid: configid
                             },
                             dataType: "html",
                             success: function (text) {
                                 //alert(text);
                                 $.ajax({
-                                    url: "ajax/tables/member_table.php",
+                                    url: "ajax/tables/attendance_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -247,7 +220,74 @@ if ($getcount == '1') { ?>
                                         })
                                     },
                                     success: function (text) {
-                                        $('#membertable_div').html(text);
+                                        $('#attendancetable_div').html(text);
+                                    },
+                                    error: function (xhr, ajaxOptions, thrownError) {
+                                        alert(xhr.status + " " + thrownError);
+                                    },
+                                    complete: function () {
+                                        KTApp.unblockPage();
+                                    },
+                                });
+                            },
+
+                            complete: function () {
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + " " + thrownError);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    });
+
+
+    $(document).off('click', '.mark_absent').on('click', '.mark_absent', function () {
+        var member_index = $(this).attr('member_index');
+        var configid = '<?php echo $configid ?>';
+        //alert(member_index+' '+configid);
+
+        $.confirm({
+            title: 'Mark Absent!',
+            content: 'Are you sure to continue?',
+            buttons: {
+                no: {
+                    text: 'No',
+                    keys: ['enter', 'shift'],
+                    backdrop: 'static',
+                    keyboard: false,
+                    action: function () {
+                        $.alert('Still Present!');
+                    }
+                },
+                yes: {
+                    text: 'Yes, Continue!',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        $.ajax({
+                            type: "POST",
+                            url: "ajax/queries/mark_absent.php",
+                            data: {
+                                member_index: member_index,
+                                configid: configid
+                            },
+                            dataType: "html",
+                            success: function (text) {
+                                //alert(text);
+                                $.ajax({
+                                    url: "ajax/tables/attendance_table.php",
+                                    beforeSend: function () {
+                                        KTApp.blockPage({
+                                            overlayColor: "#000000",
+                                            type: "v2",
+                                            state: "success",
+                                            message: "Please wait..."
+                                        })
+                                    },
+                                    success: function (text) {
+                                        $('#attendancetable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
