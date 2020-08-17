@@ -19,8 +19,8 @@
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
-                                    Configuration
-                                    <small>Ministries</small>
+                                    Attendance
+                                    <small>Take Attendance</small>
                                 </h3>
                             </div>
                         </div>
@@ -28,11 +28,14 @@
                         <!--begin::Form-->
 
                         <div class="form-group row">
-                            <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="ministryform_div"></div>
+                            <div class="col-md-6 col-xs-12 col-sm-12">
+                                <div id="attendancetable_div"></div>
                             </div>
-                            <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="ministrytable_div"></div>
+                            <div class="col-md-3 col-xs-12 col-sm-12">
+                                <div id="attendancevisform_div"></div>
+                            </div>
+                            <div class="col-md-3 col-xs-12 col-sm-12">
+                                <div id="attendancevistable_div"></div>
                             </div>
                         </div>
                         <!--end::Form-->
@@ -54,7 +57,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/ministry_form.php",
+        url: "ajax/tables/attendance_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -64,7 +67,7 @@
             })
         },
         success: function (text) {
-            $('#ministryform_div').html(text);
+            $('#attendancetable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -74,10 +77,9 @@
         },
 
     });
-
 
     $.ajax({
-        url: "ajax/tables/ministry_table.php",
+        url: "ajax/forms/attendancevis_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -87,7 +89,7 @@
             })
         },
         success: function (text) {
-            $('#ministrytable_div').html(text);
+            $('#attendancevisform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -98,5 +100,26 @@
 
     });
 
+    $.ajax({
+        url: "ajax/tables/attendancevis_table.php",
+        beforeSend: function () {
+            KTApp.blockPage({
+                overlayColor: "#000000",
+                type: "v2",
+                state: "success",
+                message: "Please wait..."
+            })
+        },
+        success: function (text) {
+            $('#attendancevistable_div').html(text);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status + " " + thrownError);
+        },
+        complete: function () {
+            KTApp.unblockPage();
+        },
+
+    });
 </script>
 

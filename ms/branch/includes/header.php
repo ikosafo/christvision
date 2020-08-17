@@ -321,6 +321,8 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/branch/services.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/attendanceconfig.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/takeattendance.php" ||
                                 $_SERVER['PHP_SELF'] == "/branch/attendance_search.php"
 
 
@@ -336,13 +338,33 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/ms/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/services.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="services"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Services</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/attendanceconfig.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="attendanceconfig"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Configure Attendance</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/takeattendance.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="takeattendance"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Take Attendance</span></a>
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
