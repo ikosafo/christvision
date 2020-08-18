@@ -323,7 +323,7 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/branch/services.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/attendanceconfig.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/takeattendance.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/attendance_search.php"
+                                $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearch.php"
 
 
                                     ? "kt-menu__item--here" : ""); ?>"
@@ -368,9 +368,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearch.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="attendancesearch"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
