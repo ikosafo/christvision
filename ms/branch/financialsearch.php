@@ -62,12 +62,12 @@
                                     <div class="kt-form__control">
                                         <select class="form-control bootstrap-select" id="fin_type">
                                             <option value="">Select...</option>
-                                            <option value="1">Special Offerings/Seeds</option>
-                                            <option value="2">Tithe</option>
-                                            <option value="3">Welfare</option>
-                                            <option value="4">First Fruit</option>
-                                            <option value="5">Contributions</option>
-                                            <option value="6">Ministry Partners</option>
+                                            <option value="Special Offerings/Seeds">Special Offerings/Seeds</option>
+                                            <option value="Tithe">Tithe</option>
+                                            <option value="Welfare">Welfare</option>
+                                            <option value="First Fruit">First Fruit</option>
+                                            <option value="Contributions">Contributions</option>
+                                            <option value="Ministry Partners">Ministry Partners</option>
                                         </select>
                                     </div>
                                 </div>
@@ -112,7 +112,17 @@
 
 
 <script>
+    $('#datefrom').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom"
+    });
 
+    $('#dateto').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom"
+    });
 
     $("#load_btn").click(function(){
         var datefrom = $("#datefrom").val();

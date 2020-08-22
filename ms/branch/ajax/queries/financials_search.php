@@ -3,7 +3,7 @@
 $branch = $_SESSION['branch'];
 $datefrom = $_POST['datefrom'];
 $dateto = $_POST['dateto'];
-$fin_types = $_POST['fin_type'];
+$fin_type = $_POST['fin_type'];
 
 
 ?>
@@ -23,17 +23,8 @@ $fin_types = $_POST['fin_type'];
         <small><?php echo $dateto ?></small>
     </div>
     <div class="col-md-4">
-        STATUS:
-        <small><?php if ($attendance_status == '1') {
-                echo "Present";
-            }
-            else if ($attendance_status == '0'){
-                echo "Absent";
-            } else {
-                echo "All";
-            }
-            ?>
-        </small>
+        TYPE:
+        <small><?php echo $fin_type?></small>
     </div>
 </div>
 <hr/>
@@ -53,7 +44,7 @@ $fin_types = $_POST['fin_type'];
         </div>
 
         <div class="table-responsive">
-            <table id="data-table" class="table" style="margin-top: 3% !important;">
+            <!--<table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
                     <th>Service Name</th>
@@ -66,74 +57,74 @@ $fin_types = $_POST['fin_type'];
 
                 <tbody>
                 <?php
-                while ($fetch = $getatt->fetch_assoc()) {
-                    ?>
+/*                while ($fetch = $getatt->fetch_assoc()) {
+                    */?>
                     <tr>
                         <td>
-                            <?php $configid = $fetch['configid'];
+                            <?php /*$configid = $fetch['configid'];
                             $getservice = $mysqli->query("select * from service_config where configid = '$configid'");
                             $resservice = $getservice->fetch_assoc();
                             $serviceid = $resservice['serviceid'];
                             $getname = $mysqli->query("select * from service where id = '$serviceid'");
                             $resname = $getname->fetch_assoc();
                             echo $resname['service_name'];
-                            ?>
+                            */?>
                         </td>
                         <td>
                             <?php
-                            echo $resservice['datefrom'].' - '.$resservice['dateto'];
-                            ?>
+/*                            echo $resservice['datefrom'].' - '.$resservice['dateto'];
+                            */?>
                         </td>
                         <td class="kt-datatable__member">
                             <span style="width: 294px;">
                                 <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
                                         <?php
-                                        $memberid = $fetch['memberid'];
+/*                                        $memberid = $fetch['memberid'];
                                         $getimage = $mysqli->query("select * from `member_images` where memberid = '$memberid'");
                                         $resimage = $getimage->fetch_assoc();
                                         $theimage = $resimage['image_location'];
-                                        if ($theimage != "") { ?>
+                                        if ($theimage != "") { */?>
                                             <img style="width: 40px;height: 40px"
-                                                 src="../<?php echo $theimage ?>">
-                                        <?php } else {
+                                                 src="../<?php /*echo $theimage */?>">
+                                        <?php /*} else {
                                             echo "";
                                         }
-                                        ?>
+                                        */?>
 
                                     </div>
                                     <div class="kt-user-card-v2__details">
                                         <a class="kt-user-card-v2__name view_member"
-                                           member_index="<?php echo $fetch['memberid'] ?>"
+                                           member_index="<?php /*echo $fetch['memberid'] */?>"
                                            href="#">
-                                            <?php $getmember = $mysqli->query("SELECT * FROM `member` WHERE memberid = '$memberid'");
+                                            <?php /*$getmember = $mysqli->query("SELECT * FROM `member` WHERE memberid = '$memberid'");
                                             $resmember = $getmember->fetch_assoc();
 
-                                            echo $resmember['surname'].' '.$resmember['firstname'].' '.$resmember['othername'] ?>
+                                            echo $resmember['surname'].' '.$resmember['firstname'].' '.$resmember['othername'] */?>
                                         </a>
-                                        <span class="kt-user-card-v2__email"><?php echo $resmember['gender'] ?>, <?php echo $resmember['telephone'] ?></span></div>
+                                        <span class="kt-user-card-v2__email"><?php /*echo $resmember['gender'] */?>, <?php /*echo $resmember['telephone'] */?></span></div>
                                 </div>
                             </span>
                         </td>
                         <td>
-                            <?php echo $fetch['datereported'] ?>
+                            <?php /*echo $fetch['datereported'] */?>
                         </td>
                         <td>
                             <?php
-                            $getstatus = $fetch['status'];
-                            if ($getstatus == '1') { ?>
+/*                            $getstatus = $fetch['status'];
+                            if ($getstatus == '1') { */?>
                                 <span class="kt-badge  kt-badge--success kt-badge--inline kt-badge--pill">Present</span>
-                            <?php } else { ?>
+                            <?php /*} else { */?>
                                 <span class="kt-badge  kt-badge--danger kt-badge--inline kt-badge--pill">Absent</span>
-                            <?php }
-                            ?>
+                            <?php /*}
+                            */?>
 
                         </td>
                     </tr>
-                <?php } ?>
+                <?php /*} */?>
                 </tbody>
 
-            </table>
+            </table>-->
         </div>
     </div>
 </div>
