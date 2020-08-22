@@ -136,3 +136,10 @@ function getfincontributions($memberid) {
                         Pay Contributions
     </button>';
 }
+
+function getfinmpartner($memberid) {
+    return '<button class="btn btn btn-label-facebook paympartner_btn"
+                    i_index='.$memberid.'>
+                        Pay Partnership Dues
+    </button>';
+}

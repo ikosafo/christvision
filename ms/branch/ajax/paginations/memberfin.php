@@ -114,6 +114,18 @@ else if ($financialtype == 'Contributions') {
         );
     }
 }
+else if ($financialtype == 'Ministry Partners') {
+    while ($row = mysqli_fetch_assoc($empRecords)) {
+        $data[] = array(
+            "member"=>getmemberdetails($row['memberid']),
+            "residence"=>$row['residence'],
+            "occupation"=>$row['occupation'],
+            "maritalstatus"=>$row['maritalstatus'],
+            "department"=>getdepartment($row['department']),
+            "action"=>getfinmpartner($row['memberid'])
+        );
+    }
+}
 
 
 
