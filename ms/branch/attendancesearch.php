@@ -144,7 +144,7 @@
         if (datefrom > dateto) {
             error += 'Please select correct date range \n';
         }
-        
+
 
         if (error == "") {
             $.ajax({

@@ -13,14 +13,12 @@ else {
                               datereported >= '$datefrom' AND datereported <= '$dateto' AND status = '$attendance_status'");
 }
 
-
 ?>
 <style>
     .dataTables_filter {
         display: none;
     }
 </style>
-
 
     <div class="row">
         <div class="col-md-4">

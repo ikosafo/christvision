@@ -382,7 +382,7 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/offering.php" ||
                                  $_SERVER['PHP_SELF'] == "/branch/#paydetails.php" ||
                                  $_SERVER['PHP_SELF'] == "/branch/#paysearch.php" ||
                                  $_SERVER['PHP_SELF'] == "/branch/#pay.php"
@@ -399,13 +399,13 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/offering.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="offering"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
-                                                        class="kt-menu__link-text">Offerings</span></a>
+                                                        class="kt-menu__link-text">Special Offerings/Seeds</span></a>
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
