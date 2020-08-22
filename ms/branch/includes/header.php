@@ -383,8 +383,8 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/branch/offering.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/#paydetails.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/#paysearch.php" ||
+                                 $_SERVER['PHP_SELF'] == "/ms/branch/tithe.php" ||
+                                 $_SERVER['PHP_SELF'] == "/ms/branch/welfare.php" ||
                                  $_SERVER['PHP_SELF'] == "/branch/#pay.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
@@ -409,7 +409,7 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/tithe.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/tithe.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
                                                     href="tithe"
                                                     class="kt-menu__link "><i
@@ -419,9 +419,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/welfare.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="welfare"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span

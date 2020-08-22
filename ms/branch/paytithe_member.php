@@ -3,7 +3,7 @@ include('../../config.php');
 
 $memberid = $_POST['id_index'];
 $branch = $_POST['branch'];
-$paymenttype = 'Offering';
+$paymenttype = 'Tithe';
 //$user_id = $_SESSION['user_id'];
 
 $app = $mysqli->query("select * from `member` where memberid = '$memberid'");
@@ -17,11 +17,9 @@ $result = $app->fetch_assoc();
         if (charCode != 46 && charCode > 31
             && (charCode < 48 || charCode > 57))
             return false;
-
         return true;
     }
 </script>
-
 
 
 <section class="page-content container-fluid">
@@ -31,7 +29,7 @@ $result = $app->fetch_assoc();
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Payment of Offering for <?php echo $result['surname'] . ' ' .$result['firstname'] . ' ' .$result['othername'] ?>
+                            Payment of Tithe for <?php echo $result['surname'] . ' ' .$result['firstname'] . ' ' .$result['othername'] ?>
                         </h3>
                     </div>
                 </div>
@@ -39,9 +37,9 @@ $result = $app->fetch_assoc();
                 <form class="">
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <label for="purpose">Purpose</label>
-                            <textarea class="form-control" id="purpose" rows="3"
-                                      placeholder="Enter Purpose"></textarea>
+                            <label for="paymentfor">Payment For</label>
+                            <input type="text" class="form-control" id="paymentfor"
+                                   placeholder="Select Tithe Payment For">
                         </div>
                         <div class="form-group">
                             <label for="amount">Amount</label>
@@ -49,11 +47,20 @@ $result = $app->fetch_assoc();
                                    placeholder="Enter amount" onkeypress="return isNumberKey(event)">
                         </div>
                         <div class="form-group">
+                            <label for="payment_mode">Select Payment Mode</label>
+                            <div class="kt-form__control">
+                                <select class="form-control bootstrap-select" id="payment_mode">
+                                    <option value="Cash">Cash</option>
+                                    <option value="Cheque">Cheque</option>
+                                    <option value="Mobile Money">Mobile Money</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="datepaid">Date Paid</label>
                             <input type="text" class="form-control" id="datepaid"
                                    placeholder="Select Date Paid" value="<?php echo date("Y-m-d"); ?>">
                         </div>
-
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
@@ -77,7 +84,6 @@ $result = $app->fetch_assoc();
                 <!--begin::Form-->
 
                 <div id="paymenttable_div"></div>
-
                 <!--end::Form-->
             </div>
         </div>
@@ -127,16 +133,26 @@ $result = $app->fetch_assoc();
         orientation: "bottom"
     });
 
+    $('#paymentfor').datepicker({
+        format: 'yyyy-mm',
+        autoclose: true,
+        orientation: "bottom",
+        startView: "months",
+        minViewMode: "months"
+    });
 
-   $("#savepaymentbtn").click(function () {
-    var purpose = $("#purpose").val();
-    var amount = $("#amount").val();
-    var datepaid = $("#datepaid").val();
+    $("#payment_mode").selectpicker();
 
-    var error = '';
-        if (purpose == "") {
-            error += 'Please enter purpose of offering \n';
-            $("#purpose").focus();
+    $("#savepaymentbtn").click(function () {
+        var paymentfor = $("#paymentfor").val();
+        var amount = $("#amount").val();
+        var datepaid = $("#datepaid").val();
+        var payment_mode = $("#payment_mode").val();
+
+        var error = '';
+        if (paymentfor == "") {
+            error += 'Please select payment for \n';
+            $("#paymentfor").focus();
         }
         if (amount == "") {
             error += 'Please enter amount \n';
@@ -149,7 +165,7 @@ $result = $app->fetch_assoc();
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/payoffering.php",
+                url: "ajax/queries/paytithe.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -162,39 +178,40 @@ $result = $app->fetch_assoc();
                     memberid: '<?php echo $memberid ?>',
                     branch: '<?php echo $branch ?>',
                     amount:amount,
-                    purpose:purpose,
+                    paymentfor:paymentfor,
+                    payment_mode:payment_mode,
                     datepaid:datepaid
                 },
                 success: function (text) {
-                        //alert(text);
-                        $.notify("Payment Made", "success", {position: "top center"});
-                        $("#mem-table").DataTable().ajax.reload(null, false );
-                        $.ajax({
-                            type:"post",
-                            url: "ajax/tables/mempayment_table.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            data:{
-                                memberid:'<?php echo $memberid ?>',
-                                paymenttype:'<?php echo $paymenttype ?>',
-                                branch:'<?php echo $branch ?>'
-                            },
-                            success: function (text) {
-                                $('#paymenttable_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
-                        });
+                    //alert(text);
+                    $.notify("Payment Made", "success", {position: "top center"});
+                    $("#mem-table").DataTable().ajax.reload(null, false );
+                    $.ajax({
+                        type:"post",
+                        url: "ajax/tables/mempayment_table.php",
+                        beforeSend: function () {
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
+                        },
+                        data:{
+                            memberid:'<?php echo $memberid ?>',
+                            paymenttype:'<?php echo $paymenttype ?>',
+                            branch:'<?php echo $branch ?>'
+                        },
+                        success: function (text) {
+                            $('#paymenttable_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                        complete: function () {
+                            KTApp.unblockPage();
+                        },
+                    });
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);
@@ -207,11 +224,6 @@ $result = $app->fetch_assoc();
         else {
             $.notify(error, {position: "top center"});
         }
-    return false;
-});
-
-
-
-
-
+        return false;
+    });
 </script>
