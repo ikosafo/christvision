@@ -121,3 +121,18 @@ function getfinwelfare($memberid) {
                         Pay Welfare
     </button>';
 }
+
+function getfinff($memberid) {
+    return '<button class="btn btn btn-label-facebook payff_btn"
+                    i_index='.$memberid.'>
+                        Pay First Fruit
+    </button>';
+}
+
+
+function getfincontributions($memberid) {
+    return '<button class="btn btn btn-label-facebook paycontributions_btn"
+                    i_index='.$memberid.'>
+                        Pay Contributions
+    </button>';
+}

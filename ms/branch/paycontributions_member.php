@@ -3,7 +3,7 @@ include('../../config.php');
 
 $memberid = $_POST['id_index'];
 $branch = $_POST['branch'];
-$paymenttype = 'Offering';
+$paymenttype = 'Contributions';
 //$user_id = $_SESSION['user_id'];
 
 $app = $mysqli->query("select * from `member` where memberid = '$memberid'");
@@ -31,7 +31,7 @@ $result = $app->fetch_assoc();
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Payment of Offering for <?php echo $result['surname'] . ' ' .$result['firstname'] . ' ' .$result['othername'] ?>
+                            Payment of Contributions for <?php echo $result['surname'] . ' ' .$result['firstname'] . ' ' .$result['othername'] ?>
                         </h3>
                     </div>
                 </div>
@@ -128,14 +128,14 @@ $result = $app->fetch_assoc();
     });
 
 
-   $("#savepaymentbtn").click(function () {
-    var purpose = $("#purpose").val();
-    var amount = $("#amount").val();
-    var datepaid = $("#datepaid").val();
+    $("#savepaymentbtn").click(function () {
+        var purpose = $("#purpose").val();
+        var amount = $("#amount").val();
+        var datepaid = $("#datepaid").val();
 
-    var error = '';
+        var error = '';
         if (purpose == "") {
-            error += 'Please enter purpose of offering \n';
+            error += 'Please enter purpose of contribution \n';
             $("#purpose").focus();
         }
         if (amount == "") {
@@ -149,7 +149,7 @@ $result = $app->fetch_assoc();
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/payoffering.php",
+                url: "ajax/queries/paycontibutions.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -166,35 +166,35 @@ $result = $app->fetch_assoc();
                     datepaid:datepaid
                 },
                 success: function (text) {
-                        //alert(text);
-                        $.notify("Payment Made", "success", {position: "top center"});
-                        $("#mem-table").DataTable().ajax.reload(null, false );
-                        $.ajax({
-                            type:"post",
-                            url: "ajax/tables/mempayment_table.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            data:{
-                                memberid:'<?php echo $memberid ?>',
-                                paymenttype:'<?php echo $paymenttype ?>',
-                                branch:'<?php echo $branch ?>'
-                            },
-                            success: function (text) {
-                                $('#paymenttable_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
-                        });
+                    //alert(text);
+                    $.notify("Payment Made", "success", {position: "top center"});
+                    $("#mem-table").DataTable().ajax.reload(null, false );
+                    $.ajax({
+                        type:"post",
+                        url: "ajax/tables/mempayment_table.php",
+                        beforeSend: function () {
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
+                        },
+                        data:{
+                            memberid:'<?php echo $memberid ?>',
+                            paymenttype:'<?php echo $paymenttype ?>',
+                            branch:'<?php echo $branch ?>'
+                        },
+                        success: function (text) {
+                            $('#paymenttable_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                        complete: function () {
+                            KTApp.unblockPage();
+                        },
+                    });
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);
@@ -207,7 +207,11 @@ $result = $app->fetch_assoc();
         else {
             $.notify(error, {position: "top center"});
         }
-    return false;
-});
+        return false;
+    });
+
+
+
+
 
 </script>

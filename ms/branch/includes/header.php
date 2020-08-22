@@ -385,7 +385,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/branch/offering.php" ||
                                  $_SERVER['PHP_SELF'] == "/ms/branch/tithe.php" ||
                                  $_SERVER['PHP_SELF'] == "/ms/branch/welfare.php" ||
-                                 $_SERVER['PHP_SELF'] == "/branch/#pay.php"
+                                 $_SERVER['PHP_SELF'] == "/ms/branch/firstfruit.php" ||
+                                 $_SERVER['PHP_SELF'] == "/ms/branch/contributions.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -429,9 +430,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/firstfruit.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="firstfruit"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
@@ -439,9 +440,9 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/contributions.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="contributions"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span

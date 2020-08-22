@@ -90,6 +90,30 @@ else if ($financialtype == 'Welfare') {
         );
     }
 }
+else if ($financialtype == 'First Fruit') {
+    while ($row = mysqli_fetch_assoc($empRecords)) {
+        $data[] = array(
+            "member"=>getmemberdetails($row['memberid']),
+            "residence"=>$row['residence'],
+            "occupation"=>$row['occupation'],
+            "maritalstatus"=>$row['maritalstatus'],
+            "department"=>getdepartment($row['department']),
+            "action"=>getfinff($row['memberid'])
+        );
+    }
+}
+else if ($financialtype == 'Contributions') {
+    while ($row = mysqli_fetch_assoc($empRecords)) {
+        $data[] = array(
+            "member"=>getmemberdetails($row['memberid']),
+            "residence"=>$row['residence'],
+            "occupation"=>$row['occupation'],
+            "maritalstatus"=>$row['maritalstatus'],
+            "department"=>getdepartment($row['department']),
+            "action"=>getfincontributions($row['memberid'])
+        );
+    }
+}
 
 
 
