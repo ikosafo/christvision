@@ -13,119 +13,343 @@ $fin_type = $_POST['fin_type'];
     }
 </style>
 
-<div class="row">
-    <div class="col-md-4">
-        START PERIOD:
-        <small><?php echo $datefrom ?></small>
-    </div>
-    <div class="col-md-4">
-        END PERIOD:
-        <small><?php echo $dateto ?></small>
-    </div>
-    <div class="col-md-4">
-        TYPE:
-        <small><?php echo $fin_type?></small>
-    </div>
-</div>
-<hr/>
 
+<hr/>
 
 <div class="kt-section">
 
     <div class="kt-section__content responsive">
-        <div class="kt-searchbar">
-            <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">
-                                <i class="la la-search"></i>
-                            </span></div>
-                <input type="text" id="data_search" class="form-control"
-                       placeholder="Search..." aria-describedby="basic-addon1">
+
+        <div class="row">
+            <div class="col-md-4">
+                START PERIOD:
+                <small><?php echo $datefrom ?></small>
+            </div>
+            <div class="col-md-4">
+                END PERIOD:
+                <small><?php echo $dateto ?></small>
+            </div>
+            <div class="col-md-4">
+                TYPE:
+                <small><?php echo $fin_type?></small>
             </div>
         </div>
 
-        <div class="table-responsive">
-            <!--<table id="data-table" class="table" style="margin-top: 3% !important;">
-                <thead>
-                <tr>
-                    <th>Service Name</th>
-                    <th>Service Period</th>
-                    <th>Member</th>
-                    <th>Period Reported</th>
-                    <th>Status</th>
-                </tr>
-                </thead>
 
-                <tbody>
-                <?php
-/*                while ($fetch = $getatt->fetch_assoc()) {
-                    */?>
-                    <tr>
-                        <td>
-                            <?php /*$configid = $fetch['configid'];
-                            $getservice = $mysqli->query("select * from service_config where configid = '$configid'");
-                            $resservice = $getservice->fetch_assoc();
-                            $serviceid = $resservice['serviceid'];
-                            $getname = $mysqli->query("select * from service where id = '$serviceid'");
-                            $resname = $getname->fetch_assoc();
-                            echo $resname['service_name'];
-                            */?>
-                        </td>
-                        <td>
+            <?php
+        if ($fin_type == "Special Offerings/Seeds") {
+            $gettable = $mysqli->query("select * from f_offerings where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Purpose</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['purpose']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
                             <?php
-/*                            echo $resservice['datefrom'].' - '.$resservice['dateto'];
-                            */?>
-                        </td>
-                        <td class="kt-datatable__member">
-                            <span style="width: 294px;">
-                                <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
+                        }
+                        ?>
+                            <tr>
+                                <td>
+                                    <span style="font-weight: 600;font-size: large">
                                         <?php
-/*                                        $memberid = $fetch['memberid'];
-                                        $getimage = $mysqli->query("select * from `member_images` where memberid = '$memberid'");
-                                        $resimage = $getimage->fetch_assoc();
-                                        $theimage = $resimage['image_location'];
-                                        if ($theimage != "") { */?>
-                                            <img style="width: 40px;height: 40px"
-                                                 src="../<?php /*echo $theimage */?>">
-                                        <?php /*} else {
-                                            echo "";
-                                        }
-                                        */?>
+                                        $gettotal = $mysqli->query("select sum(amount) as sumoffering from f_offerings where branch = '$branch' and date_paid
+                                        BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                        $restotal = $gettotal->fetch_assoc();
+                                        echo number_format($restotal['sumoffering'],2);
+                                        ?>
+                                    </span>
+                                </td>
+                                <td colspan="3">
+                                    TOTAL
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
 
-                                    </div>
-                                    <div class="kt-user-card-v2__details">
-                                        <a class="kt-user-card-v2__name view_member"
-                                           member_index="<?php /*echo $fetch['memberid'] */?>"
-                                           href="#">
-                                            <?php /*$getmember = $mysqli->query("SELECT * FROM `member` WHERE memberid = '$memberid'");
-                                            $resmember = $getmember->fetch_assoc();
+        else  if ($fin_type == "Tithe") {
+            $gettable = $mysqli->query("select * from f_tithe where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Payment For</th>
+                            <th>Payment Mode</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                                            echo $resmember['surname'].' '.$resmember['firstname'].' '.$resmember['othername'] */?>
-                                        </a>
-                                        <span class="kt-user-card-v2__email"><?php /*echo $resmember['gender'] */?>, <?php /*echo $resmember['telephone'] */?></span></div>
-                                </div>
-                            </span>
-                        </td>
-                        <td>
-                            <?php /*echo $fetch['datereported'] */?>
-                        </td>
-                        <td>
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['year_month']; ?></td>
+                                <td><?php echo $restable['payment_mode']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
                             <?php
-/*                            $getstatus = $fetch['status'];
-                            if ($getstatus == '1') { */?>
-                                <span class="kt-badge  kt-badge--success kt-badge--inline kt-badge--pill">Present</span>
-                            <?php /*} else { */?>
-                                <span class="kt-badge  kt-badge--danger kt-badge--inline kt-badge--pill">Absent</span>
-                            <?php /*}
-                            */?>
+                        }
+                        ?>
+                            <tr>
+                                <td>
+                                        <span style="font-weight: 600;font-size: large">
+                                            <?php
+                                            $gettotal = $mysqli->query("select sum(amount) as sumtithe from f_tithe where branch = '$branch' and date_paid
+                                            BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                            $restotal = $gettotal->fetch_assoc();
+                                            echo number_format($restotal['sumtithe'],2);
+                                            ?>
+                                        </span>
+                                </td>
+                                <td colspan="3">
+                                    TOTAL
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
 
-                        </td>
-                    </tr>
-                <?php /*} */?>
-                </tbody>
+        else  if ($fin_type == "Welfare") {
+            $gettable = $mysqli->query("select * from f_welfare where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Payment For</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-            </table>-->
-        </div>
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['year_month']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                        <tr>
+                            <td>
+                                        <span style="font-weight: 600;font-size: large">
+                                            <?php
+                                            $gettotal = $mysqli->query("select sum(amount) as sumwelfare from f_welfare where
+                                                        branch = '$branch' and date_paid
+                                            BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                            $restotal = $gettotal->fetch_assoc();
+                                            echo number_format($restotal['sumwelfare'],2);
+                                            ?>
+                                        </span>
+                            </td>
+                            <td colspan="3">
+                                TOTAL
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
+
+        else  if ($fin_type == "First Fruit") {
+            $gettable = $mysqli->query("select * from f_firstfruit where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Payment For</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['year']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                        <tr>
+                            <td>
+                                        <span style="font-weight: 600;font-size: large">
+                                            <?php
+                                            $gettotal = $mysqli->query("select sum(amount) as sumfistfruit from f_firstfruit where
+                                                        branch = '$branch' and date_paid
+                                            BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                            $restotal = $gettotal->fetch_assoc();
+                                            echo number_format($restotal['sumfistfruit'],2);
+                                            ?>
+                                        </span>
+                            </td>
+                            <td colspan="3">
+                                TOTAL
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
+
+        else  if ($fin_type == "Contributions") {
+            $gettable = $mysqli->query("select * from f_contributions where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Purpose</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['purpose']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                            <tr>
+                                <td>
+                                            <span style="font-weight: 600;font-size: large">
+                                                <?php
+                                                $gettotal = $mysqli->query("select sum(amount) as sumcontribution from f_contributions where
+                                                            branch = '$branch' and date_paid
+                                                BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                                $restotal = $gettotal->fetch_assoc();
+                                                echo number_format($restotal['sumcontribution'],2);
+                                                ?>
+                                            </span>
+                                </td>
+                                <td colspan="3">
+                                    TOTAL
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
+
+        else  if ($fin_type == "Ministry Partners") {
+            $gettable = $mysqli->query("select * from f_mpcontributions where branch = '$branch' and date_paid BETWEEN '$datefrom'
+                                   AND '$dateto' ORDER by id DESC");
+            ?>
+            <div class="table-responsive">
+                <div class="kt-portlet__body">
+                    <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Purpose</th>
+                            <th>Date Paid</th>
+                            <th>Entry Period</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+                        while ($restable = $gettable->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $restable['amount']; ?></td>
+                                <td><?php echo $restable['purpose']; ?></td>
+                                <td><?php echo $restable['date_paid']; ?></td>
+                                <td><?php echo $restable['period']; ?></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                            <tr>
+                                <td>
+                                                <span style="font-weight: 600;font-size: large">
+                                                    <?php
+                                                    $gettotal = $mysqli->query("select sum(amount) as sumcontribution from f_mpcontributions where
+                                                                branch = '$branch' and date_paid
+                                                    BETWEEN '$datefrom' AND '$dateto' ORDER by id DESC");
+                                                    $restotal = $gettotal->fetch_assoc();
+                                                    echo number_format($restotal['sumcontribution'],2);
+                                                    ?>
+                                                </span>
+                                </td>
+                                <td colspan="3">
+                                    TOTAL
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>
+                </div>
+            </div>
+        <?php }
+        ?>
+
     </div>
 </div>
 
