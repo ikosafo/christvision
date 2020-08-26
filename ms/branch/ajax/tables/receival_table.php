@@ -24,10 +24,11 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                     ?>
                     <tr>
                         <td><?php $dateyear = $fetch['datequery'];
-                            echo '<span style="text-decoration:underline;text-transform: uppercase;font-weight: 600;font-size: 15px">'.date('F - Y',strtotime($dateyear)).'</span>';
+                            echo '<span style="text-decoration:underline;text-transform: uppercase;
+                               font-weight: 600;font-size: 15px">'.date('Y - F',strtotime($dateyear)).'</span>';
                             $getdetails = $mysqli->query("select * from acc_receivals where
-                                                         branch = '$branch' AND
-SUBSTRING(datereceived, 1, 7) = '$dateyear' order by datereceived DESC");?>
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'
+                                                         order by datereceived DESC");?>
 
                             <table class="table table-sm table-hover">
                                 <thead>
