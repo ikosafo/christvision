@@ -10,12 +10,23 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
     .dataTables_filter {
         display: none;
     }
+
+    .scrollbar-auto {
+        scrollbar-width: thin;
+        height: 550px;
+        width: 105%;
+        overflow-y: scroll;
+    }
 </style>
 
 
 <div class="kt-section">
+    <h5 class="kt-portlet__head-title">
+        ACCOUNT DETAILS
+    </h5>
+    <div class="kt-separator kt-separator--dashed"></div>
 
-    <div class="kt-section__content responsive">
+    <div class="kt-section__content responsive scrollbar-auto">
         <div class="table-responsive">
             <table>
                 <tbody>
@@ -54,7 +65,7 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                 <tr>
                                     <td>
                                         <?php $daterec = $resdetails['datereceived'];
-                                           echo $new_date = date('D-jS', strtotime($daterec));
+                                           echo $new_date = date('jS(D)', strtotime($daterec));
                                         ?>
                                     </td>
                                     <td>
@@ -111,7 +122,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getoffering = $mysqli->query("select sum(offering) as sumoffering from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $resoffering = $getoffering->fetch_assoc();
-                                        echo $offt = $resoffering['sumoffering'];
+                                        $offt = $resoffering['sumoffering'];
+                                        echo number_format($offt,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -119,7 +131,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $gettithe = $mysqli->query("select sum(tithe) as sumtithe from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $restithe = $gettithe->fetch_assoc();
-                                        echo $titt = $restithe['sumtithe'];
+                                        $titt = $restithe['sumtithe'];
+                                        echo number_format($titt,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -127,7 +140,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getyouth = $mysqli->query("select sum(youth) as sumyouth from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $resyouth = $getyouth->fetch_assoc();
-                                        echo $yout = $resyouth['sumyouth'];
+                                        $yout = $resyouth['sumyouth'];
+                                        echo number_format($yout,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -135,7 +149,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getchildren = $mysqli->query("select sum(children) as sumchildren from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $reschildren = $getchildren->fetch_assoc();
-                                        echo $chit = $reschildren['sumchildren'];
+                                        $chit = $reschildren['sumchildren'];
+                                        echo number_format($chit,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -143,7 +158,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getpledge = $mysqli->query("select sum(pledge) as sumpledge from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $respledge = $getpledge->fetch_assoc();
-                                        echo $plet = $respledge['sumpledge'];
+                                        $plet = $respledge['sumpledge'];
+                                        echo number_format($plet,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -151,7 +167,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getseed = $mysqli->query("select sum(seed) as sumseed from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $resseed = $getseed->fetch_assoc();
-                                        echo $seet = $resseed['sumseed'];
+                                        $seet = $resseed['sumseed'];
+                                        echo number_format($seet,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -159,7 +176,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getwelfare = $mysqli->query("select sum(welfare) as sumwelfare from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $reswelfare = $getwelfare->fetch_assoc();
-                                        echo $welt = $reswelfare['sumwelfare'];
+                                        $welt = $reswelfare['sumwelfare'];
+                                        echo number_format($welt,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -167,7 +185,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getfirstfruit = $mysqli->query("select sum(firstfruit) as sumfirstfruit from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $resfirstfruit = $getfirstfruit->fetch_assoc();
-                                        echo $firt = $resfirstfruit['sumfirstfruit'];
+                                        $firt = $resfirstfruit['sumfirstfruit'];
+                                        echo number_format($firt,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -175,7 +194,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getcontribution = $mysqli->query("select sum(contribution) as sumcontribution from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $rescontribution = $getcontribution->fetch_assoc();
-                                        echo $cont = $rescontribution['sumcontribution'];
+                                        $cont = $rescontribution['sumcontribution'];
+                                        echo number_format($cont,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 500">
@@ -183,7 +203,8 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                                         $getpartners = $mysqli->query("select sum(partners) as sumpartners from acc_receivals where
                                                          branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
                                         $respartners = $getpartners->fetch_assoc();
-                                        echo $part = $respartners['sumpartners'];
+                                        $part = $respartners['sumpartners'];
+                                        echo number_format($part,2);
                                         ?>
                                     </td>
                                     <td style="font-weight: 600;color:red">
