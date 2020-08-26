@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="kt-form__control">
                                         <input type="text" class="form-control" id="datefrom"
-                                               placeholder="Select Start Period">
+                                               placeholder="Select Start Period" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="kt-form__control">
                                         <input type="text" class="form-control" id="dateto"
-                                               placeholder="Select Start Period">
+                                               placeholder="Select Start Period" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
