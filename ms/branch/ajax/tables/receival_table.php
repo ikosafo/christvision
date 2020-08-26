@@ -23,12 +23,13 @@ DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') D
                 while ($fetch = $getyearmonth->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $dateyear = $fetch['datequery'];
+                        <td><?php $dateyear = $fetch['datequery'];
+                            echo '<span style="text-decoration:underline;text-transform: uppercase;font-weight: 600;font-size: 15px">'.date('F - Y',strtotime($dateyear)).'</span>';
                             $getdetails = $mysqli->query("select * from acc_receivals where
                                                          branch = '$branch' AND
 SUBSTRING(datereceived, 1, 7) = '$dateyear' order by datereceived DESC");?>
 
-                            <table class="table">
+                            <table class="table table-sm table-hover">
                                 <thead>
                                   <tr>
                                       <th>Date</th>
@@ -51,7 +52,9 @@ SUBSTRING(datereceived, 1, 7) = '$dateyear' order by datereceived DESC");?>
                                   while ($resdetails = $getdetails->fetch_assoc()){ ?>
                                 <tr>
                                     <td>
-                                        <?php echo $resdetails['datereceived'] ?>
+                                        <?php $daterec = $resdetails['datereceived'];
+                                           echo $new_date = date('D-jS', strtotime($daterec));
+                                        ?>
                                     </td>
                                     <td>
                                         <?php echo $off = $resdetails['offering'] ?>
@@ -99,7 +102,7 @@ SUBSTRING(datereceived, 1, 7) = '$dateyear' order by datereceived DESC");?>
                                 <?php }
                                 ?>
                                 <tr>
-                                    <td>
+                                    <td style="font-weight: 500">
                                         TOTAL
                                     </td>
                                     <td style="font-weight: 500">

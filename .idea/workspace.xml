@@ -25,38 +25,65 @@
       <file leaf-file-name="receival_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5125448">
-              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.609319">
+              <caret line="104" column="64" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
               <folding>
-                <element signature="n#style#0;n#td#11;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#0;n#td#12;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#7;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#9;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#10;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#11;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1598414964816" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="797:804" placeholder="select 8 fro..." />
-                <marker date="1598414964816" expanded="true" signature="797:830" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="797:940" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="797:954" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="797:981" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="5289:5473" placeholder="select sum(o..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="5908:6086" placeholder="select sum(t..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="6509:6687" placeholder="select sum(y..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="7113:7297" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="7733:7913" placeholder="select sum(p..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="8339:8515" placeholder="select sum(s..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="8936:9118" placeholder="select sum(w..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="9554:9742" placeholder="select sum(w..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="10192:10384" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598414964816" expanded="true" signature="10838:11022" placeholder="select sum(p..acc_receivals..." />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1598416748123" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="781:865" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="807:832" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="807:849" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="807:865" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="973:980" placeholder="select 8 fro..." />
+                <marker date="1598416748123" expanded="true" signature="973:1006" placeholder="select * fro..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="973:1116" placeholder="select * fro..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="973:1130" placeholder="select * fro..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="973:1157" placeholder="select * fro..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="1233:2414" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="1273:2101" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="1312:2060" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2141:2414" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2303:2414" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2344:2414" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2651:2722" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2819:2890" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="2984:3055" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3149:3220" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3317:3388" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3483:3554" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3647:3718" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3814:3885" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="3984:4055" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="4156:4227" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="4332:4348" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="4349:4573" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="4614:4933" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="4677:4933" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="5044:5067" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="5380:5468" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="5517:5533" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="5653:5837" placeholder="select sum(o..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="6139:6155" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="6272:6450" placeholder="select sum(t..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="6740:6756" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="6873:7051" placeholder="select sum(y..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="7341:7357" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="7477:7661" placeholder="select sum(c..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="7963:7979" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="8097:8277" placeholder="select sum(p..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="8571:8587" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="8703:8879" placeholder="select sum(s..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="9165:9181" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="9300:9482" placeholder="select sum(w..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="9780:9796" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="9918:10106" placeholder="select sum(w..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="10416:10432" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="10556:10748" placeholder="select sum(c..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="11066:11082" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="11202:11386" placeholder="select sum(p..acc_receivals..." />
+                <marker date="1598416748123" expanded="true" signature="11688:11714" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="11715:12025" placeholder="..." />
+                <marker date="1598416748123" expanded="true" signature="12352:12374" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -991,38 +1018,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5125448">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.609319">
+          <caret line="104" column="64" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
           <folding>
-            <element signature="n#style#0;n#td#11;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#td#12;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#7;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#9;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#10;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#11;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1598414964816" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="797:804" placeholder="select 8 fro..." />
-            <marker date="1598414964816" expanded="true" signature="797:830" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="797:940" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="797:954" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="797:981" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="5289:5473" placeholder="select sum(o..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="5908:6086" placeholder="select sum(t..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="6509:6687" placeholder="select sum(y..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="7113:7297" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="7733:7913" placeholder="select sum(p..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="8339:8515" placeholder="select sum(s..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="8936:9118" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="9554:9742" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="10192:10384" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598414964816" expanded="true" signature="10838:11022" placeholder="select sum(p..acc_receivals..." />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1598416748123" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="781:865" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="807:832" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="807:849" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="807:865" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="973:980" placeholder="select 8 fro..." />
+            <marker date="1598416748123" expanded="true" signature="973:1006" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="973:1116" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="973:1130" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="973:1157" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="1233:2414" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="1273:2101" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="1312:2060" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2141:2414" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2303:2414" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2344:2414" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2651:2722" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2819:2890" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="2984:3055" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3149:3220" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3317:3388" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3483:3554" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3647:3718" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3814:3885" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="3984:4055" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="4156:4227" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="4332:4348" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="4349:4573" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="4614:4933" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="4677:4933" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="5044:5067" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="5380:5468" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="5517:5533" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="5653:5837" placeholder="select sum(o..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="6139:6155" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="6272:6450" placeholder="select sum(t..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="6740:6756" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="6873:7051" placeholder="select sum(y..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="7341:7357" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="7477:7661" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="7963:7979" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="8097:8277" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="8571:8587" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="8703:8879" placeholder="select sum(s..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="9165:9181" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="9300:9482" placeholder="select sum(w..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="9780:9796" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="9918:10106" placeholder="select sum(w..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="10416:10432" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="10556:10748" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="11066:11082" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="11202:11386" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598416748123" expanded="true" signature="11688:11714" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="11715:12025" placeholder="..." />
+            <marker date="1598416748123" expanded="true" signature="12352:12374" placeholder="..." />
           </folding>
         </state>
       </provider>
