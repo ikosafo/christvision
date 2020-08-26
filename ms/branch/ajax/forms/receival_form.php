@@ -138,8 +138,7 @@ $random = rand(1,10000).date("Ymd");
                     welfare: welfare,
                     firstfruit: firstfruit,
                     contributions: contributions,
-                    partners: partners,
-                    branch: '<?php echo $_SESSION['branch'] ?>'
+                    partners: partners
                 },
                 success: function (text) {
                     //alert(text);

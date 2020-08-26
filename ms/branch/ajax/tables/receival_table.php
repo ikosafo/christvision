@@ -1,7 +1,10 @@
 <?php include('../../../../config.php');
 $branch = $_SESSION['branch'];
 
-$pinq = $mysqli->query("select * from acc_receivals where branch = '$branch' GROUP BY MONTH(datereceived)");
+$getyearmonth = $mysqli->query("SELECT DATE_FORMAT(datereceived, '%Y-%m') as datequery
+FROM acc_receivals where branch = '$branch'
+GROUP BY
+DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') DESC")
 ?>
 <style>
     .dataTables_filter {
@@ -14,44 +17,183 @@ $pinq = $mysqli->query("select * from acc_receivals where branch = '$branch' GRO
 
     <div class="kt-section__content responsive">
         <div class="table-responsive">
-            <table id="data-table" class="table" style="margin-top: 3% !important;">
-                <thead>
-                <tr>
-                    <th>Service Name</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-
+            <table>
                 <tbody>
                 <?php
-                while ($fetch = $pinq->fetch_assoc()) {
+                while ($fetch = $getyearmonth->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['service_name']; ?></td>
-                        <td>
-                            <span>
-                                <div class="dropdown"><a data-toggle="dropdown"
-                                                         class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                            class="flaticon-more-1"></i> </a>
+                        <td><?php echo $dateyear = $fetch['datequery'];
+                            $getdetails = $mysqli->query("select * from acc_receivals where
+                                                         branch = '$branch' AND
+SUBSTRING(datereceived, 1, 7) = '$dateyear' order by datereceived DESC");?>
 
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <ul class="kt-nav">
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_service"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_service"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </span>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                      <th>Date</th>
+                                      <th>Offering</th>
+                                      <th>Tithe</th>
+                                      <th>Youth</th>
+                                      <th>Children</th>
+                                      <th>Pledge</th>
+                                      <th>Seed</th>
+                                      <th>Welfare</th>
+                                      <th>First Fruit</th>
+                                      <th>Contri.</th>
+                                      <th>Partners</th>
+                                      <th>TOTAL</th>
+                                      <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                  while ($resdetails = $getdetails->fetch_assoc()){ ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $resdetails['datereceived'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $off = $resdetails['offering'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $tit = $resdetails['tithe'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $you = $resdetails['youth'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $chi = $resdetails['children'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $ple = $resdetails['pledge'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $see = $resdetails['seed'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $wel = $resdetails['welfare'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $fir = $resdetails['firstfruit'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $con = $resdetails['contribution'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $par = $resdetails['partners'] ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                            <?php $tot = $off+$tit+$you+$chi+$ple+$see+$wel+$fir+$con+$par;
+                                            echo number_format($tot,2);?>
+                                    </td>
+                                    <td>
+                                        <button type="button"
+                                                data-type="confirm"
+                                                class="btn btn-sm btn-danger js-sweetalert delete_receival"
+                                                i_index="<?php echo $resdetails['rid'] ?>" title="Delete">
+                                            <i class="flaticon2-trash ml-2" style="color: #fff !important;"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <?php }
+                                ?>
+                                <tr>
+                                    <td>
+                                        TOTAL
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getoffering = $mysqli->query("select sum(offering) as sumoffering from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $resoffering = $getoffering->fetch_assoc();
+                                        echo $offt = $resoffering['sumoffering'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $gettithe = $mysqli->query("select sum(tithe) as sumtithe from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $restithe = $gettithe->fetch_assoc();
+                                        echo $titt = $restithe['sumtithe'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getyouth = $mysqli->query("select sum(youth) as sumyouth from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $resyouth = $getyouth->fetch_assoc();
+                                        echo $yout = $resyouth['sumyouth'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getchildren = $mysqli->query("select sum(children) as sumchildren from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $reschildren = $getchildren->fetch_assoc();
+                                        echo $chit = $reschildren['sumchildren'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getpledge = $mysqli->query("select sum(pledge) as sumpledge from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $respledge = $getpledge->fetch_assoc();
+                                        echo $plet = $respledge['sumpledge'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getseed = $mysqli->query("select sum(seed) as sumseed from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $resseed = $getseed->fetch_assoc();
+                                        echo $seet = $resseed['sumseed'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getwelfare = $mysqli->query("select sum(welfare) as sumwelfare from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $reswelfare = $getwelfare->fetch_assoc();
+                                        echo $welt = $reswelfare['sumwelfare'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getfirstfruit = $mysqli->query("select sum(firstfruit) as sumfirstfruit from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $resfirstfruit = $getfirstfruit->fetch_assoc();
+                                        echo $firt = $resfirstfruit['sumfirstfruit'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getcontribution = $mysqli->query("select sum(contribution) as sumcontribution from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $rescontribution = $getcontribution->fetch_assoc();
+                                        echo $cont = $rescontribution['sumcontribution'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 500">
+                                        <?php
+                                        $getpartners = $mysqli->query("select sum(partners) as sumpartners from acc_receivals where
+                                                         branch = '$branch' AND SUBSTRING(datereceived, 1, 7) = '$dateyear'");
+                                        $respartners = $getpartners->fetch_assoc();
+                                        echo $part = $respartners['sumpartners'];
+                                        ?>
+                                    </td>
+                                    <td style="font-weight: 600;color:red">
+                                        <?php
+                                         $tott = $offt +$titt+$yout+$chit+$plet+$seet+$welt+$firt+$cont+$part;
+                                        echo number_format($tott,2)
+                                        ?>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                           <?php ?>
                         </td>
                     </tr>
                 <?php } ?>
@@ -63,40 +205,12 @@ $pinq = $mysqli->query("select * from acc_receivals where branch = '$branch' GRO
 </div>
 
 <script>
-    oTable = $('#data-table').DataTable({
-        "bLengthChange": false,"order": []
-    });
 
-    $('#data_search').keyup(function () {
-        oTable.search($(this).val()).draw();
-    });
-
-    $(document).off('click', '.edit_service').on('click', '.edit_service', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_service.php",
-            data: {
-                i_index: theindex
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#servicesform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-    $(document).off('click', '.delete_service').on('click', '.delete_service', function () {
+    $(document).off('click', '.delete_receival').on('click', '.delete_receival', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Service!',
+            title: 'Delete Receival!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -114,14 +228,14 @@ $pinq = $mysqli->query("select * from acc_receivals where branch = '$branch' GRO
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_service.php",
+                            url: "ajax/queries/delete_receival.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/services_table.php",
+                                    url: "ajax/tables/receival_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -131,7 +245,7 @@ $pinq = $mysqli->query("select * from acc_receivals where branch = '$branch' GRO
                                         })
                                     },
                                     success: function (text) {
-                                        $('#servicestable_div').html(text);
+                                        $('#receivaltable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
