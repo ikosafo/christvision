@@ -4,7 +4,7 @@ $branch = $_SESSION['branch'];
 $getyearmonth = $mysqli->query("SELECT DATE_FORMAT(datereceived, '%Y-%m') as datequery
 FROM acc_receivals where branch = '$branch'
 GROUP BY
-DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') DESC")
+DATE_FORMAT(datereceived, '%Y-%m') ORDER BY DATE_FORMAT(datereceived, '%Y-%m') DESC");
 ?>
 <style>
     .dataTables_filter {

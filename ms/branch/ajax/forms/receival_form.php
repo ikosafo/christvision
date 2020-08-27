@@ -3,6 +3,18 @@ $random = rand(1,10000).date("Ymd");
 ?>
 <!--begin::Form-->
 
+<script>
+    function isNumberKey(evt)
+    {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
 <form class="" autocomplete="off">
 
     <div class="kt-portlet__body" id="error_loc">
@@ -19,60 +31,60 @@ $random = rand(1,10000).date("Ymd");
             <div class="col-lg-6 col-md-6">
                 <label for="receival_name">Offering</label>
                 <input type="text" class="form-control" id="offering"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="tithe">Tithe</label>
                 <input type="text" class="form-control" id="tithe"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="youth">Youth</label>
                 <input type="text" class="form-control" id="youth"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="children">Children Service</label>
                 <input type="text" class="form-control" id="children"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="pledge">Pledge</label>
                 <input type="text" class="form-control" id="pledge"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="seed">Special Seed</label>
                 <input type="text" class="form-control" id="seed"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="welfare">Welfare</label>
                 <input type="text" class="form-control" id="welfare"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="firstfruit">First Fruits</label>
                 <input type="text" class="form-control" id="firstfruit"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="contributions">Contributions</label>
                 <input type="text" class="form-control" id="contributions"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="partners">Partners</label>
                 <input type="text" class="form-control" id="partners"
-                       placeholder="Enter Amount" value="0.00">
+                       placeholder="Enter Amount" value="0.00" onkeypress="return isNumberKey(event)">
             </div>
         </div>
 

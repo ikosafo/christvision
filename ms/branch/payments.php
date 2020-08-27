@@ -4,6 +4,7 @@
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
 <!-- end:: Subheader -->
 
+
 <!-- begin:: Content -->
 <div class="kt-container  kt-grid__item kt-grid__item--fluid">
     <!--Begin::Dashboard 3-->
@@ -19,7 +20,7 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Accounts
-                                    <small>Receivals</small>
+                                    <small>Payments / Expenses / Expenditure / Bank </small>
                                 </h3>
                             </div>
                         </div>
@@ -28,10 +29,10 @@
 
                         <div class="form-group row">
                             <div class="col-md-4 col-xs-12 col-sm-12">
-                                <div id="receivalform_div"></div>
+                                <div id="paymentform_div"></div>
                             </div>
                             <div class="col-md-8 col-xs-12 col-sm-12">
-                                <div id="receivaltable_div"></div>
+                                <div id="paymenttable_div"></div>
                             </div>
                         </div>
                         <!--end::Form-->
@@ -49,10 +50,11 @@
 
 <?php require('includes/footer.php') ?>
 
+
 <script>
 
     $.ajax({
-        url: "ajax/forms/receival_form.php",
+        url: "ajax/forms/payment_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -62,7 +64,7 @@
             })
         },
         success: function (text) {
-            $('#receivalform_div').html(text);
+            $('#paymentform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -70,11 +72,10 @@
         complete: function () {
             KTApp.unblockPage();
         },
-
     });
 
     $.ajax({
-        url: "ajax/tables/receival_table.php",
+        url: "ajax/tables/payment_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -84,7 +85,7 @@
             })
         },
         success: function (text) {
-            $('#receivaltable_div').html(text);
+            $('#paymenttable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -92,7 +93,5 @@
         complete: function () {
             KTApp.unblockPage();
         },
-
     });
-
 </script>

@@ -479,7 +479,8 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/branch/receivals.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/payments.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/accountsearch.php" ||
                                 $_SERVER['PHP_SELF'] == "/branch/#.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
@@ -504,15 +505,23 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/payments.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="payments"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Payments</span></a>
                                             </li>
-
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/accountsearch.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="accountsearch"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Search</span></a>
+                                            </li>
                                             <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/branch/#.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
@@ -531,15 +540,6 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Cash Book</span></a>
-                                            </li>
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Search</span></a>
                                             </li>
                                             <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/branch/#.php"
