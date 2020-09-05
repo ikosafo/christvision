@@ -22,90 +22,113 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="payment_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/payment_form.php">
+      <file leaf-file-name="sms.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/sms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            <state vertical-scroll-proportion="-7.8846154">
+              <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accounts_search.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/accounts_search.php">
+      <file leaf-file-name="sms_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/sms_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45698926">
-              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+            <state vertical-scroll-proportion="-5.9615383">
+              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sms_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/sms_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8846154">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding>
-                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <marker date="1598504528727" expanded="true" signature="234:466" placeholder="SELECT DATE_..acc_payments..." />
-                <marker date="1598504528727" expanded="true" signature="1328:1444" placeholder="..." />
-                <marker date="1598504528727" expanded="true" signature="1556:1898" placeholder="select * fro..acc_payments..." />
-                <marker date="1598504528727" expanded="true" signature="4242:4528" placeholder="select sum(a..acc_payments..." />
-                <marker date="1598504528727" expanded="true" signature="5318:5571" placeholder="SELECT DATE_..acc_payments..." />
-                <marker date="1598504528727" expanded="true" signature="6431:6547" placeholder="..." />
-                <marker date="1598504528727" expanded="true" signature="6659:7019" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="11265:11568" placeholder="select sum(o..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="12099:12397" placeholder="select sum(t..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="12916:13213" placeholder="select sum(y..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="13735:14038" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="14570:14869" placeholder="select sum(p..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="15391:15686" placeholder="select sum(s..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="16203:16505" placeholder="select sum(w..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="17037:17344" placeholder="select sum(f..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="17890:18201" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598504528727" expanded="true" signature="18751:19054" placeholder="select sum(p..acc_receivals..." />
+                <marker date="1599322625415" expanded="true" signature="96:155" placeholder="select * fro..sms..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="receival_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php">
+      <file leaf-file-name="services_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/services_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8461537">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
               <folding>
-                <marker date="1598504247955" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="1061:1177" placeholder="..." />
-                <marker date="1598504247955" expanded="true" signature="1285:1526" placeholder="select * fro..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="6023:6207" placeholder="select sum(o..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="6706:6884" placeholder="select sum(t..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="7371:7549" placeholder="select sum(y..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="8039:8223" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="8723:8903" placeholder="select sum(p..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="9393:9569" placeholder="select sum(s..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="10054:10236" placeholder="select sum(w..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="10736:10924" placeholder="select sum(f..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="11438:11630" placeholder="select sum(c..acc_receivals..." />
-                <marker date="1598504247955" expanded="true" signature="12148:12332" placeholder="select sum(p..acc_receivals..." />
+                <marker date="1597670890574" expanded="true" signature="96:164" placeholder="select * fro..service..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/includes/header.php">
+      <file leaf-file-name="saveform_sms.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_sms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
-              <caret line="516" column="87" selection-start-line="516" selection-start-column="87" selection-end-line="516" selection-end-column="87" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
               <folding>
-                <marker date="1598503451369" expanded="true" signature="48709:48748" placeholder="select * fro..branch..." />
+                <marker date="1599324258358" expanded="true" signature="341:397" placeholder="select * fro..." />
+                <marker date="1599324258358" expanded="true" signature="757:839" placeholder="SELECT * FRO..." />
+                <marker date="1599324258358" expanded="true" signature="1053:1283" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveform_payment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_payment.php">
+      <file leaf-file-name="dbcon.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbcon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.0">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11643836">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
-                <marker date="1598467254015" expanded="true" signature="391:693" placeholder="INSERT INTO ..." />
+                <marker date="1597670188427" expanded="true" signature="178:261" placeholder="select * fro..service..." />
+                <marker date="1597670188427" expanded="true" signature="344:461" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/services_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,12 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ms/branch/ajax/queries/saveform_visitoratt.php" />
-        <option value="$PROJECT_DIR$/ms/branch/takeattendance.php" />
-        <option value="$PROJECT_DIR$/ms/branch/ajax/tables/attendancevis_table.php" />
-        <option value="$PROJECT_DIR$/ms/branch/ajax/queries/delete_visitoratt.php" />
-        <option value="$PROJECT_DIR$/ms/branch/ajax/forms/attendancevis_form.php" />
-        <option value="$PROJECT_DIR$/ms/branch/ajax/queries/attendance_search.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/memberfin_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/offering.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/queries/payoffering.php" />
@@ -166,6 +183,12 @@
         <option value="$PROJECT_DIR$/ms/branch/accountsearch.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/queries/accounts_search.php" />
+        <option value="$PROJECT_DIR$/ms/branch/sms.php" />
+        <option value="$PROJECT_DIR$/ms/branch/ajax/tables/sms_table.php" />
+        <option value="$PROJECT_DIR$/dbcon.php" />
+        <option value="$PROJECT_DIR$/ms/branch/ajax/queries/saveform_sms.php" />
+        <option value="$PROJECT_DIR$/ms/branch/ajax/forms/sms_form.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -210,7 +233,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,74 +265,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="branch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="branch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="christvision" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="branch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +326,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18154311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,121 +364,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/payoffering.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <marker date="1598082509969" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/payoffering_member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-103.19231">
-          <caret line="210" column="3" selection-start-line="210" selection-start-column="3" selection-end-line="210" selection-end-column="3" />
-          <folding>
-            <marker date="1598112123811" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/delete_paymentoff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/contributions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/mpartners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/paycontibutions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/paympartner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <marker date="1598113506813" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/paginations/memberfin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.192308">
-          <caret line="124" column="36" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="36" />
-          <folding>
-            <marker date="1598113506819" expanded="true" signature="-1:-1" placeholder="select count..." />
-            <marker date="1598113506819" expanded="true" signature="-1:-1" placeholder="select count..." />
-            <marker date="1598113506819" expanded="true" signature="-1:-1" placeholder="select * FRO..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/includes/phpfunctions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.923077">
-          <caret line="140" column="65" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="65" />
-          <folding>
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1598113506803" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598113506803" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/delete_paymentcontribution.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/delete_paymentmpartner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15232974">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding>
-            <marker date="1598113655612" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -529,9 +375,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3461537">
           <caret line="116" column="50" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
-          <folding>
-            <marker date="1598113443709" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -539,9 +383,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0">
           <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <marker date="1596692842109" expanded="true" signature="-1:-1" placeholder="select * fro..mnotify..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,24 +401,12 @@
           <caret line="286" column="10" selection-start-line="248" selection-start-column="4" selection-end-line="286" selection-end-column="10" />
           <folding>
             <element signature="e#142#10673#0#PHP" expanded="false" />
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#!!top" expanded="false" />
             <element signature="e#10788#13704#0#HTML" expanded="false" />
             <element signature="e#13810#16728#0#HTML" expanded="false" />
             <element signature="e#16838#19758#0#HTML" expanded="false" />
             <element signature="e#19858#22773#0#HTML" expanded="false" />
             <element signature="e#22893#25818#0#HTML" expanded="false" />
             <element signature="e#25930#28851#0#HTML" expanded="false" />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_offerings..." />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_tithe..." />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_welfare..." />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_firstfruit..." />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_contributions..." />
-            <marker date="1598113655609" expanded="true" signature="-1:-1" placeholder="select * fro..f_mpcontributions..." />
           </folding>
         </state>
       </provider>
@@ -587,28 +417,9 @@
           <caret line="300" column="58" selection-start-line="300" selection-start-column="58" selection-end-line="300" selection-end-column="58" />
           <folding>
             <element signature="e#799#16012#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#3247#16012#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#5834#16012#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#8327#16012#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_offerings..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_offerings..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_tithe..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_tithe..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_welfare..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_welfare..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_firstfruit..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_firstfruit..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_contributions..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_contributions..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select * fro..f_mpcontributions..." />
-            <marker date="1598159642070" expanded="true" signature="-1:-1" placeholder="select sum(a..f_mpcontributions..." />
           </folding>
         </state>
       </provider>
@@ -625,14 +436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.038462">
           <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="select * fro..service_config..." />
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="select * fro..service..." />
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="select * fro..attendance..." />
-            <marker date="1597696040166" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -640,10 +444,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-49.03846">
           <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <marker date="1597698754044" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1597698754044" expanded="true" signature="-1:-1" placeholder="select * fro..service_config..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -651,9 +452,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="35.307693">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1597674083820" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,20 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.692307">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1596690569744" expanded="true" signature="-1:-1" placeholder="select * fro..ministry..." />
-            <marker date="1596690569744" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/services_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding>
-            <marker date="1597670890574" expanded="true" signature="-1:-1" placeholder="select * fro..service..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,9 +475,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <marker date="1597554199973" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,10 +490,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="5.8846154">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1597691545795" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1597691545795" expanded="true" signature="-1:-1" placeholder="select * fro..service..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,15 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27419356">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..member_images..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..children..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..department..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..ministry..." />
-            <marker date="1596751364413" expanded="true" signature="-1:-1" placeholder="select * fro..cell..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,9 +529,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1597552667564" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,9 +537,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="19.615385">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1596779928106" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -779,9 +545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1596690753221" expanded="true" signature="-1:-1" placeholder="select * fro..ministry..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,9 +561,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537">
           <caret line="42" column="80" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
-          <folding>
-            <marker date="1598111975602" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,9 +577,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
           <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <marker date="1596782833110" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -833,18 +593,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <marker date="1598410146954" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_payment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <marker date="1598467254015" expanded="true" signature="391:693" placeholder="INSERT INTO ..." />
+            <marker date="1598467254015" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -853,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding>
-            <marker date="1598414867263" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,18 +617,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384">
           <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          <folding>
-            <marker date="1598467423075" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
+        <state vertical-scroll-proportion="0.0">
           <caret line="516" column="87" selection-start-line="516" selection-start-column="87" selection-end-line="516" selection-end-column="87" />
           <folding>
-            <marker date="1598503451369" expanded="true" signature="48709:48748" placeholder="select * fro..branch..." />
+            <marker date="1598503451369" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
           </folding>
         </state>
       </provider>
@@ -883,14 +634,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63978493">
           <caret line="129" column="62" selection-start-line="129" selection-start-column="62" selection-end-line="129" selection-end-column="62" />
-          <folding>
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="select * fro..attendance..." />
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="select * fro..attendance..." />
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="select * fro..service_config..." />
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="select * fro..service..." />
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1597752601812" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -898,9 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <marker date="1596692285866" expanded="true" signature="-1:-1" placeholder="select * fro..cell..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,22 +664,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8461537">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
-            <marker date="1598504247955" expanded="true" signature="105:296" placeholder="SELECT DATE_..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="1061:1177" placeholder="..." />
-            <marker date="1598504247955" expanded="true" signature="1285:1526" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="6023:6207" placeholder="select sum(o..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="6706:6884" placeholder="select sum(t..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="7371:7549" placeholder="select sum(y..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="8039:8223" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="8723:8903" placeholder="select sum(p..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="9393:9569" placeholder="select sum(s..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="10054:10236" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="10736:10924" placeholder="select sum(f..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="11438:11630" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504247955" expanded="true" signature="12148:12332" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(o..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(t..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(y..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(s..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(w..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(f..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598504247955" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
           </folding>
         </state>
       </provider>
@@ -946,23 +688,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7311828">
           <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#button#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_receivals..." />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
-            <marker date="1598467475416" expanded="true" signature="-1:-1" placeholder="select sum(t..acc_payments..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/payment_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding />
         </state>
@@ -970,29 +702,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/accounts_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45698926">
-          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <marker date="1598504528727" expanded="true" signature="234:466" placeholder="SELECT DATE_..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="1328:1444" placeholder="..." />
-            <marker date="1598504528727" expanded="true" signature="1556:1898" placeholder="select * fro..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="4242:4528" placeholder="select sum(a..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="5318:5571" placeholder="SELECT DATE_..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="6431:6547" placeholder="..." />
-            <marker date="1598504528727" expanded="true" signature="6659:7019" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="11265:11568" placeholder="select sum(o..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="12099:12397" placeholder="select sum(t..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="12916:13213" placeholder="select sum(y..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="13735:14038" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="14570:14869" placeholder="select sum(p..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="15391:15686" placeholder="select sum(s..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="16203:16505" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="17037:17344" placeholder="select sum(f..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="17890:18201" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="18751:19054" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_payments..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(a..acc_payments..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_payments..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select * fro..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(o..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(t..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(y..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(s..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(w..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(f..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
+            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ministries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.730769">
+          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/services_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1597670188427" expanded="true" signature="178:261" placeholder="select * fro..service..." />
+            <marker date="1597670188427" expanded="true" signature="344:461" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/services_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding>
+            <marker date="1597670890574" expanded="true" signature="96:164" placeholder="select * fro..service..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/sms_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8846154">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <marker date="1599322625415" expanded="true" signature="96:155" placeholder="select * fro..sms..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/sms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8846154">
+          <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_sms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding>
+            <marker date="1599324258358" expanded="true" signature="341:397" placeholder="select * fro..." />
+            <marker date="1599324258358" expanded="true" signature="757:839" placeholder="SELECT * FRO..." />
+            <marker date="1599324258358" expanded="true" signature="1053:1283" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/sms_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9615383">
+          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbcon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11643836">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
