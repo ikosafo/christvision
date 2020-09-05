@@ -8,6 +8,17 @@ $random = rand(1,10000).date("Ymd");
         <div id="success_loc"></div>
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
+                <label for="group">Group</label>
+                <select class="form-control" id="group">
+                    <option value="">Select Group</option>
+                    <option value="Members">Members</option>
+                    <option value="Visitors">Visitors</option>
+                    <option value="New Converts">New Converts</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title"
                        placeholder="Enter Title">
@@ -35,9 +46,12 @@ $random = rand(1,10000).date("Ymd");
 
 <script>
 
+    $("#group").select2();
+
     $('#savesms').click(function () {
         var title = $('#title').val();
         var message = $('#messages').val();
+        var group = $('#group').val();
 
         var error = '';
         if (title == "") {
@@ -51,6 +65,10 @@ $random = rand(1,10000).date("Ymd");
         if (message == "") {
             error += 'Please enter message \n';
             $("#messages").focus();
+        }
+        if (group == "") {
+            error += 'Please select group \n';
+            $("#group").focus();
         }
         
 
@@ -68,7 +86,8 @@ $random = rand(1,10000).date("Ymd");
                 },
                 data: {
                     title: title,
-                    message: message
+                    message: message,
+                    group:group
                 },
                 success: function (text) {
                         //alert(text);

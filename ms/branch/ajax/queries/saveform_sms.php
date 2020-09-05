@@ -2,8 +2,9 @@
 require_once('../../../../config.php');
 
 $branch = $_SESSION['branch'];
-$title=mysqli_real_escape_string($mysqli,$_POST['title']);
-$message=mysqli_real_escape_string($mysqli,$_POST['message']);
+$title = mysqli_real_escape_string($mysqli,$_POST['title']);
+$message = mysqli_real_escape_string($mysqli,$_POST['message']);
+$group = mysqli_real_escape_string($mysqli,$_POST['group']);
 
 function sendSMS($message, $phone)
 {
@@ -20,7 +21,17 @@ function sendSMS($message, $phone)
 }
 
 $date = date('Y-m-d H:i:s');
-$res= $mysqli->query("SELECT * FROM `member` where status = '' OR status IS NULL  AND branch = '$branch'");
+
+if ($group == "Members") {
+    $res= $mysqli->query("SELECT * FROM `member` where status = '' OR status IS NULL  AND branch = '$branch'");
+}
+else if ($group == "Visitors") {
+    $res= $mysqli->query("SELECT * FROM `visitor` where branch = '$branch'");
+}
+else if ($group == "New Converts") {
+    $res= $mysqli->query("SELECT * FROM `convert` where branch = '$branch'");
+}
+
 
 while ($record = $res->fetch_assoc()) {
     $number = $record['telephone'];
@@ -37,7 +48,7 @@ $query = $mysqli->query("INSERT INTO `sms`
              `datesent`,
              `title`,
              `branch`)
-VALUES ('All Members',
+VALUES ('$group',
         '$message',
         '$date',
         '$title',
