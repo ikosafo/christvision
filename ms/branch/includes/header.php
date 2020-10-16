@@ -207,6 +207,7 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/ms/branch/documents.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/departments.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/ministries.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/cells.php" ||
@@ -222,6 +223,15 @@ background-size: 100% 350px;"
 
                                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/documents.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="documents"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Documents</span></a>
+                                            </li>
 
                                             <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/branch/departments.php"

@@ -91,6 +91,10 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                                 </div>
                             </div>
 
+                            <div class="position-absolute top-0 right-0 text-right mt-5 mb-15 mb-lg-0 flex-column-auto justify-content-center py-5 px-10">
+                                <span class="font-weight-bold text-dark-50">Dont have an account?</span>
+                                <a href="../" class="font-weight-bold ml-2" id="kt_login_signup">Go Back!</a>
+                            </div>
 
                         </div>
                     </div>

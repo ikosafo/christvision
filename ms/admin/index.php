@@ -26,7 +26,7 @@
 
                                                     <div class="kt-widget__subhead">
                                                         <a href="#"><i class="flaticon2-user-1"></i><?php echo $_SESSION['username']; ?></a>
-                                                        <a href="#"><i class="flaticon2-calendar-3"></i><?php echo $_SESSION['user_type']; ?></a>
+                                                        <a href="#"><i class="flaticon2-calendar-3"></i>Administrator</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -35,11 +35,11 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Property</span>
+                                                        <span class="kt-widget__title">Branches</span>
                                                         <span class="kt-widget__value"><span><i class="la la-home"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_property`");
-                                                        echo mysqli_num_rows($getperm);
+                                                        $getbranch = $mysqli->query("select * from `branch`");
+                                                        echo mysqli_num_rows($getbranch);
                                                         ?>
                                                         </span>
                                                     </div>
@@ -47,11 +47,11 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Tenant</span>
+                                                        <span class="kt-widget__title">Branch Admins</span>
                                                         <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_tenant`");
-                                                        echo mysqli_num_rows($getperm);
+                                                        $getusers = $mysqli->query("select * from `users_admin`");
+                                                        echo mysqli_num_rows($getusers);
                                                         ?>
                                                         </span>
                                                     </div>
@@ -59,11 +59,11 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Staff</span>
+                                                        <span class="kt-widget__title">Members</span>
                                                         <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_staff`");
-                                                        echo mysqli_num_rows($getperm);
+                                                        $getmem = $mysqli->query("select * from `member`");
+                                                        echo mysqli_num_rows($getmem);
                                                         ?>
                                                         </span>
                                                     </div>
@@ -71,12 +71,24 @@
 
                                                 <div class="kt-widget__item">
                                                     <div class="kt-widget__details">
-                                                        <span class="kt-widget__title">Billing</span>
+                                                        <span class="kt-widget__title">New Converts</span>
                                                         <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
-                                                        <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_billing`");
-                                                        echo mysqli_num_rows($getperm);
-                                                        ?>
+                                                            <?php
+                                                            $getcon = $mysqli->query("select * from `convert`");
+                                                            echo mysqli_num_rows($getcon);
+                                                            ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="kt-widget__item">
+                                                    <div class="kt-widget__details">
+                                                        <span class="kt-widget__title">Visitors</span>
+                                                        <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
+                                                            <?php
+                                                            $getvis = $mysqli->query("select * from `visitor`");
+                                                            echo mysqli_num_rows($getvis);
+                                                            ?>
                                                         </span>
                                                     </div>
                                                 </div>
