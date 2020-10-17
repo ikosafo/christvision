@@ -227,7 +227,7 @@ background-size: 100% 350px;"
                                             <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/branch/documents.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
+                                                    href="documents"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                         class="kt-menu__link-text">Documents</span></a>

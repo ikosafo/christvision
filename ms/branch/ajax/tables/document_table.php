@@ -39,32 +39,26 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
                     ?>
                     <tr>
                         <td><?php echo $fetch['document_title']; ?></td>
-                        <td></td>
-                        <td><?php echo $fetch['document_description']; ?></td>
                         <td>
-                            <span>
-                                <div class="dropdown"><a data-toggle="dropdown"
-                                                         class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                            class="flaticon-more-1"></i> </a>
+                            <?php
+                            $document_id = $fetch['document_id'];
+                            $getfiles = $mysqli->query("select * from document_files where document_id = '$document_id'");
+                            while ($resfiles = $getfiles->fetch_assoc()) { ?>
+                                <a href="../../ms/<?php echo $resfiles['document_location'] ?>">
+                                    View/Download File
+                                </a> <br/>
+                            <?php } ?>
 
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <ul class="kt-nav">
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_department"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_department"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </span>
+                        </td>
+                        <td><?php echo $fetch['document_description']; ?></td>
+
+                        <td>
+                            <button type="button"
+                                    data-type="confirm"
+                                    class="btn btn-sm btn-danger js-sweetalert delete_doc"
+                                    i_index="<?php echo $fetch['id'] ?>" title="Delete">
+                                <i class="flaticon2-trash ml-1" style="color: #fff !important;"></i>
+                            </button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -84,32 +78,11 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_department').on('click', '.edit_department', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_department.php",
-            data: {
-                i_index: theindex
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#departmentform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-    $(document).off('click', '.delete_department').on('click', '.delete_department', function () {
+    $(document).off('click', '.delete_doc').on('click', '.delete_doc', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Department!',
+            title: 'Delete Document!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -127,14 +100,15 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_department.php",
+                            url: "ajax/queries/delete_document.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
+                                //alert(text);
                                 $.ajax({
-                                    url: "ajax/tables/department_table.php",
+                                    url: "ajax/tables/document_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -144,7 +118,7 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
                                         })
                                     },
                                     success: function (text) {
-                                        $('#departmenttable_div').html(text);
+                                        $('#documenttable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

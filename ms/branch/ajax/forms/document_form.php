@@ -108,7 +108,37 @@ $docid = date('ymdhis') . rand(1, 10000);
                 success: function (text) {
                     $('#document_file').uploadifive('upload');
                     //alert(text);
-                   location.reload();
+                    $.ajax({
+                        url: "ajax/forms/document_form.php",
+                        success: function (text) {
+                            $('#documentform_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                    });
+
+                    $.ajax({
+                        url: "ajax/tables/document_table.php",
+                        beforeSend: function () {
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
+                        },
+                        success: function (text) {
+                            $('#documenttable_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                        complete: function () {
+                            KTApp.unblockPage();
+                        },
+
+                    });
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);

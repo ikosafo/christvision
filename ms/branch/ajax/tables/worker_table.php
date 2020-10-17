@@ -49,7 +49,7 @@ $getworker = $mysqli->query("select * from `branchworker` w JOIN `member` m wher
                                     data-type="confirm"
                                     class="btn btn-sm btn-danger js-sweetalert delete_worker"
                                     i_index="<?php echo $resworker['id'] ?>" title="Delete">
-                                <i class="flaticon2-trash" style="color: #fff !important;"></i>
+                                <i class="flaticon2-trash ml-1" style="color: #fff !important;"></i>
                             </button>
                         </td>
                     </tr>

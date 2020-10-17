@@ -5,7 +5,8 @@ $today = date('Y-m-d H:i:s');
 
 $target_path = "../../../uploads/documents/";
 $rand = rand(1,100000);
-$allowed =  array('gif','png' ,'jpg', 'jpeg');
+$allowed =  array('pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'txt', 'rtf', 'html',
+    'zip', 'mp3', 'wma', 'mpg', 'flv', 'avi', 'jpg', 'jpeg', 'png','gif','pdf');
 $ext = pathinfo($_FILES['Filedata']['name'], PATHINFO_EXTENSION);
 
 $filename =  $_FILES['Filedata']['name'];
