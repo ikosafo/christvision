@@ -35,11 +35,11 @@
       <file leaf-file-name="document_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/document_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0967742">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.6702509">
+              <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
               <folding>
-                <marker date="1602932999209" expanded="true" signature="96:160" placeholder="select * fro..document..." />
-                <marker date="1602932999209" expanded="true" signature="1553:1616" placeholder="select * fro..document_files..." />
+                <marker date="1602933705349" expanded="true" signature="96:160" placeholder="select * fro..document..." />
+                <marker date="1602933705349" expanded="true" signature="1598:1661" placeholder="select * fro..document_files..." />
               </folding>
             </state>
           </provider>
@@ -819,11 +819,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/document_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0967742">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.6702509">
+          <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
           <folding>
-            <marker date="1602932999209" expanded="true" signature="96:160" placeholder="select * fro..document..." />
-            <marker date="1602932999209" expanded="true" signature="1553:1616" placeholder="select * fro..document_files..." />
+            <marker date="1602933705349" expanded="true" signature="96:160" placeholder="select * fro..document..." />
+            <marker date="1602933705349" expanded="true" signature="1598:1661" placeholder="select * fro..document_files..." />
           </folding>
         </state>
       </provider>

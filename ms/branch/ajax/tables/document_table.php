@@ -29,6 +29,7 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
                     <th>Title</th>
                     <th>Document</th>
                     <th>Description</th>
+                    <th>Period Uploaded</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -45,13 +46,15 @@ $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY
                             $getfiles = $mysqli->query("select * from document_files where document_id = '$document_id'");
                             while ($resfiles = $getfiles->fetch_assoc()) { ?>
                                 <a href="../../ms/<?php echo $resfiles['document_location'] ?>">
-                                    View/Download File
+                                    View/Download File (<?php echo $resfiles['document_type']; ?>)
                                 </a> <br/>
+                                <hr/>
                             <?php } ?>
+                            <small><i>Click above to View</i> <i class="flaticon flaticon-interface-11"></i> </small>
 
                         </td>
                         <td><?php echo $fetch['document_description']; ?></td>
-
+                        <td><?php echo $fetch['period_uploaded']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
