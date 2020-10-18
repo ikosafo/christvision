@@ -1,6 +1,4 @@
-<?php require('includes/header.php');
-
-?>
+<?php require('includes/header.php');?>
 
 <!-- begin:: Subheader -->
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
@@ -22,7 +20,7 @@
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
-                                    Attendance
+                                    Meeting Attendance
                                     <small>Search</small>
                                 </h3>
                             </div>
@@ -30,7 +28,7 @@
 
                         <div class="form-group row">
 
-                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
                                         <label>Select Date From:</label>
@@ -42,7 +40,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
                                         <label>Select Date To:</label>
@@ -54,22 +52,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                <div class="kt-form__group kt-form__group--inline">
-                                    <div class="kt-form__label">
-                                        <label>Status:</label>
-                                    </div>
-                                    <div class="kt-form__control">
-                                        <select class="form-control bootstrap-select" id="attendance_status">
-                                            <option value="All">All</option>
-                                            <option value="1">Present</option>
-                                            <option value="0">Absent</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
                                         <label>Search Query:</label>
@@ -86,12 +70,6 @@
                                 <div id="attendance_table_div"></div>
                             </div>
                         </div>
-
-                        <!--<div class="form-group row">
-                            <div class="col-md-12">
-                                <div id="approval_div"></div>
-                            </div>
-                        </div>-->
 
                     </div>
                 </div>
@@ -126,7 +104,6 @@
     $("#load_btn").click(function(){
         var datefrom = $("#datefrom").val();
         var dateto = $("#dateto").val();
-        var attendance_status = $("#attendance_status").val();
 
         var error = '';
         if (datefrom == "") {
@@ -137,10 +114,6 @@
             error += 'Please select search end date \n';
             $("#dateto").focus();
         }
-        if (attendance_status == "") {
-            error += 'Please select attendance status \n';
-            $("#attendance_status").focus();
-        }
         if (datefrom > dateto) {
             error += 'Please select correct date range \n';
         }
@@ -149,7 +122,7 @@
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/attendance_search.php",
+                url: "ajax/queries/attendance_search_meeting.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -160,8 +133,7 @@
                 },
                 data: {
                     datefrom: datefrom,
-                    dateto:dateto,
-                    attendance_status:attendance_status
+                    dateto:dateto
                 },
                 success: function (text) {
                     $('#attendance_table_div').html(text);

@@ -330,10 +330,13 @@ background-size: 100% 350px;"
                                 </li>
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/ms/branch/meetings.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/takemeetingattendance.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/services.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/attendanceconfig.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/takeattendance.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearch.php"
+                                $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearch.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearchmeeting.php"
 
 
                                     ? "kt-menu__item--here" : ""); ?>"
@@ -348,13 +351,33 @@ background-size: 100% 350px;"
                                         <ul class="kt-menu__subnav">
 
                                             <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/meetings.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="meetings"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Configure Meetings</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/takemeetingattendance.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="takemeetingattendance"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Take Meeting Attendance</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/branch/services.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
                                                     href="services"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
-                                                        class="kt-menu__link-text">Services</span></a>
+                                                        class="kt-menu__link-text">Add Services</span></a>
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
@@ -384,7 +407,17 @@ background-size: 100% 350px;"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
-                                                        class="kt-menu__link-text">Search</span></a>
+                                                        class="kt-menu__link-text">Search Attendance</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/attendancesearchmeeting.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="attendancesearchmeeting"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Search Meeting Attendance</span></a>
                                             </li>
                                         </ul>
                                     </div>
