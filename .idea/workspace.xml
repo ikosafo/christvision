@@ -70,16 +70,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewmember_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="viewmember_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/viewmember_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="133" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.39605734">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
                 <element signature="n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <marker date="1603092409559" expanded="true" signature="96:180" placeholder="SELECT * FRO..." />
-                <marker date="1603092409559" expanded="true" signature="1814:1872" placeholder="select * fro..." />
+                <marker date="1603093110008" expanded="true" signature="96:180" placeholder="SELECT * FRO..." />
+                <marker date="1603093110008" expanded="true" signature="1815:1873" placeholder="select * fro..." />
               </folding>
             </state>
           </provider>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worker_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="worker_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/worker_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15232974">
+            <state vertical-scroll-proportion="-3.2692308">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <marker date="1603092644490" expanded="true" signature="101:196" placeholder="select * fro..." />
@@ -192,11 +192,11 @@
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/ministry_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/cell_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/smskey_table.php" />
-        <option value="$PROJECT_DIR$/ms/branch/ajax/tables/viewmember_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/viewmembers.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/convert_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/visitor_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/worker_table.php" />
+        <option value="$PROJECT_DIR$/ms/branch/ajax/tables/viewmember_table.php" />
       </list>
     </option>
   </component>
@@ -903,19 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/viewmember_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="133" selection-end-column="7" />
-          <folding>
-            <element signature="n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <marker date="1603092409559" expanded="true" signature="96:180" placeholder="SELECT * FRO..." />
-            <marker date="1603092409559" expanded="true" signature="1814:1872" placeholder="select * fro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/convert_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -938,10 +925,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/worker_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15232974">
+        <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <marker date="1603092644490" expanded="true" signature="101:196" placeholder="select * fro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/viewmember_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39605734">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <marker date="1603093110008" expanded="true" signature="96:180" placeholder="SELECT * FRO..." />
+            <marker date="1603093110008" expanded="true" signature="1815:1873" placeholder="select * fro..." />
           </folding>
         </state>
       </provider>

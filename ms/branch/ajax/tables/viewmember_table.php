@@ -23,7 +23,7 @@ $pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY
                 <tr>
                     <th>Member Name</th>
                     <th>Alt. Telephone</th>
-                    <th>Day of Birth</th>
+                    <th>Date of Birth</th>
                     <th>Residence</th>
                     <th>Marital Status</th>
                     <th>Occupation</th>
