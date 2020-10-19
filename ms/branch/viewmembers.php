@@ -20,17 +20,18 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Membership
-                                    <small>Add Members</small>
+                                    <small>View Members</small>
                                 </h3>
                             </div>
                         </div>
 
                         <!--begin::Form-->
+
                         <div class="form-group row">
-                            <div class="col-md-9 col-xs-12 col-sm-12">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
                                 <div id="memberform_div"></div>
                             </div>
-                            <div class="col-md-3 col-xs-12 col-sm-12">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
                                 <div id="membertable_div"></div>
                             </div>
                         </div>
@@ -53,30 +54,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/member_form.php",
-        beforeSend: function () {
-            KTApp.blockPage({
-                overlayColor: "#000000",
-                type: "v2",
-                state: "success",
-                message: "Please wait..."
-            })
-        },
-        success: function (text) {
-            $('#memberform_div').html(text);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status + " " + thrownError);
-        },
-        complete: function () {
-            KTApp.unblockPage();
-        },
-
-    });
-
-
-    $.ajax({
-        url: "ajax/tables/member_table.php",
+        url: "ajax/tables/viewmember_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",

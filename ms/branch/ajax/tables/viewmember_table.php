@@ -1,7 +1,7 @@
-<?php include ('../../../../config.php');
-
+<?php include('../../../../config.php');
 $branch = $_SESSION['branch'];
-$dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER BY `period` DESC");
+$pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY surname,firstname,othername");
+
 ?>
 
 <div class="kt-section">
@@ -21,27 +21,54 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Full Name</th>
-                    <th>Telephone</th>
+                    <th>Member Name</th>
+                    <th>Alt. Telephone</th>
+                    <th>Day of Birth</th>
                     <th>Residence</th>
-                    <th>Current Denomination</th>
-                    <th>How did you hear about us?</th>
-                    <th>Description</th>
+                    <th>Marital Status</th>
+                    <th>Occupation</th>
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbody>
 
+                <tbody>
                 <?php
-                while ($resdep = $dep->fetch_assoc()) {
+                while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $resdep['full_name']; ?></td>
-                        <td><?php echo $resdep['telephone']; ?></td>
-                        <td><?php echo $resdep['residence']; ?></td>
-                        <td><?php echo $resdep['denomination']; ?></td>
-                        <td><?php echo $resdep['hearing_about']; ?></td>
-                        <td><?php echo $resdep['description']; ?></td>
+                        <td class="kt-datatable__member">
+                            <span style="width: 294px;">
+                                <div class="kt-user-card-v2">
+                                    <div class="kt-user-card-v2__pic">
+                                        <?php
+                                        $memberid = $fetch['memberid'];
+                                        $getimage = $mysqli->query("select * from `member_images` where memberid = '$memberid'");
+                                        $resimage = $getimage->fetch_assoc();
+                                        $theimage = $resimage['image_location'];
+                                        if ($theimage != "") { ?>
+                                            <img style="width: 40px;height: 40px"
+                                                 src="../<?php echo $theimage ?>">
+                                        <?php } else {
+                                            echo "";
+                                        }
+                                        ?>
+
+                                    </div>
+                                    <div class="kt-user-card-v2__details">
+                                        <a class="kt-user-card-v2__name view_member"
+                                           member_index="<?php echo $fetch['memberid'] ?>"
+                                           href="#">
+                                            <?php echo $fetch['surname'].' '.$fetch['firstname'].' '.$fetch['othername'] ?>
+                                        </a>
+                                        <span class="kt-user-card-v2__email"><?php echo $fetch['gender'] ?>, <?php echo $fetch['telephone'] ?></span></div>
+                                </div>
+                            </span>
+                        </td>
+                        <td><?php echo $fetch['alttelephone'] ?> </td>
+                        <td><?php echo $fetch['birthdate'] ?> </td>
+                        <td><?php echo $fetch['residence'] ?> </td>
+                        <td><?php echo $fetch['maritalstatus'] ?> </td>
+                        <td><?php echo $fetch['occupation'] ?> </td>
                         <td>
                             <span>
                                 <div class="dropdown"><a data-toggle="dropdown"
@@ -51,15 +78,22 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="kt-nav">
                                             <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_visitor"
-                                                   i_index="<?php echo $resdep['id'] ?>" href="#"> <i
+                                                <a class="kt-nav__link view_member"
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
+                                                        class="kt-nav__link-icon flaticon2-file"></i>
+                                                    <span class="kt-nav__link-text">View</span>
+                                                </a>
+                                            </li>
+                                            <li class="kt-nav__item">
+                                                <a class="kt-nav__link edit_member"
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-edit"></i>
                                                     <span class="kt-nav__link-text">Edit</span>
                                                 </a>
                                             </li>
                                             <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_visitor"
-                                                   i_index="<?php echo $resdep['id'] ?>" href="#"> <i
+                                                <a class="kt-nav__link delete_member"
+                                                   member_index="<?php echo $fetch['memberid'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-trash"></i> <span
                                                         class="kt-nav__link-text">Delete</span> </a></li>
                                         </ul>
@@ -68,11 +102,9 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
                             </span>
                         </td>
                     </tr>
-                    <?php
-                }
-                ?>
+                <?php } ?>
                 </tbody>
-                <tfoot>
+
             </table>
         </div>
     </div>
@@ -101,19 +133,18 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
         oTable.search($(this).val()).draw();
     });
 
-
-    $(document).off('click', '.edit_visitor').on('click', '.edit_visitor', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
+    $(document).off('click', '.view_member').on('click', '.view_member', function () {
+        var member_index = $(this).attr('member_index');
+        //alert(member_index);
         $.ajax({
             type: "POST",
-            url: "ajax/forms/editform_visitor.php",
+            url: "ajax/forms/viewdetails_member.php",
             data: {
-                i_index: theindex
+                member_index: member_index
             },
             dataType: "html",
             success: function (text) {
-                $('#visitorform_div').html(text);
+                $('#memberform_div').html(text);
             },
             complete: function () {
             },
@@ -123,11 +154,34 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
         });
     });
 
-    $(document).off('click', '.delete_visitor').on('click', '.delete_visitor', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
+
+    $(document).off('click', '.edit_member').on('click', '.edit_member', function () {
+        var member_index = $(this).attr('member_index');
+        //alert(member_index)
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/editform_member.php",
+            data: {
+                member_index: member_index
+            },
+            dataType: "html",
+            success: function (text) {
+                $('#memberform_div').html(text);
+            },
+            complete: function () {
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            }
+        });
+    });
+
+    $(document).off('click', '.delete_member').on('click', '.delete_member', function () {
+        var member_index = $(this).attr('member_index');
+        //alert(member_index);
+
         $.confirm({
-            title: 'Delete Visitor!',
+            title: 'Delete Member!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -145,14 +199,15 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_visitor.php",
+                            url: "ajax/queries/delete_member.php",
                             data: {
-                                i_index: theindex
+                                member_index: member_index
                             },
                             dataType: "html",
                             success: function (text) {
+                                //alert(text);
                                 $.ajax({
-                                    url: "ajax/tables/visitor_table.php",
+                                    url: "ajax/tables/member_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -162,7 +217,7 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
                                         })
                                     },
                                     success: function (text) {
-                                        $('#visitortable_div').html(text);
+                                        $('#membertable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
@@ -186,5 +241,3 @@ $dep = $mysqli->query("SELECT * FROM `visitor` WHERE `branch` = '$branch' ORDER 
     });
 
 </script>
-
-

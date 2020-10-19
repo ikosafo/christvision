@@ -41,6 +41,12 @@ if (!isset($_SESSION['username'])) {
     <script src="../assets/js/jquery.min.js"></script>
 
     <style>
+        .dataTables_filter {
+            display: none !important;
+        }
+        .kt-searchbar {
+            margin-bottom: 15px;;
+        }
         .float{
             position:fixed;
             width:15%;
@@ -205,7 +211,6 @@ background-size: 100% 350px;"
                                 </li>
 
 
-
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/branch/documents.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/branch/departments.php" ||
@@ -276,6 +281,7 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                     $_SERVER['PHP_SELF'] == "/ms/branch/members.php" ||
+                                    $_SERVER['PHP_SELF'] == "/ms/branch/viewmembers.php" ||
                                     $_SERVER['PHP_SELF'] == "/ms/branch/converts.php" ||
                                     $_SERVER['PHP_SELF'] == "/ms/branch/visitors.php" ||
                                     $_SERVER['PHP_SELF'] == "/ms/branch/church_workers.php"
@@ -298,7 +304,16 @@ background-size: 100% 350px;"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
-                                                        class="kt-menu__link-text">Members</span></a>
+                                                        class="kt-menu__link-text">Add Members</span></a>
+                                            </li>
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/branch/viewmembers.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="viewmembers"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">View Members</span></a>
                                             </li>
                                             <li class="kt-menu__item   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/branch/converts.php"

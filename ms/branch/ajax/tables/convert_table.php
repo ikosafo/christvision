@@ -4,12 +4,6 @@ $branch = $_SESSION['branch'];
 $dep = $mysqli->query("SELECT * FROM `convert` WHERE `branch` = '$branch' ORDER BY `period` DESC");
 ?>
 
-<style>
-    .dataTables_filter {
-        display: none;
-    }
-</style>
-
 
 <div class="kt-section">
 
@@ -25,7 +19,7 @@ $dep = $mysqli->query("SELECT * FROM `convert` WHERE `branch` = '$branch' ORDER 
         </div>
 
         <div class="table-responsive">
-            <table id="bs4-table" class="table" style="margin-top: 3% !important;">
+            <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
                     <th>Full Name</th>
@@ -89,14 +83,27 @@ $dep = $mysqli->query("SELECT * FROM `convert` WHERE `branch` = '$branch' ORDER 
 
 <script>
 
-    oTable = $('#bs4-table').DataTable({
-        "bLengthChange": false,"order": []
+    oTable =  $("#data-table").DataTable({
+        responsive: !0,
+        dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
+        buttons: ["print", "copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
+        "bLengthChange": false,"order": [],
+
+    }), $("#export_print").on("click", function (e) {
+        e.preventDefault(), t.button(0).trigger()
+    }), $("#export_copy").on("click", function (e) {
+        e.preventDefault(), t.button(1).trigger()
+    }), $("#export_excel").on("click", function (e) {
+        e.preventDefault(), t.button(2).trigger()
+    }), $("#export_csv").on("click", function (e) {
+        e.preventDefault(), t.button(3).trigger()
+    }), $("#export_pdf").on("click", function (e) {
+        e.preventDefault(), t.button(4).trigger()
     });
 
     $('#data_search').keyup(function () {
         oTable.search($(this).val()).draw();
     });
-
 
     $(document).off('click', '.edit_convert').on('click', '.edit_convert', function () {
         var theindex = $(this).attr('i_index');
