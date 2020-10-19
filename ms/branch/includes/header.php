@@ -49,17 +49,13 @@ if (!isset($_SESSION['username'])) {
         }
         .float{
             position:fixed;
-            width:15%;
             height:30px;
             bottom:30px;
             padding:3px;
             top:80px;
             color:#FFF;
             text-align:center;
-            background: #db4437;
             cursor: pointer;
-            border-radius: 2%;
-            box-shadow: 0px 2px 5px #666;
             z-index:999;
         }
 
@@ -707,8 +703,6 @@ background-size: 100% 350px;"
                         </div>
                     </div>
 
-
-                    <!-- end: Header Menu -->        <!-- begin:: Header Topbar -->
                     <div class="kt-header__topbar kt-grid__item">
 
                         <!--begin: Search -->
@@ -828,7 +822,8 @@ background-size: 100% 350px;"
                         </div>
                         <!--end: User bar -->
                     </div>
-                    <!-- end:: Header Topbar -->
+
+
                 </div>
             </div>
             <!-- end:: Header -->
@@ -837,10 +832,14 @@ background-size: 100% 350px;"
                      id="kt_content">
 
                     <a href="#" class="float">
-                        <?php $branch = $_SESSION['branch'];
+                        <button type="button" class="btn btn-light btn-elevate btn-square">
+                            <?php
+                            $branch = $_SESSION['branch'];
                         $getbranch = $mysqli->query("select * from branch where id='$branch'");
                         $resbranch = $getbranch->fetch_assoc();
                         echo $resbranch['name'];
-                        ?>
+                            ?>
+                        </button>
+
                     </a>
 
