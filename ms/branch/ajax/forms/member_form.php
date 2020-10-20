@@ -314,8 +314,8 @@ $memberid = date('ymdhis') . rand(1, 10000);
                 autoclose: true,
                 orientation: "bottom",
                 templates: {
-                    leftArrow: '<i class="icon dripicons-chevron-left"></i>',
-                    rightArrow: '<i class="icon dripicons-chevron-right"></i>'
+                    leftArrow: '<i class="la la-angle-left"></i>',
+                    rightArrow: '<i class="la la-angle-right"></i>'
                 }
             });
 

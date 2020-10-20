@@ -59,6 +59,10 @@ if (!isset($_SESSION['username'])) {
             z-index:999;
         }
 
+        .float:hover{
+            color:#000
+        }
+
         .my-float{
             margin-top:22px;
         }
