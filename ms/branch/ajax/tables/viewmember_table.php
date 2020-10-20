@@ -22,6 +22,8 @@ $pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY
                 <thead>
                 <tr>
                     <th>Member Name</th>
+                    <th>Gender</th>
+                    <th>Telephone</th>
                     <th>Alt. Telephone</th>
                     <th>Date of Birth</th>
                     <th>Residence</th>
@@ -60,10 +62,12 @@ $pinq = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch' ORDER BY
                                            href="#">
                                             <?php echo $fetch['surname'].' '.$fetch['firstname'].' '.$fetch['othername'] ?>
                                         </a>
-                                        <span class="kt-user-card-v2__email"><?php echo $fetch['gender'] ?>, <?php echo $fetch['telephone'] ?></span></div>
+                                    </div>
                                 </div>
                             </span>
                         </td>
+                        <td><?php echo $fetch['gender'] ?> </td>
+                        <td><?php echo $fetch['telephone'] ?> </td>
                         <td><?php echo $fetch['alttelephone'] ?> </td>
                         <td><?php echo $fetch['birthdate'] ?> </td>
                         <td><?php echo $fetch['residence'] ?> </td>
