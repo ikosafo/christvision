@@ -6,7 +6,7 @@ $getbdty = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
                            AND DAY(birthdate) = DAY(NOW())");
 
 $getbdmt = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
-                           AND MONTH(birthdate) = MONTH(NOW())");
+                           AND MONTH(birthdate) = MONTH(NOW()) order by birthdate");
 ?>
 <style>
     .dataTables_filter {
