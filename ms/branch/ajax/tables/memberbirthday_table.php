@@ -120,6 +120,7 @@ $getbdmt = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
                             <table class="table">
                                 <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Member Name</th>
                                     <th>Gender</th>
                                     <th>Telephone</th>
@@ -132,10 +133,12 @@ $getbdmt = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
 
                                 <tbody>
                                 <?php
+                                $counter = 1;
                                 while ($fetch = $getbdmt->fetch_assoc()) {
                                     $id = $fetch['id'];
                                     ?>
                                     <tr>
+                                        <td><?php echo $counter; ?></td>
                                         <td class="kt-datatable__member">
                             <span style="width: 294px;">
                                 <div class="kt-user-card-v2">
@@ -181,7 +184,7 @@ $getbdmt = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
                                             </button>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php } $counter++;?>
                                 </tbody>
 
                             </table>
