@@ -184,7 +184,7 @@ $getbdmt = $mysqli->query("SELECT * FROM `member` WHERE branch = '$branch'
                                             </button>
                                         </td>
                                     </tr>
-                                <?php } $counter++;?>
+                                <?php $counter++; } ?>
                                 </tbody>
 
                             </table>
