@@ -17,7 +17,7 @@ $getservice = $mysqli->query("select * from meeting_config where id = '$servicei
 $resservice = $getservice->fetch_assoc();
 $service = $resservice['title'];
 $datestarted = $resservice['datefrom'];
-$datestarted = $resservice['dateto'];
+$dateended = $resservice['dateto'];
 
 
 $mysqli->query("INSERT INTO `meeting`
@@ -44,7 +44,7 @@ VALUES ('$service',
         '$branch',
         '$dateperiod',
         '$datestarted',
-        '$datestarted'
+        '$dateended'
         )") or die(mysqli_error($mysqli));
 echo 1;
 

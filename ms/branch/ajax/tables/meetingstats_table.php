@@ -28,6 +28,8 @@ $pinq = $mysqli->query("select * from meeting where branch = '$branch' ORDER BY 
                     <th>Children</th>
                     <th>Total</th>
                     <th>Offering</th>
+                    <th>Period Started</th>
+                    <th>Period Ended</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -45,6 +47,8 @@ $pinq = $mysqli->query("select * from meeting where branch = '$branch' ORDER BY 
                         <td><?php echo $fetch['children']; ?></td>
                         <td><?php echo $fetch['total']; ?></td>
                         <td><?php echo "GHS ".$fetch['offering']; ?></td>
+                        <td><?php echo $fetch['periodstarted']; ?></td>
+                        <td><?php echo $fetch['periodclosed']; ?></td>
                         <td>
                             <span>
                                 <div class="dropdown"><a data-toggle="dropdown"
