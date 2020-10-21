@@ -96,18 +96,6 @@ $branch = $_SESSION['branch'];
             </div>
         </div>
 
-        <div class="form-group row">
-            <div class="col-lg-6 col-md-6">
-                <label for="datefrom">Period Started</label>
-                <input type="text" class="form-control" id="datefrom"
-                       placeholder="Select Start Period">
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <label for="dateto">Period Ended</label>
-                <input type="text" class="form-control" id="dateto"
-                       placeholder="Select Start Period">
-            </div>
-        </div>
 
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
@@ -125,33 +113,42 @@ $branch = $_SESSION['branch'];
 
     $("#select_service").select2({placeholder:"Select Meeting"});
 
-    $('#datefrom').datetimepicker().on('change', function(){
-        $('.datetimepicker').hide();
-    });
-
-    $('#dateto').datetimepicker().on('change', function(){
-        $('.datetimepicker').hide();
-    });
-
     $("#savemeetingstats").click(function(){
         var serviceid = $("#select_service").val();
-        var datefrom = $("#datefrom").val();
-        var dateto = $("#dateto").val();
-        var description = $("#description").val();
-        //alert(serviceid);
+        var men = $("#men").val();
+        var women = $("#women").val();
+        var ladies = $("#ladies").val();
+        var guys = $("#guys").val();
+        var children = $("#children").val();
+        var offering = $("#offering").val();
 
         var error = '';
         if (serviceid == "") {
             error += 'Please select service \n';
         }
-        if (datefrom == "") {
-            error += 'Please select period started \n';
+        if (men == "") {
+            error += 'Please enter number of men \n';
+            $("#men").focus();
         }
-        if (dateto == "") {
-            error += 'Please select period ended \n';
+        if (women == "") {
+            error += 'Please enter number of women \n';
+            $("#women").focus();
         }
-        if (datefrom > dateto) {
-            error += 'Please select correct date range \n';
+        if (ladies == "") {
+            error += 'Please enter number of ladies \n';
+            $("#ladies").focus();
+        }
+        if (guys == "") {
+            error += 'Please enter number of guys \n';
+            $("#guys").focus();
+        }
+        if (children == "") {
+            error += 'Please enter number of children \n';
+            $("#children").focus();
+        }
+        if (offering == "") {
+            error += 'Please enter offering amount \n';
+            $("#offering").focus();
         }
 
         if (error == "") {
@@ -168,63 +165,58 @@ $branch = $_SESSION['branch'];
                 },
                 data: {
                     serviceid: serviceid,
-                    datefrom: datefrom,
-                    dateto: dateto,
-                    description: description
+                    men: men,
+                    women: women,
+                    ladies: ladies,
+                    guys: guys,
+                    children: children,
+                    offering: offering
                 },
                 success: function (text) {
                     //alert(text);
-                    if (text == 1) {
-                        $("#success_loc").notify("Configuration added","success");
+                    $.ajax({
+                        url: "ajax/forms/meetingstats_form.php",
+                        beforeSend: function () {
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
+                        },
+                        success: function (text) {
+                            $('#meetingsform_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                        complete: function () {
+                            KTApp.unblockPage();
+                        },
 
-                        $.ajax({
-                            url: "ajax/forms/meetingstats_form.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            success: function (text) {
-                                $('#meetingsform_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
+                    });
 
-                        });
+                    $.ajax({
+                        url: "ajax/tables/meetingstats_table.php",
+                        beforeSend: function () {
+                            KTApp.blockPage({
+                                overlayColor: "#000000",
+                                type: "v2",
+                                state: "success",
+                                message: "Please wait..."
+                            })
+                        },
+                        success: function (text) {
+                            $('#meetingstable_div').html(text);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " " + thrownError);
+                        },
+                        complete: function () {
+                            KTApp.unblockPage();
+                        },
 
-                        $.ajax({
-                            url: "ajax/tables/meetingstats_table.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            success: function (text) {
-                                $('#meetingstable_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
-
-                        });
-                    }
-                    else {
-                        $("#error_loc").notify("Date already exists", {position: "top center"});
-                    }
-
+                    });
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);
