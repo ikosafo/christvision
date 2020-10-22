@@ -648,44 +648,12 @@ background-size: 100% 350px;"
                                     </div>
                                 </li>
 
-
-                                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/ms/branch/birthdays.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/#.php" ||
-                                $_SERVER['PHP_SELF'] == "/branch/#.php"
-
-                                    ? "kt-menu__item--here" : ""); ?>"
-                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                        <span class="kt-menu__link-text">Birthdays
-                                            <i class="fa fa-caret-down ml-2"></i> </span>
-                                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                <li class="kt-menu__item kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/ms/branch/birthdays.php"
+                                    ? "kt-menu__item--here" : ""); ?>">
+                                    <a href="birthdays" class="kt-menu__link"><span
+                                            class="kt-menu__link-text">Birthdays</span>
                                     </a>
-
-                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                        <ul class="kt-menu__subnav">
-
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/ms/branch/birthdays.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="birthdays"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">View Celebrants</span></a>
-                                            </li>
-
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="#"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Send Messages</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </li>
 
 

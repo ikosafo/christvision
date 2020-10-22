@@ -80,7 +80,7 @@
 
     });
 
-    $(document).on('click', '.payoffering_btn', function() {
+    $(document).on('click', '.sendmessage_btn', function() {
         var id_index = $(this).attr('i_index');
         var branch = '<?php echo $_SESSION['branch']; ?>';
 
