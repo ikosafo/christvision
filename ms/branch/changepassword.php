@@ -28,12 +28,11 @@
                         <!--begin::Form-->
 
                         <div class="form-group row">
-                            <div class="col-md-5 col-xs-12 col-sm-12">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6 col-xs-12 col-sm-12">
                                 <div id="cpform_div"></div>
                             </div>
-                            <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="cptable_div"></div>
-                            </div>
+                            <div class="col-md-3 col-xs-12 col-sm-12"></div>
                         </div>
                         <!--end::Form-->
 
@@ -76,27 +75,6 @@
     });
 
 
-    $.ajax({
-        url: "ajax/tables/cp_table.php",
-        beforeSend: function () {
-            KTApp.blockPage({
-                overlayColor: "#000000",
-                type: "v2",
-                state: "success",
-                message: "Please wait..."
-            })
-        },
-        success: function (text) {
-            $('#cptable_div').html(text);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status + " " + thrownError);
-        },
-        complete: function () {
-            KTApp.unblockPage();
-        },
-
-    });
 
 </script>
 

@@ -90,50 +90,37 @@
                     newpassword: newpassword
                 },
                 success: function (text) {
+                       alert(text);
 
-                        $("#success_loc").notify("Password Changed","success");
-                        $.ajax({
-                            type: "POST",
-                            url: "ajax/forms/cp_form.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            success: function (text) {
-                                $('#cpform_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
-                        });
-                        $.ajax({
-                            type: "POST",
-                            url: "ajax/tables/cp_table.php",
-                            beforeSend: function () {
-                                KTApp.blockPage({
-                                    overlayColor: "#000000",
-                                    type: "v2",
-                                    state: "success",
-                                    message: "Please wait..."
-                                })
-                            },
-                            success: function (text) {
-                                $('#cptable_div').html(text);
-                            },
-                            error: function (xhr, ajaxOptions, thrownError) {
-                                alert(xhr.status + " " + thrownError);
-                            },
-                            complete: function () {
-                                KTApp.unblockPage();
-                            },
-                        });
+                     if (text == 1) {
+                         $("#success_loc").notify("Password Changed","success");
+                         $.ajax({
+                             type: "POST",
+                             url: "ajax/forms/cp_form.php",
+                             beforeSend: function () {
+                                 KTApp.blockPage({
+                                     overlayColor: "#000000",
+                                     type: "v2",
+                                     state: "success",
+                                     message: "Please wait..."
+                                 })
+                             },
+                             success: function (text) {
+                                 $('#cpform_div').html(text);
+                             },
+                             error: function (xhr, ajaxOptions, thrownError) {
+                                 alert(xhr.status + " " + thrownError);
+                             },
+                             complete: function () {
+                                 KTApp.unblockPage();
+                             },
+                         });
+                     }
+                     else {
+                         $.notify("Password not found", {position: "top center"});
+                     }
+
+
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);

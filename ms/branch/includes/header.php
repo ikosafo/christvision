@@ -171,7 +171,7 @@ background-size: 100% 350px;"
     <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--builder" data-toggle="kt-tooltip"
         title="Birthdays for Today"
         data-placement="left" data-original-title="Birthdays for Today">
-        <a href="birthdaytoday"><i class="flaticon2-bell"></i></a>
+        <a href="birthdays"><i class="flaticon2-bell"></i></a>
     </li>
     <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--docs" data-toggle="kt-tooltip"
         title="https://cvsiworld.net"
@@ -615,9 +615,9 @@ background-size: 100% 350px;"
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Search</span></a>
                                             </li>
-                                            <li class="kt-menu__item  <?php echo(
+                                            <!--<li class="kt-menu__item  <?php /*echo(
                                             $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
                                                     href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
@@ -625,24 +625,24 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-text">Account Entry</span></a>
                                             </li>
 
-                                            <li class="kt-menu__item  <?php echo(
+                                            <li class="kt-menu__item  <?php /*echo(
                                             $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
                                                     href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Cash Book</span></a>
                                             </li>
-                                            <li class="kt-menu__item  <?php echo(
+                                            <li class="kt-menu__item  <?php /*echo(
                                             $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
                                                     href="#"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Account Statement</span></a>
-                                            </li>
+                                            </li>-->
 
                                         </ul>
                                     </div>
