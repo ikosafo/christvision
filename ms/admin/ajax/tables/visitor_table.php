@@ -78,6 +78,7 @@ $select_branch = $_POST['select_branch'];
         e.preventDefault(), t.button(4).trigger()
     });
 
+
     $('#visitor_search').keyup(function () {
         oTable.search($(this).val()).draw();
     });
