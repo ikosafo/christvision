@@ -43,7 +43,7 @@ $pinq = $mysqli->query("select * from users_admin where branch = '$branch' ORDER
                         <td><?php echo $fetch['fullname']; ?></td>
                         <td><?php echo $fetch['username']; ?></td>
                         <td><?php $usertype = $fetch['usertype'];
-                            if ($usertype == '') {
+                            if ($usertype == '' || $usertype == 'Admin') {
                                 echo "Admin";
                             }else {
                                 echo "Normal";
@@ -57,7 +57,7 @@ $pinq = $mysqli->query("select * from users_admin where branch = '$branch' ORDER
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="kt-nav">
                                             <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_branchuser"
+                                                <a class="kt-nav__link delete_user"
                                                    i_index="<?php echo $fetch['id'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-trash"></i> <span
                                                         class="kt-nav__link-text">Delete</span> </a></li>
@@ -97,32 +97,12 @@ $pinq = $mysqli->query("select * from users_admin where branch = '$branch' ORDER
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_branchuser').on('click', '.edit_branchuser', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_branchuser.php",
-            data: {
-                i_index: theindex
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#branchform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
 
-    $(document).off('click', '.delete_branchuser').on('click', '.delete_branchuser', function () {
+    $(document).off('click', '.delete_user').on('click', '.delete_user', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Branch User!',
+            title: 'Delete User!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -140,32 +120,39 @@ $pinq = $mysqli->query("select * from users_admin where branch = '$branch' ORDER
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_branchuser.php",
+                            url: "ajax/queries/delete_user.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
-                                $.ajax({
-                                    url: "ajax/tables/branchuser_table.php",
-                                    beforeSend: function () {
-                                        KTApp.blockPage({
-                                            overlayColor: "#000000",
-                                            type: "v2",
-                                            state: "success",
-                                            message: "Please wait..."
-                                        })
-                                    },
-                                    success: function (text) {
-                                        $('#branchtable_div').html(text);
-                                    },
-                                    error: function (xhr, ajaxOptions, thrownError) {
-                                        alert(xhr.status + " " + thrownError);
-                                    },
-                                    complete: function () {
-                                        KTApp.unblockPage();
-                                    },
-                                });
+                                //alert(text);
+                                if (text == 1) {
+                                    $.ajax({
+                                        url: "ajax/tables/user_table.php",
+                                        beforeSend: function () {
+                                            KTApp.blockPage({
+                                                overlayColor: "#000000",
+                                                type: "v2",
+                                                state: "success",
+                                                message: "Please wait..."
+                                            })
+                                        },
+                                        success: function (text) {
+                                            $('#usertable_div').html(text);
+                                        },
+                                        error: function (xhr, ajaxOptions, thrownError) {
+                                            alert(xhr.status + " " + thrownError);
+                                        },
+                                        complete: function () {
+                                            KTApp.unblockPage();
+                                        },
+                                    });
+                                }
+                                else {
+                                    $.notify("You are not eligible to delete a user", {position: "top center"});
+                                }
+
                             },
 
                             complete: function () {
