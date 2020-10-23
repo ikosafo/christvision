@@ -61,7 +61,7 @@ $select_branch = $_POST['select_branch'];
             {data: 'telephone'},
             {data: 'residence'},
             {data: 'maritalstatus'},
-            {data: 'id'}
+            {data: 'id'},
         ],
         responsive: !0,
         dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
