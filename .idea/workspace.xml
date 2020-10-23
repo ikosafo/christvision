@@ -35,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visitor_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="visitor_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6200717">
+            <state vertical-scroll-proportion="-13.307693">
               <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
               <folding />
             </state>
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="member_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.653846">
-              <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.5430108">
+              <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -121,12 +121,14 @@
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/paginations/member.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.807693">
-              <caret line="84" column="39" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
+              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
               <folding>
-                <marker date="1596666886422" expanded="true" signature="1609:1650" placeholder="select count..." />
-                <marker date="1596666886422" expanded="true" signature="1809:1907" placeholder="select count..." />
-                <marker date="1596666886422" expanded="true" signature="2051:2195" placeholder="select * fro..." />
-                <marker date="1596666886422" expanded="true" signature="2591:2664" placeholder="select count..." />
+                <marker date="1603464444959" expanded="true" signature="1609:1650" placeholder="select count..." />
+                <marker date="1603464444959" expanded="true" signature="1809:1907" placeholder="select count..." />
+                <marker date="1603464444959" expanded="true" signature="2051:2195" placeholder="select * fro..." />
+                <marker date="1603464444959" expanded="true" signature="2366:2432" placeholder="select count..." />
+                <marker date="1603464444959" expanded="true" signature="2591:2664" placeholder="select count..." />
+                <marker date="1603464444959" expanded="true" signature="2808:2930" placeholder="select * FRO..." />
               </folding>
             </state>
           </provider>
@@ -149,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ms/branch/birthdays.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/birthdaymessage_table.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/queries/savebdmessage.php" />
         <option value="$PROJECT_DIR$/ms/branch/sendmessage_member.php" />
@@ -199,6 +200,7 @@
         <option value="$PROJECT_DIR$/ms/admin/documents.php" />
         <option value="$PROJECT_DIR$/ms/admin/branch_workers.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/brworker_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/paginations/member.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php" />
       </list>
     </option>
@@ -315,10 +317,6 @@
               <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -339,6 +337,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paginations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -906,19 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/paginations/member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="84" column="39" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
-          <folding>
-            <marker date="1596666886422" expanded="true" signature="1609:1650" placeholder="select count..." />
-            <marker date="1596666886422" expanded="true" signature="1809:1907" placeholder="select count..." />
-            <marker date="1596666886422" expanded="true" signature="2051:2195" placeholder="select * fro..." />
-            <marker date="1596666886422" expanded="true" signature="2591:2664" placeholder="select count..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/members.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="49.03846">
@@ -926,14 +915,6 @@
           <folding>
             <marker date="1596750895187" expanded="true" signature="1172:1206" placeholder="select * fro..branch..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.653846">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,8 +943,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6200717">
+        <state vertical-scroll-proportion="-13.307693">
           <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/paginations/member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+          <folding>
+            <marker date="1603464444959" expanded="true" signature="1609:1650" placeholder="select count..." />
+            <marker date="1603464444959" expanded="true" signature="1809:1907" placeholder="select count..." />
+            <marker date="1603464444959" expanded="true" signature="2051:2195" placeholder="select * fro..." />
+            <marker date="1603464444959" expanded="true" signature="2366:2432" placeholder="select count..." />
+            <marker date="1603464444959" expanded="true" signature="2591:2664" placeholder="select count..." />
+            <marker date="1603464444959" expanded="true" signature="2808:2930" placeholder="select * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5430108">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding />
         </state>
       </provider>
