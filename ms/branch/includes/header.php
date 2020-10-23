@@ -44,11 +44,9 @@ if (!isset($_SESSION['username'])) {
         .dataTables_filter {
             display: none !important;
         }
-
         .kt-searchbar {
             margin-bottom: 15px;;
         }
-
         .float {
             position: fixed;
             height: 30px;
@@ -60,19 +58,15 @@ if (!isset($_SESSION['username'])) {
             cursor: pointer;
             z-index: 999;
         }
-
         .float:hover {
             color: #000
         }
-
         .my-float {
             margin-top: 22px;
         }
-
         .kt-portlet {
             margin-top: 0.5% !important;
         }
-
         .kt-sticky-toolbar {
             width: 46px;
             position: fixed;
@@ -100,7 +94,6 @@ if (!isset($_SESSION['username'])) {
             flex-direction: column;
             border-radius: 3px 0 0 3px;
         }
-
         .kt-sticky-toolbar .kt-sticky-toolbar__item.kt-sticky-toolbar__item--demo-toggle > a {
             padding: 8px 0;
             height: 90px;

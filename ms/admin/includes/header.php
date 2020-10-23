@@ -39,6 +39,15 @@ if (!isset($_SESSION['username'])) {
     <link rel="shortcut icon" href="../assets/img/logo.png"/>
     <script src="../assets/js/jquery.min.js"></script>
 
+    <style>
+        .dataTables_filter {
+            display: none !important;
+        }
+        .kt-searchbar {
+            margin-bottom: 15px;;
+        }
+    </style>
+
     <script type="text/javascript">
         $(window).load(function () {
             $(".loader").fadeOut("slow");
@@ -116,13 +125,13 @@ background-size: 100% 350px;"
                                     </a>
                                 </li>
 
-                               <!-- <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel  <?php /*echo(
+                               <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel  <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wministries" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wdepartments"
 
-                                    ? "kt-menu__item--here" : ""); */?>
+                                    ? "kt-menu__item--here" : ""); ?>
                                 " data-ktmenu-submenu-toggle="click"
                                     aria-haspopup="true"><a href="javascript:;"
                                                             class="kt-menu__link kt-menu__toggle"><span
@@ -132,13 +141,13 @@ background-size: 100% 350px;"
 
                                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item kt-menu__item--submenu   <?php /*echo(
+                                            <li class="kt-menu__item kt-menu__item--submenu   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wministries" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdepartments"
 
-                                                ? "kt-menu__item--here" : ""); */?>"
+                                                ? "kt-menu__item--here" : ""); ?>"
                                                 data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
                                                     href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
                                                         class="kt-menu__link-icon"></span><span class="kt-menu__link-text">Home Page</span><i
@@ -164,105 +173,14 @@ background-size: 100% 350px;"
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="kt-menu__item kt-menu__item--submenu"
-                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-icon">
-                                                        </span><span class="kt-menu__link-text">Custom</span><i
-                                                        class="kt-menu__hor-arrow la la-angle-right"></i>
-                                                    <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
-                                                <div
-                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                    <ul class="kt-menu__subnav">
-                                                        <li class="kt-menu__item " aria-haspopup="true"><a
-                                                                href="../components/custom/badge.html"
-                                                                class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Badge</span></a></li>
-                                                        <li class="kt-menu__item " aria-haspopup="true"><a
-                                                                href="../components/custom/navs.html"
-                                                                class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Navigations</span></a>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="kt-menu__item kt-menu__item--submenu"
-                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true">
-                                                <a href="javascript:;"
-                                                   class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-icon">
-
-                                                    </span><span class="kt-menu__link-text">Extended</span><i
-                                                        class="kt-menu__hor-arrow la la-angle-right"></i>
-                                                    <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-                                                <div
-                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                    <ul class="kt-menu__subnav">
-                                                        <li class="kt-menu__item " aria-haspopup="true">
-                                                            <a href="../components/extended/kanban-board.html"
-                                                               class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span class="kt-menu__link-text">Kanban Board</span></a>
-                                                        </li>
-                                                        <li class="kt-menu__item " aria-haspopup="true">
-                                                            <a href="../components/extended/sticky-panels.html"
-                                                               class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span
-                                                                    class="kt-menu__link-text">Sticky Panels</span></a>
-                                                        </li>
-                                                        <li class="kt-menu__item " aria-haspopup="true"><a
-                                                                href="../components/maps/google-maps.html"
-                                                                class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span class="kt-menu__link-text">Google Maps</span></a>
-                                                        </li>
-                                                        <li class="kt-menu__item " aria-haspopup="true">
-                                                            <a href="../components/maps/jqvmap.html"
-                                                               class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span class="kt-menu__link-text">JQVMap</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="kt-menu__item  kt-menu__item--submenu"
-                                                data-ktmenu-submenu-toggle="hover"
-                                                aria-haspopup="true"><a href="javascript:;"
-                                                                        class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-icon">
-                                                        </span><span class="kt-menu__link-text">Utils</span><i
-                                                        class="kt-menu__hor-arrow la la-angle-right"></i>
-                                                    <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-                                                <div
-                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                    <ul class="kt-menu__subnav">
-                                                        <li class="kt-menu__item " aria-haspopup="true">
-                                                            <a href="../components/utils/session-timeout.html"
-                                                               class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span class="kt-menu__link-text">Session Timeout</span></a>
-                                                        </li>
-                                                        <li class="kt-menu__item " aria-haspopup="true">
-                                                            <a href="../components/utils/idle-timer.html"
-                                                               class="kt-menu__link ">
-                                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                                <span class="kt-menu__link-text">Idle Timer</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
                                         </ul>
                                     </div>
-                                </li>-->
+                                </li>
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/ms/admin/documents.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/branches.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/branch_users.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/admin_users.php" ||
@@ -278,6 +196,15 @@ background-size: 100% 350px;"
 
                                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/documents.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="documents"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Documents</span></a>
+                                            </li>
 
                                             <li class="kt-menu__item  <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/admin/branches.php"
