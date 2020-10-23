@@ -1,20 +1,24 @@
 <?php include('../../../../config.php');
 $branch = $_SESSION['branch'];
-$pinq = $mysqli->query("select * from asset_registry where branch = '$branch' ORDER BY itemname");
-
-$getbranch = $mysqli->query("select * from branch where id = '$branch'");
-$resbranch = $getbranch->fetch_assoc();
-$branchname = $resbranch['name'];
+$pinq = $mysqli->query("select * from users_admin where branch = '$branch' ORDER BY `fullname`");
 ?>
+<style>
+    .dataTables_filter {
+        display: none;
+    }
+</style>
+
 
 <div class="kt-section">
 
     <div class="kt-section__content responsive">
         <div class="kt-searchbar">
             <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">
-                                <i class="la la-search"></i>
-                            </span></div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                       <i class="la la-search"></i>
+                    </span>
+                </div>
                 <input type="text" id="data_search" class="form-control"
                        placeholder="Search..." aria-describedby="basic-addon1">
             </div>
@@ -24,15 +28,9 @@ $branchname = $resbranch['name'];
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Category</th>
-                    <th>Item Name</th>
-                    <th>Location</th>
-                    <!--<th>Excellent(No.)</th>
-                    <th>Good(No.)</th>
-                    <th>Fair(No.)</th>
-                    <th>Bad(No.)</th>
-                    <th>Worse(No.)</th>-->
-                    <th>Code</th>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>User Type</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -42,27 +40,15 @@ $branchname = $resbranch['name'];
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td>
-                            <?php $category = $fetch['categoryid'];
-                                  $getname = $mysqli->query("select * from asset_category where id = '$category'");
-                                  $resname = $getname->fetch_assoc();
-                                  $categorycode = $resname['category_code'];
-                                  echo $categoryname = $resname['category_name'];
-                            ?>
-                        </td>
-                        <td><?php echo $itemname = $fetch['itemname']; ?></td>
-                        <td><?php echo $location = $fetch['location']; ?></td>
-                        <!--<td><?php /*echo $fetch['excellent']; */?></td>
-                        <td><?php /*echo $fetch['good']; */?></td>
-                        <td><?php /*echo $fetch['fair']; */?></td>
-                        <td><?php /*echo $fetch['bad']; */?></td>
-                        <td><?php /*echo $fetch['worse']; */?></td>-->
-                        <td>
-                            <span style="text-transform: uppercase">
-                                <?php echo "CV"."/".substr($branchname,0,3)."/".substr($categorycode,0,3).
-                                    "/".substr($itemname,0,3)."/".substr($location,0,3)."/".$fetch['id']; ?>
-                            </span>
-                        </td>
+                        <td><?php echo $fetch['fullname']; ?></td>
+                        <td><?php echo $fetch['username']; ?></td>
+                        <td><?php $usertype = $fetch['usertype'];
+                            if ($usertype == '') {
+                                echo "Admin";
+                            }else {
+                                echo "Normal";
+                            }
+                            ?></td>
                         <td>
                                 <div class="dropdown"><a data-toggle="dropdown"
                                                          class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
@@ -71,14 +57,7 @@ $branchname = $resbranch['name'];
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="kt-nav">
                                             <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_assets"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_assets"
+                                                <a class="kt-nav__link delete_branchuser"
                                                    i_index="<?php echo $fetch['id'] ?>" href="#"> <i
                                                         class="kt-nav__link-icon flaticon2-trash"></i> <span
                                                         class="kt-nav__link-text">Delete</span> </a></li>
@@ -118,18 +97,18 @@ $branchname = $resbranch['name'];
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_assets').on('click', '.edit_assets', function () {
+    $(document).off('click', '.edit_branchuser').on('click', '.edit_branchuser', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.ajax({
             type: "POST",
-            url: "ajax/forms/editform_assets.php",
+            url: "ajax/forms/editform_branchuser.php",
             data: {
                 i_index: theindex
             },
             dataType: "html",
             success: function (text) {
-                $('#assetsform_div').html(text);
+                $('#branchform_div').html(text);
             },
             complete: function () {
             },
@@ -139,11 +118,11 @@ $branchname = $resbranch['name'];
         });
     });
 
-    $(document).off('click', '.delete_assets').on('click', '.delete_assets', function () {
+    $(document).off('click', '.delete_branchuser').on('click', '.delete_branchuser', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Assets!',
+            title: 'Delete Branch User!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -161,14 +140,14 @@ $branchname = $resbranch['name'];
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_assets.php",
+                            url: "ajax/queries/delete_branchuser.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/assets_table.php",
+                                    url: "ajax/tables/branchuser_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -178,7 +157,7 @@ $branchname = $resbranch['name'];
                                         })
                                     },
                                     success: function (text) {
-                                        $('#assetstable_div').html(text);
+                                        $('#branchtable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

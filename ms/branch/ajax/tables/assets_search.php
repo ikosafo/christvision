@@ -27,13 +27,12 @@ $branchname = $resbranch['name'];
                     <th>Category</th>
                     <th>Item Name</th>
                     <th>Location</th>
-                    <!--<th>Excellent(No.)</th>
+                    <th>Excellent(No.)</th>
                     <th>Good(No.)</th>
                     <th>Fair(No.)</th>
                     <th>Bad(No.)</th>
-                    <th>Worse(No.)</th>-->
+                    <th>Worse(No.)</th>
                     <th>Code</th>
-                    <th>Action</th>
                 </tr>
                 </thead>
 
@@ -44,47 +43,24 @@ $branchname = $resbranch['name'];
                     <tr>
                         <td>
                             <?php $category = $fetch['categoryid'];
-                                  $getname = $mysqli->query("select * from asset_category where id = '$category'");
-                                  $resname = $getname->fetch_assoc();
-                                  $categorycode = $resname['category_code'];
-                                  echo $categoryname = $resname['category_name'];
+                            $getname = $mysqli->query("select * from asset_category where id = '$category'");
+                            $resname = $getname->fetch_assoc();
+                            $categorycode = $resname['category_code'];
+                            echo $categoryname = $resname['category_name'];
                             ?>
                         </td>
                         <td><?php echo $itemname = $fetch['itemname']; ?></td>
                         <td><?php echo $location = $fetch['location']; ?></td>
-                        <!--<td><?php /*echo $fetch['excellent']; */?></td>
-                        <td><?php /*echo $fetch['good']; */?></td>
-                        <td><?php /*echo $fetch['fair']; */?></td>
-                        <td><?php /*echo $fetch['bad']; */?></td>
-                        <td><?php /*echo $fetch['worse']; */?></td>-->
+                        <td><?php echo $fetch['excellent']; ?></td>
+                        <td><?php echo $fetch['good']; ?></td>
+                        <td><?php echo $fetch['fair']; ?></td>
+                        <td><?php echo $fetch['bad']; ?></td>
+                        <td><?php echo $fetch['worse']; ?></td>
                         <td>
                             <span style="text-transform: uppercase">
                                 <?php echo "CV"."/".substr($branchname,0,3)."/".substr($categorycode,0,3).
                                     "/".substr($itemname,0,3)."/".substr($location,0,3)."/".$fetch['id']; ?>
                             </span>
-                        </td>
-                        <td>
-                                <div class="dropdown"><a data-toggle="dropdown"
-                                                         class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                            class="flaticon-more-1"></i> </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <ul class="kt-nav">
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_assets"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_assets"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                         </td>
                     </tr>
                 <?php } ?>

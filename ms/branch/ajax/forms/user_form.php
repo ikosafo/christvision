@@ -1,9 +1,5 @@
 <?php include ('../../../../config.php');
 //$random = rand(1,10000).date("Ymd");
-$i_index = $_POST['i_index'];
-
-$query = $mysqli->query("select * from users_admin where id = '$i_index'");
-$result = $query->fetch_assoc();
 ?>
 <!--begin::Form-->
 
@@ -17,7 +13,7 @@ $result = $query->fetch_assoc();
             <div class="col-lg-12 col-md-12">
                 <label for="full_name">Full Name</label>
                 <input type="text" class="form-control" id="full_name"
-                       placeholder="Enter Full Name" value="<?php echo $result['fullname'] ?>">
+                       placeholder="Enter Full Name">
             </div>
         </div>
 
@@ -25,29 +21,25 @@ $result = $query->fetch_assoc();
             <div class="col-lg-12 col-md-12">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username"
-                       placeholder="Enter Username" value="<?php echo $result['username'] ?>">
+                       placeholder="Enter Username">
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="user_branch">Select User Branch</label>
-                <select id="user_branch" style="width: 100%">
-                    <option value="">Select User Branch</option>
-                    <?php
-                    $user_branch = $result['branch'];
-                    $queryed = $mysqli->query("select * from branch ORDER BY name");
-                    while ($resulted = $queryed->fetch_assoc()) { ?>
-                        <option <?php if (@$user_branch == @$resulted['id']) echo "Selected" ?>><?php echo $resulted['name'] ?></option>
-                    <?php } ?>
+                <label for="user_type">Select User Type</label>
+                <select id="user_type" style="width: 100%">
+                    <option value="">Select User Type</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Normal">Normal</option>
                 </select>
             </div>
         </div>
 
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="editbranchuser">Edit</button>
-                <button type="button" class="btn btn-secondary" id="cancelbranch">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveuser">Submit</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
     </div>
@@ -58,13 +50,12 @@ $result = $query->fetch_assoc();
 
 <script>
 
-    $("#user_branch").select2({placeholder:'Select Branch'});
+    $("#user_type").select2({placeholder:'Select User Type'});
 
-    $('#editbranchuser').click(function () {
+    $('#saveuser').click(function () {
         var full_name = $('#full_name').val();
         var username = $('#username').val();
-        var user_branch = $('#user_branch').val();
-        var i_index = '<?php echo $i_index ?>';
+        var user_type = $('#user_type').val();
 
         var error = '';
         if (full_name == "") {
@@ -75,15 +66,15 @@ $result = $query->fetch_assoc();
             error += 'Please enter username \n';
             $("#username").focus();
         }
-        if (user_branch == "") {
-            error += 'Please select branch \n';
-            $("#user_branch").focus();
+        if (user_type == "") {
+            error += 'Please select user type \n';
+            $("#user_type").focus();
         }
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_branchuseredit.php",
+                url: "ajax/queries/saveform_user.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -95,16 +86,15 @@ $result = $query->fetch_assoc();
                 data: {
                     full_name: full_name,
                     username: username,
-                    user_branch: user_branch,
-                    i_index: i_index
+                    user_type: user_type
                 },
                 success: function (text) {
                     //alert(text);
                     if (text == 1) {
-                        $("#success_loc").notify("Branch updated","success");
+                        $("#success_loc").notify("User added","success");
                         $.ajax({
                             type: "POST",
-                            url: "ajax/forms/branchuser_form.php",
+                            url: "ajax/forms/user_form.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -114,7 +104,7 @@ $result = $query->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#branchform_div').html(text);
+                                $('#userform_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -125,7 +115,7 @@ $result = $query->fetch_assoc();
                         });
                         $.ajax({
                             type: "POST",
-                            url: "ajax/tables/branchuser_table.php",
+                            url: "ajax/tables/user_table.php",
                             beforeSend: function () {
                                 KTApp.blockPage({
                                     overlayColor: "#000000",
@@ -135,7 +125,7 @@ $result = $query->fetch_assoc();
                                 })
                             },
                             success: function (text) {
-                                $('#branchtable_div').html(text);
+                                $('#usertable_div').html(text);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 alert(xhr.status + " " + thrownError);
@@ -164,33 +154,6 @@ $result = $query->fetch_assoc();
         }
         return false;
     });
-
-
-    $('#cancelbranch').click(function () {
-
-        $.ajax({
-            url: "ajax/forms/branchuser_form.php",
-            beforeSend: function () {
-                KTApp.blockPage({
-                    overlayColor: "#000000",
-                    type: "v2",
-                    state: "success",
-                    message: "Please wait..."
-                })
-            },
-            success: function (text) {
-                $('#branchform_div').html(text);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            },
-            complete: function () {
-                KTApp.unblockPage();
-            },
-        });
-
-    });
-
 
 
 </script>
