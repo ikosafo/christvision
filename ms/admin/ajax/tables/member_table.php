@@ -77,7 +77,8 @@ $select_branch = $_POST['select_branch'];
     }), $("#export_csv").on("click", function (e) {
         e.preventDefault(), t.button(3).trigger()
     }), $("#export_pdf").on("click", function (e) {
-        e.preventDefault(), t.button(4).trigger();
+        e.preventDefault(), t.button(4).trigger()
+    });
 
 
     $('#data_search').keyup(function () {
