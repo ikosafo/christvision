@@ -1,5 +1,14 @@
 <?php include('../../../../config.php');
+
 $select_branch = $_POST['select_branch'];
+if ($select_branch == "All") {
+    $getworker = $mysqli->query("select * from `branchworker` w JOIN `member` m where m.id = w.memberid");
+}
+else {
+    $getworker = $mysqli->query("select * from `branchworker` w JOIN `member` m where m.id = w.memberid AND m.branch = '$select_branch'");
+}
+
+//$select_branch = $_POST['select_branch'];
 ?>
 <style>
     .dataTables_filter {
@@ -7,7 +16,6 @@ $select_branch = $_POST['select_branch'];
     }
 </style>
 
-<div class="kt-separator kt-separator--dashed"></div>
 
 <div class="kt-section">
     <div class="kt-section__content responsive">
@@ -16,24 +24,43 @@ $select_branch = $_POST['select_branch'];
                 <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">
                                 <i class="la la-search"></i>
                             </span></div>
-                <input type="text" id="visitor_search" class="form-control"
+                <input type="text" id="data_search" class="form-control"
                        placeholder="Search..." aria-describedby="basic-addon1">
             </div>
         </div>
 
         <div class="table-responsive">
-            <table id="prov-table" class="table" style="margin-top: 3% !important;">
+            <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
                     <th>Branch</th>
                     <th>Full Name</th>
                     <th>Telephone</th>
                     <th>Residence</th>
-                    <th>Denomination</th>
-                    <th>How did <br/>you hear</th>
-                    <th>Description</th>
+                    <th>Role</th>
+                    <th>Position</th>
                 </tr>
                 </thead>
+                <tbody>
+                <?php
+                while ($resworker = $getworker->fetch_assoc()) { ?>
+                    <tr>
+                        <td>
+                            <?php
+                            $branchid = $resworker['branch'];
+                            $getbranch = $mysqli->query("select * from branch where id = '$branchid'");
+                            $resbranch = $getbranch->fetch_assoc();
+                            echo $resbranch['name'];
+                            ?>
+                        </td>
+                        <td><?php echo $resworker['firstname'].' '.$resworker['othername'].' '.$resworker['surname']; ?></td>
+                        <td><?php echo $resworker['telephone']; ?></td>
+                        <td><?php echo $resworker['residence']; ?></td>
+                        <td><?php echo $resworker['role']; ?></td>
+                        <td><?php echo $resworker['position']; ?></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
             </table>
         </div>
 
@@ -42,25 +69,7 @@ $select_branch = $_POST['select_branch'];
 
 
 <script>
-
-    oTable =  $("#prov-table").DataTable({
-        stateSave: true,
-        "sDom": '<"top"ip>rt<"bottom"fl><"clear">',
-        'processing': true,
-        'serverSide': true,
-        'serverMethod': 'post',
-        'ajax': {
-            'url': 'ajax/paginations/visitor.php?branch=<?php echo $select_branch ?>'
-        },
-        'columns': [
-            {data: 'branchid'},
-            {data: 'fullname'},
-            {data: 'telephone'},
-            {data: 'residence'},
-            {data: 'denomination'},
-            {data: 'hearingabout'},
-            {data: 'description'},
-        ],
+    oTable =  $("#data-table").DataTable({
         responsive: !0,
         dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
         buttons: ["print", "copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
@@ -78,7 +87,7 @@ $select_branch = $_POST['select_branch'];
         e.preventDefault(), t.button(4).trigger()
     });
 
-    $('#visitor_search').keyup(function () {
+    $('#data_search').keyup(function () {
         oTable.search($(this).val()).draw();
     });
 

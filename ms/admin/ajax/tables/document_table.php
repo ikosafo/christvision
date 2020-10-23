@@ -1,5 +1,12 @@
 <?php include('../../../../config.php');
-$pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
+$branch = $_POST['select_branch'];
+if ($branch == "All") {
+    $pinq = $mysqli->query("select * from document ORDER BY id DESC");
+}
+else {
+    $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY id DESC");
+}
+
 ?>
 <style>
     .dataTables_filter {
@@ -13,11 +20,9 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
     <div class="kt-section__content responsive">
         <div class="kt-searchbar">
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                       <i class="la la-search"></i>
-                    </span>
-                </div>
+                <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">
+                                <i class="la la-search"></i>
+                            </span></div>
                 <input type="text" id="data_search" class="form-control"
                        placeholder="Search..." aria-describedby="basic-addon1">
             </div>
@@ -27,9 +32,11 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Full Name</th>
-                    <th>Username</th>
-                    <th>Action</th>
+                    <th>Branch</th>
+                    <th>Title</th>
+                    <th>Document</th>
+                    <th>Description</th>
+                    <th>Period Uploaded</th>
                 </tr>
                 </thead>
 
@@ -38,33 +45,29 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['fullname']; ?></td>
-                        <td><?php echo $fetch['username']; ?></td>
-                        <td>
-                            <span>
-                                <div class="dropdown"><a data-toggle="dropdown"
-                                                         class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                            class="flaticon-more-1"></i> </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <ul class="kt-nav">
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link edit_adminuser"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-edit"></i>
-                                                    <span class="kt-nav__link-text">Edit</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link delete_adminuser"
-                                                   i_index="<?php echo $fetch['id'] ?>" href="#"> <i
-                                                        class="kt-nav__link-icon flaticon2-trash"></i> <span
-                                                        class="kt-nav__link-text">Delete</span> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </span>
+                        <td><?php
+                            $branchid = $fetch['branch'];
+                            $getbranch = $mysqli->query("select * from branch where id = '$branchid'");
+                            $resbranch = $getbranch->fetch_assoc();
+                            echo $resbranch['name'];
+                            ?>
                         </td>
+                        <td><?php echo $fetch['document_title']; ?></td>
+                        <td>
+                            <?php
+                            $document_id = $fetch['document_id'];
+                            $getfiles = $mysqli->query("select * from document_files where document_id = '$document_id'");
+                            while ($resfiles = $getfiles->fetch_assoc()) { ?>
+                                <a href="../../ms/<?php echo $resfiles['document_location'] ?>">
+                                    View/Download File (<?php echo $resfiles['document_type']; ?>)
+                                </a> <br/>
+                                <hr/>
+                            <?php } ?>
+                            <small><i>Click above to View</i></small>
+
+                        </td>
+                        <td><?php echo $fetch['document_description']; ?></td>
+                        <td><?php echo $fetch['period_uploaded']; ?></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -97,33 +100,11 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
         oTable.search($(this).val()).draw();
     });
 
-
-    $(document).off('click', '.edit_adminuser').on('click', '.edit_adminuser', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_adminuser.php",
-            data: {
-                i_index: theindex
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#adminform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-    $(document).off('click', '.delete_adminuser').on('click', '.delete_adminuser', function () {
+    $(document).off('click', '.delete_doc').on('click', '.delete_doc', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Admin User!',
+            title: 'Delete Document!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -141,14 +122,15 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_adminuser.php",
+                            url: "ajax/queries/delete_document.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
+                                //alert(text);
                                 $.ajax({
-                                    url: "ajax/tables/adminuser_table.php",
+                                    url: "ajax/tables/document_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -158,7 +140,7 @@ $pinq = $mysqli->query("select * from users_adminmain ORDER BY `fullname`");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#admintable_div').html(text);
+                                        $('#documenttable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

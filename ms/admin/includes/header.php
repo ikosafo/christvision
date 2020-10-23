@@ -251,7 +251,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/members.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/converts.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/visitors.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/church_workers.php"
+                                $_SERVER['PHP_SELF'] == "/ms/admin/church_workers.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/branch_workers.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -295,7 +296,15 @@ background-size: 100% 350px;"
                                                     href="church_workers"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                        class="kt-menu__link-text">Church Workers</span></a>
+                                                        class="kt-menu__link-text">Admin Workers</span></a>
+                                            </li>
+                                            <li class="kt-menu__item   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/branch_workers.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="branch_workers"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Branch Workers</span></a>
                                             </li>
 
                                         </ul>

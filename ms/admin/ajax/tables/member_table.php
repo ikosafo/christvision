@@ -16,7 +16,7 @@ $select_branch = $_POST['select_branch'];
                 <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">
                                 <i class="la la-search"></i>
                             </span></div>
-                <input type="text" id="member_search" class="form-control"
+                <input type="text" id="data_search" class="form-control"
                        placeholder="Search..." aria-describedby="basic-addon1">
             </div>
         </div>
@@ -44,10 +44,8 @@ $select_branch = $_POST['select_branch'];
 
 <script>
 
-    oTable = $('#prov-table').DataTable({
+    oTable =  $("#prov-table").DataTable({
         stateSave: true,
-        "bLengthChange": false,
-        dom: "rtiplf",
         "sDom": '<"top"ip>rt<"bottom"fl><"clear">',
         'processing': true,
         'serverSide': true,
@@ -64,10 +62,26 @@ $select_branch = $_POST['select_branch'];
             {data: 'residence'},
             {data: 'maritalstatus'},
             {data: 'id'}
-        ]
+        ],
+        responsive: !0,
+        dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
+        buttons: ["print", "copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
+        "bLengthChange": false,"order": [],
+
+    }), $("#export_print").on("click", function (e) {
+        e.preventDefault(), t.button(0).trigger()
+    }), $("#export_copy").on("click", function (e) {
+        e.preventDefault(), t.button(1).trigger()
+    }), $("#export_excel").on("click", function (e) {
+        e.preventDefault(), t.button(2).trigger()
+    }), $("#export_csv").on("click", function (e) {
+        e.preventDefault(), t.button(3).trigger()
+    }), $("#export_pdf").on("click", function (e) {
+        e.preventDefault(), t.button(4).trigger()
     });
 
-    $('#member_search').keyup(function () {
+
+    $('#data_search').keyup(function () {
         oTable.search($(this).val()).draw();
     });
 

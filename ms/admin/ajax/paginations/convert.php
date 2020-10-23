@@ -16,21 +16,13 @@ $searchValue = $_POST['search']['value']; // Search value
 $searchQuery = " ";
 if($searchValue != ''){
     $searchQuery = " and
-(CONCAT(firstname,' ',surname) LIKE '%" . $searchValue . "%'
-OR CONCAT(firstname,' ',surname,' ',othername) LIKE '%" . $searchValue . "%'
-OR CONCAT(surname,' ',firstname,' ',othername) LIKE '%" . $searchValue . "%'
-OR CONCAT(firstname,' ',othername,' ',surname) LIKE '%" . $searchValue . "%'
-OR CONCAT(surname,' ',othername,' ',firstname) LIKE '%" . $searchValue . "%'
-OR CONCAT(othername,' ',firstname, ' ',surname) LIKE '%" . $searchValue . "%'
-OR CONCAT(othername,' ',surname,' ',firstname) LIKE '%" . $searchValue . "%'
-OR surname LIKE '%" . $searchValue . "%'
-OR firstname LIKE '%" . $searchValue . "%'
-OR othername LIKE '%" . $searchValue . "%'
-OR emailaddress LIKE '%" . $searchValue . "%'
-OR gender LIKE '%" . $searchValue . "%'
+
+full_name LIKE '%" . $searchValue . "%'
 OR telephone LIKE '%" . $searchValue . "%'
-OR maritalstatus LIKE '%" . $searchValue . "%'
-OR residence LIKE '%" . $searchValue . "%') ";
+OR residence LIKE '%" . $searchValue . "%'
+OR denomination LIKE '%" . $searchValue . "%'
+OR hearing_about LIKE '%" . $searchValue . "%'
+OR description LIKE '%" . $searchValue . "%'";
 }
 
 $branch = $_GET['branch'];
@@ -44,8 +36,7 @@ if ($branch == "All") {
     $totalRecords = $records['allcount'];
 
 ## Total number of record with filtering
-    $sel = mysqli_query($con,"select count(*) as allcount from `convert` WHERE id != ''
-                                   AND 1 ".$searchQuery);
+    $sel = mysqli_query($con,"select count(*) as allcount from `convert` WHERE id != '' AND 1 ".$searchQuery);
     $records = mysqli_fetch_assoc($sel);
     $totalRecordwithFilter = $records['allcount'];
 
@@ -81,6 +72,7 @@ while ($row = mysqli_fetch_assoc($empRecords)) {
         "fullname"=>$row['full_name'],
         "telephone"=>$row['telephone'],
         "residence"=>$row['residence'],
+        "denomination"=>$row['denomination'],
         "hearingabout"=>$row['hearing_about'],
         "description"=>$row['description']
     );
