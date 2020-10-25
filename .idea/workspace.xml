@@ -69,8 +69,8 @@
       <file leaf-file-name="member_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63978493">
-              <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.70071685">
+              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -112,8 +112,8 @@
       <file leaf-file-name="member.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/paginations/member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.46154">
-              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
               <folding>
                 <marker date="1603464444959" expanded="true" signature="1609:1650" placeholder="select count..." />
                 <marker date="1603464444959" expanded="true" signature="1809:1907" placeholder="select count..." />
@@ -312,10 +312,6 @@
               <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,6 +332,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paginations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -844,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/paginations/member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.46154">
-          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
           <folding>
             <marker date="1603464444959" expanded="true" signature="1609:1650" placeholder="select count..." />
             <marker date="1603464444959" expanded="true" signature="1809:1907" placeholder="select count..." />
@@ -859,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63978493">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.70071685">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding />
         </state>
       </provider>
