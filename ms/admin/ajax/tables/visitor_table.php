@@ -67,8 +67,8 @@ $select_branch = $_POST['select_branch'];
         "bLengthChange": false,"order": []
     }),
         $("#export_print").on("click", function (e) {
-            e.preventDefault(), t.button(0).trigger()
-        }), $("#export_copy").on("click", function (e) {
+        e.preventDefault(), t.button(0).trigger()
+     }),$("#export_copy").on("click", function (e) {
         e.preventDefault(), t.button(1).trigger()
     }), $("#export_excel").on("click", function (e) {
         e.preventDefault(), t.button(2).trigger()
