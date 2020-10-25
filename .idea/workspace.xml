@@ -34,16 +34,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meetingattendance_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/meetingattendance_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="attendancesearchmeeting.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ms/branch/attendancesearchmeeting.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="member_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70071685">
+            <state vertical-scroll-proportion="-15.038462">
               <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convert_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.653846">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visitor_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="visitor_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.576923">
-              <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.54121864">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -190,14 +190,14 @@
         <option value="$PROJECT_DIR$/ms/admin/branch_workers.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/brworker_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/paginations/member.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/meetings.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/meeting_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/ms/branch/attendancesearchmeeting.php" />
         <option value="$PROJECT_DIR$/ms/admin/attendancesearchmeeting.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php" />
       </list>
     </option>
   </component>
@@ -312,6 +312,10 @@
               <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -332,10 +336,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paginations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7307692">
@@ -823,14 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.576923">
-          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/service_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.6538463">
@@ -859,8 +843,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70071685">
+        <state vertical-scroll-proportion="-15.038462">
           <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.653846">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54121864">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
           <folding />
         </state>
       </provider>
