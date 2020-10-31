@@ -1,4 +1,6 @@
-<?php require('includes/header.php') ?>
+<?php require('includes/header.php');
+
+?>
 
 <!-- begin:: Subheader -->
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
@@ -16,24 +18,34 @@
                 <div class="kt-portlet__body">
                     <div class="kt-portlet__body">
 
+
+                        <div class="kt-portlet__head kt-portlet__head--lg mb-4">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">
+                                    Financials
+                                    <small>Search</small>
+                                </h3>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
 
-                            <div class="col-lg-3 col-md-3 col-sm-12">
-                                <div class="kt-form__group kt-form__group--inline">
-                                    <div class="kt-form__label">
-                                        <label>Select Branch</label>
-                                    </div>
-                                    <select class="form-control kt-select2" id="select_branch" name="param">
-                                        <option value="">Select Branch</option>
-                                        <option value="All">All</option>
-                                        <?php
-                                        $getmeeting = $mysqli->query("select * from branch ORDER BY name");
-                                        while ($resmeeting = $getmeeting->fetch_assoc()){ ?>
-                                            <option value="<?php echo $resmeeting['id'] ?>"><?php echo $resmeeting['name'] ?></option>
-                                        <?php } ?>
-                                    </select>
+                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-form__label">
+                                    <label>Select Branch:</label>
                                 </div>
+                                <select class="form-control kt-select2" id="select_branch" name="param">
+                                    <option value="">Select Branch</option>
+                                    <option value="All">All</option>
+                                    <?php
+                                    $getconvert = $mysqli->query("select * from branch ORDER BY name");
+                                    while ($resconvert = $getconvert->fetch_assoc()){ ?>
+                                        <option value="<?php echo $resconvert['id'] ?>"><?php echo $resconvert['name'] ?></option>
+                                    <?php } ?>
+
+                                </select>
                             </div>
+
                             <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
@@ -45,6 +57,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
@@ -56,24 +69,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+
+                            <div class="col-md-2 kt-margin-b-20-tablet-and-mobile">
                                 <div class="kt-form__group kt-form__group--inline">
                                     <div class="kt-form__label">
-                                        <label>Search Query:</label>
+                                        <label>Select Type:</label>
                                     </div>
-                                    <button type="button" id="load_btn" class="btn btn-primary">
-                                        Click to load Data
-                                    </button>
+                                    <div class="kt-form__control">
+                                        <select class="form-control bootstrap-select" id="fin_type">
+                                            <option value="">Select...</option>
+                                            <option value="Special Offerings/Seeds">Special Offerings/Seeds</option>
+                                            <option value="Tithe">Tithe</option>
+                                            <option value="Welfare">Welfare</option>
+                                            <option value="First Fruit">First Fruit</option>
+                                            <option value="Contributions">Contributions</option>
+                                            <option value="Ministry Partners">Ministry Partners</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="col-md-1 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-form__group kt-form__group--inline">
+                                    <button type="button" id="load_btn" class="btn btn-primary">
+                                        Click to Load
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-md-12">
-                                <div id="meeting_table_div"></div>
+                                <div id="attendance_table_div"></div>
                             </div>
                         </div>
+
+                        <!--<div class="form-group row">
+                            <div class="col-md-12">
+                                <div id="approval_div"></div>
+                            </div>
+                        </div>-->
 
                     </div>
                 </div>
@@ -82,9 +117,8 @@
         </div>
     </div>
 
-    <!--End::Dashboard 3-->
 </div>
-
+<!--End::Dashboard 3-->
 <!-- end:: Content -->
 
 <?php require('includes/footer.php') ?>
@@ -93,24 +127,29 @@
 <script>
     var KTSelect2 = {
         init: function () {
-            $("#select_branch").select2({placeholder: "Select Branch"});
-            $('#datefrom').datetimepicker().on('change', function(){
-                $('.datetimepicker').hide();
-            });
-
-            $('#dateto').datetimepicker().on('change', function(){
-                $('.datetimepicker').hide();
-            });
+            $("#select_branch").select2({placeholder: "Select Branch"})
         }
     };
     jQuery(document).ready(function () {
         KTSelect2.init()
     });
 
+    $('#datefrom').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom"
+    });
+
+    $('#dateto').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom"
+    });
 
     $("#load_btn").click(function(){
         var datefrom = $("#datefrom").val();
         var dateto = $("#dateto").val();
+        var fin_type = $("#fin_type").val();
         var select_branch = $("#select_branch").val();
 
         var error = '';
@@ -126,14 +165,19 @@
             error += 'Please select search end date \n';
             $("#dateto").focus();
         }
+        if (fin_type == "") {
+            error += 'Please select financial type \n';
+            $("#fin_type").focus();
+        }
         if (datefrom > dateto) {
             error += 'Please select correct date range \n';
         }
 
+
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/attendance_search_meeting.php",
+                url: "ajax/queries/financials_search.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -145,10 +189,11 @@
                 data: {
                     datefrom: datefrom,
                     dateto:dateto,
+                    fin_type:fin_type,
                     select_branch:select_branch
                 },
                 success: function (text) {
-                    $('#meeting_table_div').html(text);
+                    $('#attendance_table_div').html(text);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);
@@ -164,6 +209,8 @@
         return false;
     });
 
+
+    $("#fin_type").selectpicker();
 
 
 </script>

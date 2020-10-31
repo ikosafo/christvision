@@ -1,6 +1,4 @@
-<?php require('includes/header.php');
-$financialtype = 'Offering';
-?>
+<?php require('includes/header.php') ?>
 
 <!-- begin:: Subheader -->
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
@@ -21,8 +19,8 @@ $financialtype = 'Offering';
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
-                                    Financials
-                                    <small>Special Offerings / Seeds</small>
+                                    Attendance
+                                    <small>Meeting Statistics</small>
                                 </h3>
                             </div>
                         </div>
@@ -30,15 +28,26 @@ $financialtype = 'Offering';
                         <!--begin::Form-->
 
                         <div class="form-group row">
-                            <div class="col-md-12">
-                                <div id="member_table_div"></div>
+                            <label class="col-form-label col-lg-3 col-sm-12">Select Branch for <b>Meeting</b> Details</label>
+
+                            <div class=" col-lg-4 col-md-9 col-sm-12">
+                                <select class="form-control kt-select2" id="select_branch" name="param">
+                                    <option value="">Select Branch</option>
+                                    <option value="All">All</option>
+                                    <?php
+                                    $getconvert = $mysqli->query("select * from branch ORDER BY name");
+                                    while ($resconvert = $getconvert->fetch_assoc()){ ?>
+                                        <option value="<?php echo $resconvert['id'] ?>"><?php echo $resconvert['name'] ?></option>
+                                    <?php } ?>
+
+                                </select>
                             </div>
                         </div>
 
 
                         <div class="form-group row">
-                            <div class="col-md-12">
-                                <div id="approval_div"></div>
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div id="meetingstable_div"></div>
                             </div>
                         </div>
                         <!--end::Form-->
@@ -59,46 +68,21 @@ $financialtype = 'Offering';
 
 <script>
 
-    $.ajax({
-        type: "POST",
-        url: "ajax/tables/memberfin_table.php",
-        beforeSend: function () {
-            KTApp.blockPage({
-                overlayColor: "#000000",
-                type: "v2",
-                state: "success",
-                message: "Please wait..."
-            })
-        },
-        data: {
-            financialtype: '<?php echo $financialtype ?>'
-        },
-        success: function (text) {
-            $('#member_table_div').html(text);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status + " " + thrownError);
-        },
-        complete: function () {
-            KTApp.unblockPage();
-        },
+    var KTSelect2 = {
+        init: function () {
+            $("#select_branch").select2({placeholder: "Select Branch"})
+        }
+    };
+    jQuery(document).ready(function () {
+        KTSelect2.init()
     });
 
-    $(document).on('click', '.payoffering_btn', function() {
-        var id_index = $(this).attr('i_index');
-        var branch = '<?php echo $_SESSION['branch']; ?>';
 
-        $('html, body').animate({
-            scrollTop: $("#approval_div").offset().top
-        }, 2000);
-
+    $("#select_branch").change(function () {
+        var select_branch = $("#select_branch").val();
         $.ajax({
             type: "POST",
-            url: "payoffering_member.php",
-            data: {
-                id_index:id_index,
-                branch:branch
-            },
+            url: "ajax/tables/meetingstats_table.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -107,8 +91,11 @@ $financialtype = 'Offering';
                     message: "Please wait..."
                 })
             },
+            data: {
+                select_branch: select_branch
+            },
             success: function (text) {
-                $('#approval_div').html(text);
+                $('#meetingstable_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
@@ -118,8 +105,8 @@ $financialtype = 'Offering';
             },
 
         });
-
-
     });
+
+
 </script>
 

@@ -1,14 +1,15 @@
 <?php include('../../../../config.php');
-$select_branch = $_POST['select_branch'];
+$branch = $_POST['select_branch'];
 
-if ($select_branch == "All") {
-    $getservice = $mysqli->query("select * from `service` ORDER BY service_name");
-} else {
-    $getservice = $mysqli->query("select * from `service` where branch = '$select_branch' ORDER BY service_name");
+if ($branch == "All") {
+    $pinq = $mysqli->query("select * from meeting ORDER BY id DESC");
+}
+else {
+    $pinq = $mysqli->query("select * from meeting where branch = '$branch' ORDER BY id DESC");
 }
 
-
 ?>
+
 <div class="kt-section">
 
     <div class="kt-section__content responsive">
@@ -27,13 +28,22 @@ if ($select_branch == "All") {
                 <thead>
                 <tr>
                     <th>Branch</th>
-                    <th>Service Name</th>
+                    <th>Title</th>
+                    <th>Men</th>
+                    <th>Women</th>
+                    <th>Ladies</th>
+                    <th>Guys</th>
+                    <th>Children</th>
+                    <th>Total</th>
+                    <th>Offering</th>
+                    <th>Period Started</th>
+                    <th>Period Ended</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <?php
-                while ($fetch = $getservice->fetch_assoc()) {
+                while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
                         <td>
@@ -44,7 +54,16 @@ if ($select_branch == "All") {
                             echo $resbranch['name'];
                             ?>
                         </td>
-                        <td><?php echo $fetch['service_name']; ?></td>
+                        <td><?php echo $fetch['meetingname']; ?></td>
+                        <td><?php echo $fetch['men']; ?></td>
+                        <td><?php echo $fetch['women']; ?></td>
+                        <td><?php echo $fetch['ladies']; ?></td>
+                        <td><?php echo $fetch['guys']; ?></td>
+                        <td><?php echo $fetch['children']; ?></td>
+                        <td><?php echo $fetch['total']; ?></td>
+                        <td><?php echo "GHS ".$fetch['offering']; ?></td>
+                        <td><?php echo $fetch['periodstarted']; ?></td>
+                        <td><?php echo $fetch['periodclosed']; ?></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -77,32 +96,11 @@ if ($select_branch == "All") {
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_service').on('click', '.edit_service', function () {
-        var theindex = $(this).attr('i_index');
-        //alert(theindex)
-        $.ajax({
-            type: "POST",
-            url: "ajax/forms/editform_service.php",
-            data: {
-                i_index: theindex
-            },
-            dataType: "html",
-            success: function (text) {
-                $('#servicesform_div').html(text);
-            },
-            complete: function () {
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-    });
-
-    $(document).off('click', '.delete_service').on('click', '.delete_service', function () {
+    $(document).off('click', '.delete_meeting').on('click', '.delete_meeting', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Service!',
+            title: 'Delete Meeting!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -120,14 +118,14 @@ if ($select_branch == "All") {
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_service.php",
+                            url: "ajax/queries/delete_meetingstats.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/services_table.php",
+                                    url: "ajax/tables/meetingstats_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -137,7 +135,7 @@ if ($select_branch == "All") {
                                         })
                                     },
                                     success: function (text) {
-                                        $('#servicestable_div').html(text);
+                                        $('#meetingstable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

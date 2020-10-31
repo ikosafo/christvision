@@ -693,14 +693,64 @@ function getmailstatus($pin) {
 
 
 
+function getmemberdetails($memberid){
+    include ('db.php');
+    $q = mysqli_query($con,"select * from `member_images` where memberid = '$memberid'");
+    $resimage = mysqli_fetch_assoc($q);
+    $theimage = $resimage['image_location'];
+
+    $getdetails = mysqli_query($con,"select * from `member` where memberid = '$memberid'");
+    $resdetails = mysqli_fetch_assoc($getdetails);
+    $surname = $resdetails['surname'];
+    $firstname = $resdetails['firstname'];
+    $othername = $resdetails['othername'];
+    $gender = $resdetails['gender'];
+    $telephone = $resdetails['telephone'];
+
+    if ($theimage == "") {
+        return '<span style="width: 294px;">
+                                <div class="kt-user-card-v2">
+                                    <div class="kt-user-card-v2__pic">
+                                    </div>
+                                    <div class="kt-user-card-v2__details">
+                                        <a class="kt-user-card-v2__name view_member"
+                                           member_index="'.$memberid.'"
+                                           href="#">'.$surname.' '.$firstname.' '.$othername.'
+                                        </a>
+                                        <span class="kt-user-card-v2__email">'.$gender.', '.$telephone.'</span></div>
+                                </div>
+                            </span>';
+    }
+    else {
+        return '<span style="width: 294px;">
+                                <div class="kt-user-card-v2">
+                                    <div class="kt-user-card-v2__pic">
+                                       <img style="width: 40px;height: 40px"
+                                             src="../'.$theimage.'">
+                                    </div>
+                                    <div class="kt-user-card-v2__details">
+                                        <a class="kt-user-card-v2__name view_member"
+                                           member_index="'.$memberid.'"
+                                           href="#">'.$surname.' '.$firstname.' '.$othername.'
+                                        </a>
+                                        <span class="kt-user-card-v2__email">'.$gender.', '.$telephone.'</span></div>
+                                </div>
+                            </span>';
+    }
 
 
+}
 
 
+function getdepartment($department){
+    include ('db.php');
 
+    $q = mysqli_query($con,"select * from `department` where id = '$department'");
+    $resdept = mysqli_fetch_assoc($q);
+    $thedepartment = $resdept['department_name'];
+    return $thedepartment;
 
-
-
+}
 
 /*Member Functions*/
 function getbranch($id) {

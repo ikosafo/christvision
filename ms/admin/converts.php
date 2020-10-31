@@ -39,13 +39,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div id="approval_div"></div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
@@ -53,8 +46,8 @@
         </div>
     </div>
 
-    <!--End::Dashboard 3-->    </div>
-
+    <!--End::Dashboard 3-->
+</div>
 
 
 
@@ -103,44 +96,6 @@
         });
     });
 
-
-
-    $(document).on('click', '.convertdetailsbtn', function() {
-        var id_index = $(this).attr('convertid');
-        //alert(id_index);
-
-        $('html, body').animate({
-            scrollTop: $("#approval_div").offset().top
-        }, 2000);
-
-        $.ajax({
-            type: "POST",
-            url: "convertdetails.php",
-            data: {
-                id_index:id_index
-            },
-            beforeSend: function () {
-                KTApp.blockPage({
-                    overlayColor: "#000000",
-                    type: "v2",
-                    state: "success",
-                    message: "Please wait..."
-                })
-            },
-            success: function (text) {
-                $('#approval_div').html(text);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            },
-            complete: function () {
-                KTApp.unblockPage();
-            },
-
-        });
-
-
-    });
 
 
 </script>

@@ -17,7 +17,7 @@
                     <div class="kt-portlet__body">
 
                         <div class="form-group row">
-                            <label class="col-form-label col-lg-3 col-sm-12">Select Branch for <b>Service</b> Details</label>
+                            <label class="col-form-label col-lg-3 col-sm-12">Select Branch for <b>Services</b></label>
 
                             <div class=" col-lg-4 col-md-9 col-sm-12">
                                 <select class="form-control kt-select2" id="select_branch" name="param">
@@ -38,13 +38,6 @@
                                 <div id="service_table_div"></div>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div id="approval_div"></div>
-                            </div>
-                        </div>
-
 
                     </div>
                 </div>
@@ -101,45 +94,6 @@
             },
 
         });
-    });
-
-
-
-    $(document).on('click', '.memberdetailsbtn', function() {
-        var id_index = $(this).attr('memberid');
-        //alert(id_index);
-
-        $('html, body').animate({
-            scrollTop: $("#approval_div").offset().top
-        }, 2000);
-
-        $.ajax({
-            type: "POST",
-            url: "memberdetails.php",
-            data: {
-                id_index:id_index
-            },
-            beforeSend: function () {
-                KTApp.blockPage({
-                    overlayColor: "#000000",
-                    type: "v2",
-                    state: "success",
-                    message: "Please wait..."
-                })
-            },
-            success: function (text) {
-                $('#approval_div').html(text);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            },
-            complete: function () {
-                KTApp.unblockPage();
-            },
-
-        });
-
-
     });
 
 
