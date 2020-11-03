@@ -163,7 +163,7 @@ background-size: 100% 350px;"
     </li>
     <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--builder" data-toggle="kt-tooltip"
         title="Birthdays for Today"
-        data-placement="left" data-original-title="Birthdays for Today">
+        data-placement="left" data-original-title="Birthdays">
         <a href="birthdays"><i class="flaticon2-bell"></i></a>
     </li>
     <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--docs" data-toggle="kt-tooltip"
@@ -608,34 +608,6 @@ background-size: 100% 350px;"
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Search</span></a>
                                             </li>
-                                            <!--<li class="kt-menu__item  <?php /*echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
-                                                    href="#"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Account Entry</span></a>
-                                            </li>
-
-                                            <li class="kt-menu__item  <?php /*echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
-                                                    href="#"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Cash Book</span></a>
-                                            </li>
-                                            <li class="kt-menu__item  <?php /*echo(
-                                            $_SERVER['PHP_SELF'] == "/branch/#.php"
-                                                ? "kt-menu__item--active" : ""); */?>" aria-haspopup="true"><a
-                                                    href="#"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Account Statement</span></a>
-                                            </li>-->
 
                                         </ul>
                                     </div>

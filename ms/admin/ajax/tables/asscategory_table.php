@@ -1,18 +1,14 @@
 <?php include('../../../../config.php');
 $branch = $_POST['select_branch'];
+
 if ($branch == "All") {
-    $pinq = $mysqli->query("select * from document ORDER BY id DESC");
+    $pinq = $mysqli->query("select * from asset_category ORDER BY category_name");
 }
 else {
-    $pinq = $mysqli->query("select * from document where branch = '$branch' ORDER BY id DESC");
+    $pinq = $mysqli->query("select * from asset_category where branch = '$branch' ORDER BY category_name");
 }
 
 ?>
-<style>
-    .dataTables_filter {
-        display: none;
-    }
-</style>
 
 
 <div class="kt-section">
@@ -33,10 +29,8 @@ else {
                 <thead>
                 <tr>
                     <th>Branch</th>
-                    <th>Title</th>
-                    <th>Document</th>
-                    <th>Description</th>
-                    <th>Period Uploaded</th>
+                    <th>Category Name</th>
+                    <th>Category Code</th>
                 </tr>
                 </thead>
 
@@ -53,22 +47,8 @@ else {
                             echo $resbranch['name'];
                             ?>
                         </td>
-                        <td><?php echo $fetch['document_title']; ?></td>
-                        <td>
-                            <?php
-                            $document_id = $fetch['document_id'];
-                            $getfiles = $mysqli->query("select * from document_files where document_id = '$document_id'");
-                            while ($resfiles = $getfiles->fetch_assoc()) { ?>
-                                <a href="../../ms/<?php echo $resfiles['document_location'] ?>">
-                                    View/Download File (<?php echo $resfiles['document_type']; ?>)
-                                </a> <br/>
-                                <hr/>
-                            <?php } ?>
-                            <small><i>Click above to View</i></small>
-
-                        </td>
-                        <td><?php echo $fetch['document_description']; ?></td>
-                        <td><?php echo $fetch['period_uploaded']; ?></td>
+                        <td><?php echo $fetch['category_name']; ?></td>
+                        <td><?php echo $fetch['category_code']; ?></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -101,11 +81,32 @@ else {
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_doc').on('click', '.delete_doc', function () {
+    $(document).off('click', '.edit_asscategory').on('click', '.edit_asscategory', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex)
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/editform_asscategory.php",
+            data: {
+                i_index: theindex
+            },
+            dataType: "html",
+            success: function (text) {
+                $('#asscategoryform_div').html(text);
+            },
+            complete: function () {
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            }
+        });
+    });
+
+    $(document).off('click', '.delete_asscategory').on('click', '.delete_asscategory', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Document!',
+            title: 'Delete Category!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -123,15 +124,14 @@ else {
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_document.php",
+                            url: "ajax/queries/delete_asscategory.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
-                                //alert(text);
                                 $.ajax({
-                                    url: "ajax/tables/document_table.php",
+                                    url: "ajax/tables/asscategory_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -141,7 +141,7 @@ else {
                                         })
                                     },
                                     success: function (text) {
-                                        $('#documenttable_div').html(text);
+                                        $('#asscategorytable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
