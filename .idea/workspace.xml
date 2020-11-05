@@ -22,125 +22,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="assets_search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/assets_search.php">
+      <file leaf-file-name="events_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/events_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <marker date="1604369891266" expanded="true" signature="129:175" placeholder="select * fro..asset_registry..." />
-                <marker date="1604369891266" expanded="true" signature="216:287" placeholder="select * fro..asset_registry..." />
-                <marker date="1604369891266" expanded="true" signature="1766:1809" placeholder="select * fro..branch..." />
-                <marker date="1604369891266" expanded="true" signature="2161:2212" placeholder="select * fro..asset_category..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/sms.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="56" column="33" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="33" />
+            <state vertical-scroll-proportion="-4.6923075">
+              <caret line="136" column="43" selection-start-line="136" selection-start-column="43" selection-end-line="136" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/sms_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.269231">
-              <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="saveform_sms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/saveform_sms.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1538463">
-              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-              <folding>
-                <marker date="1604496706227" expanded="true" signature="394:450" placeholder="select * fro..." />
-                <marker date="1604496706227" expanded="true" signature="842:900" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="965:988" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="1057:1080" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="1156:1178" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="1156:1217" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="1294:1361" placeholder="SELECT * FRO..." />
-                <marker date="1604496706227" expanded="true" signature="1578:1801" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="saveform_sms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/saveform_sms.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/sms.php">
+      <file leaf-file-name="wrecentsermon.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/wrecentsermon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="79" column="35" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="35" />
+            <state vertical-scroll-proportion="-19.346153">
+              <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/sms_table.php">
+      <file leaf-file-name="audio_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/audio_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87455195">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state vertical-scroll-proportion="14.846154">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding>
-                <marker date="1604496876206" expanded="true" signature="65:99" placeholder="select * fro..sms..." />
-                <marker date="1604496876206" expanded="true" signature="1446:1489" placeholder="select * fro..branch..." />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1604540085206" expanded="true" signature="65:87" placeholder="select * fro..website_image_slider..." />
+                <marker date="1604540085206" expanded="true" signature="65:116" placeholder="select * fro..website_audio_sermon..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/sms_table.php">
+      <file leaf-file-name="upload_audio_sermon.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_audio_sermon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2437276">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1604545687246" expanded="true" signature="837:859" placeholder="select * fro..website_image_slider..." />
+                <marker date="1604545687246" expanded="true" signature="837:897" placeholder="select * fro..website_audio_sermon..." />
+                <marker date="1604545687246" expanded="true" signature="989:1288" placeholder="INSERT INTO ..." />
+                <marker date="1604545687246" expanded="true" signature="1354:1419" placeholder="select * fro..website_audio_sermon..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_event_image.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_event_image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.4615383">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <folding>
+                <marker date="1604534608273" expanded="true" signature="818:878" placeholder="select * fro..website_image_events..." />
+                <marker date="1604534608273" expanded="true" signature="970:1358" placeholder="INSERT INTO ..." />
+                <marker date="1604534608273" expanded="true" signature="1423:1483" placeholder="select * fro..website_image_events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_slider_image.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_slider_image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.038462">
+              <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+              <folding>
+                <marker date="1604506266769" expanded="true" signature="818:878" placeholder="select * fro..website_image_slider..." />
+                <marker date="1604506266769" expanded="true" signature="970:1269" placeholder="INSERT INTO ..." />
+                <marker date="1604506266769" expanded="true" signature="1335:1400" placeholder="select * fro..website_image_slider..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="audio_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/audio_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8076925">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assetcategory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/assetcategory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
-              <folding>
-                <marker date="1604369501020" expanded="true" signature="1167:1201" placeholder="select * fro..branch..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asscategory_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/asscategory_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-              <folding>
-                <marker date="1604369536593" expanded="true" signature="129:180" placeholder="select * fro..asset_category..." />
-                <marker date="1604369536593" expanded="true" signature="221:297" placeholder="select * fro..asset_category..." />
-                <marker date="1604369536593" expanded="true" signature="1514:1557" placeholder="select * fro..branch..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -150,23 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ms/admin/ajax/paginations/visitor.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/worker_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/documents.php" />
-        <option value="$PROJECT_DIR$/ms/admin/branch_workers.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/brworker_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/paginations/member.php" />
-        <option value="$PROJECT_DIR$/ms/admin/meetings.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/meeting_table.php" />
-        <option value="$PROJECT_DIR$/ms/branch/attendancesearchmeeting.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/member_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/convert_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/visitor_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/attendancesearchmeeting.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/attendance_search_meeting.php" />
-        <option value="$PROJECT_DIR$/ms/admin/meetingstats.php" />
-        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/meetingstats_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/services.php" />
         <option value="$PROJECT_DIR$/ms/branch/ajax/tables/services_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/service_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/attendancesearch.php" />
@@ -194,13 +152,30 @@
         <option value="$PROJECT_DIR$/ms/admin/assetcategory.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/document_table.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/asscategory_table.php" />
-        <option value="$PROJECT_DIR$/ms/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/ms/admin/searchassets.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/assets_search.php" />
         <option value="$PROJECT_DIR$/ms/admin/sms.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/forms/sms_form.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/queries/saveform_sms.php" />
         <option value="$PROJECT_DIR$/ms/admin/ajax/tables/sms_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/wslider.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/saveform_slider.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/forms/addslider_form.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/upload_slider_image.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/addslider_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/delete_slider.php" />
+        <option value="$PROJECT_DIR$/ms/admin/wevents.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/saveform_events.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/events_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/forms/events_form.php" />
+        <option value="$PROJECT_DIR$/wb/index.php" />
+        <option value="$PROJECT_DIR$/wb/includes/header.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/upload_event_image.php" />
+        <option value="$PROJECT_DIR$/ms/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/tables/audio_table.php" />
+        <option value="$PROJECT_DIR$/ms/admin/wrecentsermon.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/forms/audio_form.php" />
+        <option value="$PROJECT_DIR$/ms/admin/ajax/queries/upload_audio_sermon.php" />
       </list>
     </option>
   </component>
@@ -277,6 +252,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="christvision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -336,9 +377,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22919819" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21482602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -376,234 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/mempayment_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/financialsearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.076923">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/financials_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/receival_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.39605734">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/department_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5483871">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/meetingstats_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21326165">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/receivals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1827957">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/meeting_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/financials_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.115383">
-          <caret line="170" column="56" selection-start-line="170" selection-start-column="56" selection-end-line="170" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/financials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-91.42308">
-          <caret line="188" column="23" selection-start-line="187" selection-start-column="18" selection-end-line="188" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/payment_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/payments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <marker date="1604112180431" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/accountsearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/attendance_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/receivals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <marker date="1604111849593" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/meetingstats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="29" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/attendancesearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <marker date="1604032944027" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/queries/accounts_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding>
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(a..acc_payments..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select * fro..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(o..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(t..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(y..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(s..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(f..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1598504528727" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/accountsearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="79" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
-          <folding>
-            <marker date="1604112827714" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/payment_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <marker date="1604112242587" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_payments..." />
-            <marker date="1604112242587" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1604112242587" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
-            <marker date="1604112242587" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-            <marker date="1604112242587" expanded="true" signature="-1:-1" placeholder="select sum(a..acc_payments..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/accounts_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-          <folding>
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_payments..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select * fro..acc_payments..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(a..acc_payments..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select * fro..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(o..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(t..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(y..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(s..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(w..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(f..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(c..acc_receivals..." />
-            <marker date="1604113030054" expanded="true" signature="-1:-1" placeholder="select sum(p..acc_receivals..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/memberbirthday_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
@@ -788,17 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ms/admin/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.730769">
-          <caret line="561" column="91" selection-start-line="561" selection-start-column="79" selection-end-line="561" selection-end-column="91" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#40460#40962#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms/branch/ajax/tables/assets_search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70071685">
@@ -834,9 +636,9 @@
         <state vertical-scroll-proportion="-4.0">
           <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
-            <marker date="1604369536593" expanded="true" signature="129:180" placeholder="select * fro..asset_category..." />
-            <marker date="1604369536593" expanded="true" signature="221:297" placeholder="select * fro..asset_category..." />
-            <marker date="1604369536593" expanded="true" signature="1514:1557" placeholder="select * fro..branch..." />
+            <marker date="1604369536593" expanded="true" signature="-1:-1" placeholder="select * fro..asset_category..." />
+            <marker date="1604369536593" expanded="true" signature="-1:-1" placeholder="select * fro..asset_category..." />
+            <marker date="1604369536593" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
           </folding>
         </state>
       </provider>
@@ -846,7 +648,7 @@
         <state vertical-scroll-proportion="-9.807693">
           <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
           <folding>
-            <marker date="1604369501020" expanded="true" signature="1167:1201" placeholder="select * fro..branch..." />
+            <marker date="1604369501020" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
           </folding>
         </state>
       </provider>
@@ -888,10 +690,10 @@
         <state vertical-scroll-proportion="-7.1923075">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <marker date="1604369891266" expanded="true" signature="129:175" placeholder="select * fro..asset_registry..." />
-            <marker date="1604369891266" expanded="true" signature="216:287" placeholder="select * fro..asset_registry..." />
-            <marker date="1604369891266" expanded="true" signature="1766:1809" placeholder="select * fro..branch..." />
-            <marker date="1604369891266" expanded="true" signature="2161:2212" placeholder="select * fro..asset_category..." />
+            <marker date="1604369891266" expanded="true" signature="-1:-1" placeholder="select * fro..asset_registry..." />
+            <marker date="1604369891266" expanded="true" signature="-1:-1" placeholder="select * fro..asset_registry..." />
+            <marker date="1604369891266" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
+            <marker date="1604369891266" expanded="true" signature="-1:-1" placeholder="select * fro..asset_category..." />
           </folding>
         </state>
       </provider>
@@ -917,25 +719,248 @@
         <state vertical-scroll-proportion="-7.1538463">
           <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
           <folding>
-            <marker date="1604496706227" expanded="true" signature="394:450" placeholder="select * fro..." />
-            <marker date="1604496706227" expanded="true" signature="842:900" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="965:988" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="1057:1080" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="1156:1178" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="1156:1217" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="1294:1361" placeholder="SELECT * FRO..." />
-            <marker date="1604496706227" expanded="true" signature="1578:1801" placeholder="INSERT INTO ..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1604496706227" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/sms_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87455195">
+        <state vertical-scroll-proportion="-18.76923">
           <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
           <folding>
-            <marker date="1604496876206" expanded="true" signature="65:99" placeholder="select * fro..sms..." />
-            <marker date="1604496876206" expanded="true" signature="1446:1489" placeholder="select * fro..branch..." />
+            <marker date="1604496876206" expanded="true" signature="-1:-1" placeholder="select * fro..sms..." />
+            <marker date="1604496876206" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taymac/admin/website_slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/adminuser_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/saveform_slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1604499712597" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/delete_slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <marker date="1604508570881" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_image_slider..." />
+            <marker date="1604508570881" expanded="true" signature="-1:-1" placeholder="select * fro..website_image_slider..." />
+            <marker date="1604508570881" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+            <marker date="1604508570881" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/meetings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1603497068374" expanded="true" signature="-1:-1" placeholder="select * fro..branch..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/church_workers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.615385">
+          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/branch/ajax/forms/configatt_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.923077">
+          <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="72" selection-end-column="7" />
+          <folding>
+            <marker date="1597674083820" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/wevents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6538463">
+          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/saveform_events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <marker date="1604532062674" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8076923">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <marker date="1604533793369" expanded="true" signature="-1:-1" placeholder="select * fro..website_events..." />
+            <marker date="1604533793369" expanded="true" signature="-1:-1" placeholder="select * fro..website_image_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wb/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#288#336#0#HTML" expanded="true" />
+            <element signature="e#377#425#0#HTML" expanded="true" />
+            <element signature="e#465#519#0#HTML" expanded="true" />
+            <element signature="e#559#614#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wb/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.6153846">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/wslider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/events_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6923075">
+          <caret line="136" column="43" selection-start-line="136" selection-start-column="43" selection-end-line="136" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/addslider_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4615383">
+          <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_slider_image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.038462">
+          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+          <folding>
+            <marker date="1604506266769" expanded="true" signature="818:878" placeholder="select * fro..website_image_slider..." />
+            <marker date="1604506266769" expanded="true" signature="970:1269" placeholder="INSERT INTO ..." />
+            <marker date="1604506266769" expanded="true" signature="1335:1400" placeholder="select * fro..website_image_slider..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_event_image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4615383">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <marker date="1604534608273" expanded="true" signature="818:878" placeholder="select * fro..website_image_events..." />
+            <marker date="1604534608273" expanded="true" signature="970:1358" placeholder="INSERT INTO ..." />
+            <marker date="1604534608273" expanded="true" signature="1423:1483" placeholder="select * fro..website_image_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/addslider_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/tables/audio_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.846154">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1604540085206" expanded="true" signature="65:87" placeholder="select * fro..website_image_slider..." />
+            <marker date="1604540085206" expanded="true" signature="65:116" placeholder="select * fro..website_audio_sermon..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/wrecentsermon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.346153">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/forms/audio_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8076925">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ms/admin/ajax/queries/upload_audio_sermon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2437276">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1604545687246" expanded="true" signature="837:859" placeholder="select * fro..website_image_slider..." />
+            <marker date="1604545687246" expanded="true" signature="837:897" placeholder="select * fro..website_audio_sermon..." />
+            <marker date="1604545687246" expanded="true" signature="989:1288" placeholder="INSERT INTO ..." />
+            <marker date="1604545687246" expanded="true" signature="1354:1419" placeholder="select * fro..website_audio_sermon..." />
           </folding>
         </state>
       </provider>

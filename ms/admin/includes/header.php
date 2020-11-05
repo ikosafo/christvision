@@ -188,7 +188,7 @@ background-size: 100% 350px;"
                                <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel  <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wministries" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wdepartments"
 
                                     ? "kt-menu__item--here" : ""); ?>
@@ -204,7 +204,7 @@ background-size: 100% 350px;"
                                             <li class="kt-menu__item kt-menu__item--submenu   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
-                                            $_SERVER['PHP_SELF'] == "/ms/admin/wministries" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdepartments"
 
                                                 ? "kt-menu__item--here" : ""); ?>"
@@ -217,17 +217,29 @@ background-size: 100% 350px;"
                                                 <div
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
-                                                        <li class="kt-menu__item " aria-haspopup="true"><a
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
                                                                 href="wslider"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Slider</span></a>
                                                         </li>
-                                                        <li class="kt-menu__item " aria-haspopup="true"><a
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
                                                                 href="wevents"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Events</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wrecentsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Recent Sermon (Audio)</span></a>
                                                         </li>
 
                                                     </ul>

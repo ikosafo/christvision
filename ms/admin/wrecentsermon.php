@@ -4,7 +4,6 @@
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
 <!-- end:: Subheader -->
 
-
 <!-- begin:: Content -->
 <div class="kt-container  kt-grid__item kt-grid__item--fluid">
     <!--Begin::Dashboard 3-->
@@ -21,7 +20,7 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Website
-                                    <small>Slider</small>
+                                    <small>Recent Sermon (Audio)</small>
                                 </h3>
                             </div>
                         </div>
@@ -29,10 +28,10 @@
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="sliderform_div"></div>
+                                <div id="audioform_div"></div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="slidertable_div"></div>
+                                <div id="audiotable_div"></div>
                             </div>
                         </div>
 
@@ -49,11 +48,9 @@
 
 <?php require('includes/footer.php') ?>
 
-
 <script>
-
     $.ajax({
-        url: "ajax/forms/addslider_form.php",
+        url: "ajax/forms/audio_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -63,7 +60,7 @@
             })
         },
         success: function (text) {
-            $('#sliderform_div').html(text);
+            $('#audioform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -73,10 +70,9 @@
         },
 
     });
-
-
+    
     $.ajax({
-        url: "ajax/tables/addslider_table.php",
+        url: "ajax/tables/audio_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -86,7 +82,7 @@
             })
         },
         success: function (text) {
-            $('#slidertable_div').html(text);
+            $('#audiotable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

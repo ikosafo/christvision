@@ -16,25 +16,26 @@
                 <div class="kt-portlet__body">
                     <div class="kt-portlet__body">
 
-
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Website
-                                    <small>Slider</small>
+                                    <small>Events</small>
                                 </h3>
                             </div>
                         </div>
 
+                        <!--begin::Form-->
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="sliderform_div"></div>
+                                <div id="eventsform_div"></div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="slidertable_div"></div>
+                                <div id="eventstable_div"></div>
                             </div>
                         </div>
+                        <!--end::Form-->
 
                     </div>
                 </div>
@@ -53,7 +54,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/addslider_form.php",
+        url: "ajax/forms/events_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -63,7 +64,7 @@
             })
         },
         success: function (text) {
-            $('#sliderform_div').html(text);
+            $('#eventsform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -76,7 +77,7 @@
 
 
     $.ajax({
-        url: "ajax/tables/addslider_table.php",
+        url: "ajax/tables/events_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -86,7 +87,7 @@
             })
         },
         success: function (text) {
-            $('#slidertable_div').html(text);
+            $('#eventstable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

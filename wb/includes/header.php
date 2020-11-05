@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html class="no-js">
 
-
 <head>
     <!-- Basic Page Needs
       ================================================== -->
