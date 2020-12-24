@@ -1,4 +1,4 @@
 <?php
-header("Location:wb/");
+header("Location:ms/");
 exit();
 ?>
