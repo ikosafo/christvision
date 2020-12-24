@@ -1,12 +1,15 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php');
+?>
     <!-- Start Hero Slider -->
     <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes"
          data-style="fade" data-pause="yes">
+
+        <!--Get Slider-->
         <ul class="slides">
-            <li class=" parallax" style="background-image:url(images/slide1.jpg);"></li>
-            <li class=" parallax" style="background-image:url(images/slide2.jpg);"></li>
-            <li class="parallax" style="background-image:url(images/gallery-img1.jpg);"></li>
-            <li class="parallax" style="background-image:url(images/gallery-img10.jpg);"></li>
+            <?php $getslider = $mysqli->query("select * from website_image_slider");
+            while ($resslider = $getslider->fetch_assoc()){ ?>
+            <li class=" parallax" style="background-image:url('../ms/<?php echo $resslider['image_location'] ?>');"></li>
+            <?php } ?>
         </ul>
     </div>
     <!-- End Hero Slider -->
@@ -18,7 +21,7 @@
                     <h3><i class="fa fa-microphone"></i> Latest Sermon</h3>
                 </div>
                 <div class="col-md-7 col-sm-8 col-xs-12">
-                    <audio class="audio-player" src="audio/Miaow-02-Hidden.mp3" type="audio/mp3" controls></audio>
+                    <audio class="audio-player" src="assets/audio/Miaow-02-Hidden.mp3" type="audio/mp3" controls></audio>
                 </div>
                 <div class="col-md-2 hidden-sm hidden-xs">
                     <a href="sermons.html" class="btn btn-block btn-primary">All Sermons</a>
@@ -33,60 +36,55 @@
             <div class="container">
                 <div class="listing">
                     <header class="listing-header">
-                        <a href="events.html" class="btn btn-primary pull-right push-btn">All Events</a>
-
+                        <a href="events" class="btn btn-primary pull-right push-btn">All Events</a>
                         <h3>Upcoming Events</h3>
                     </header>
                     <section class="listing-cont">
                         <ul class="event-blocks row">
-                            <li class="col-md-3 format-standard">
-                                <div class="grid-item-inner">
-                                    <a href="single-event.html" class="media-box"> <img src="images/gallery-img2.jpg"
-                                                                                        alt=""></a>
+                            <?php $getvent = $mysqli->query("select * from website_events e JOIN website_image_events i
+                                                        ON i.imageid = e.eventid ORDER BY e.id DESC LIMIT 4");
+                            while ($resevent = $getvent->fetch_assoc()){
+                                $eventid = $resevent['eventid'];
+                                ?>
 
-                                    <div class="grid-content">
-                                        <div class="label label-primary event-cat">Prayers</div>
-                                        <h5><a href="single-event.html">Evening Prayer</a></h5>
-                                        <span class="meta-data"><i class="fa fa-calendar"></i> Friday | 7:00 PM - 8:00 PM</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-3 format-standard">
-                                <div class="grid-item-inner">
-                                    <a href="single-event.html" class="media-box"> <img src="images/gallery-img3.jpg"
-                                                                                        alt=""></a>
+                                <li class="col-md-3 format-standard">
+                                    <div class="grid-item-inner">
+                                        <a href="eventdetails?id=<?php echo lock($eventid) ?>" class="media-box">
+                                            <img src="../ms/<?php echo $resevent['image_location'] ?>"
+                                                 style="width: 230px;height: 150px" alt=""></a>
 
-                                    <div class="grid-content">
-                                        <div class="label label-primary event-cat">Prayers</div>
-                                        <h5><a href="single-event.html">Monday Prayer</a></h5>
-                                        <span class="meta-data"><i class="fa fa-calendar"></i> Monday | 7:00 AM - 1:00 PM</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-3 format-standard">
-                                <div class="grid-item-inner">
-                                    <a href="single-event.html" class="media-box"> <img src="images/gallery-img4.jpg"
-                                                                                        alt=""></a>
+                                        <div class="grid-content">
+                                            <?php
+                                            $now = date('Y-m-d H:i:s');
+                                            $startperiod = $resevent['startperiod'];
+                                            $endperiod = $resevent['endperiod'];
 
-                                    <div class="grid-content">
-                                        <div class="label label-primary event-cat">Fests</div>
-                                        <h5><a href="single-event.html">Children's Fest</a></h5>
-                                        <span class="meta-data"><i class="fa fa-calendar"></i> Sunday | 9:00 AM - 1:00 PM</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-3 format-standard">
-                                <div class="grid-item-inner">
-                                    <a href="single-event.html" class="media-box"> <img src="images/gallery-img5.jpg"
-                                                                                        alt=""></a>
+                                            if ($endperiod > $now && $startperiod < $now) { ?>
+                                                <div class="label label-warning event-cat ml-2"><< Ongoing >></div>
+                                            <?php } else if ($endperiod < $now ) { ?>
+                                                <div class="label label-danger event-cat ml-2"><< Recent >></div>
+                                            <?php } else if ($startperiod > $now ) { ?>
+                                                <div class="label label-success event-cat ml-2"><< Incoming >></div>
+                                            <?php }
+                                            ?>
+                                            <hr/>
 
-                                    <div class="grid-content">
-                                        <div class="label label-primary event-cat">Meets</div>
-                                        <h5><a href="single-event.html">Member's meet</a></h5>
-                                        <span class="meta-data"><i class="fa fa-calendar"></i> Saturday | 4:00 PM - 7:00 PM</span>
+                                            <h5><a href="eventdetails?id=<?php echo lock($eventid) ?>"><?php echo $resevent['title'] ?></a></h5>
+                                            <span class="meta-data"><i class="fa fa-calendar"></i>
+                                                <?php
+                                                $date=date_create($resevent['startperiod']);
+                                                echo date_format($date,"l, F j, Y");
+                                                ?>
+                                            </span>
+                                             <span class="meta-data"><i class="fa fa-map-marker"></i>
+                                                 <?php echo $resevent['venue'] ?>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
+
+                            <?php }
+                            ?>
                         </ul>
                     </section>
                 </div>
@@ -101,14 +99,16 @@
                             <section class="listing-cont">
                                 <ul>
                                     <li class="item sermon featured-sermon">
-                                        <h4><a href="single-sermon.html">How To Recover The Cutting Edge</a></h4>
+                                        <h4><a href="single-sermon.html">Open Doors</a></h4>
 
                                         <div class="featured-sermon-video">
-                                            <iframe width="200" height="150"
-                                                    src="https://player.vimeo.com/video/19564018?title=0&amp;byline=0&amp;color=007F7B"></iframe>
+                                            <iframe width="200" height="150" src="https://www.youtube.com/embed/dWvVX3ZSB-c" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                            egestas rhoncus. </p>
+                                        <p>
+                                            A seven day Morning and Evening Programme Themed: Open Doors.
+                                            The Main Speaker is PROPHET MACAIAH. Come with an expectation.
+                                        </p>
 
                                         <div class="sermon-actions"><a href="#" data-placement="top"
                                                                        data-toggle="tooltip"
@@ -138,9 +138,10 @@
 
 
                                     <div class="featured-blocks clearfix">
-            <div class="col-md-12 col-sm-12 featured-block"  style="margin-top: 20px !important;"> <a href="our-staff.html" class="img-thumbnail"> <img src="images/staff.jpg" alt="staff"> <strong>Our Pastors</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-12 col-sm-12 featured-block"  style="margin-top: 20px !important;"> <a href="pastors" class="img-thumbnail">
+                    <img src="assets/img/pastorsimg.jpg" alt="staff"> <strong>Our Pastors</strong> <span class="more">read more</span> </a> </div>
             <div class="col-md-12 col-sm-12 featured-block"  style="margin-top: 25px !important;">
-            <a href="about.html" class="img-thumbnail"> <img src="images/newhere.jpg" alt="staff">
+            <a href="donate" class="img-thumbnail"> <img src="assets/img/donateimg.jpg" alt="staff">
             <strong>Donate to Support</strong> <span class="more">read more</span> </a> </div>
            </div>
 
@@ -178,52 +179,6 @@
                                 </section>
 
 
-                            <!--<section class="listing-cont">
-                                <ul>
-                                    <li class="item post">
-                                        <div class="row">
-                                            <div class="col-md-4"><a href="#" class="media-box"> <img
-                                                        src="images/blog-image3.jpg" alt="" class="img-thumbnail"> </a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="post-title">
-                                                    <h2><a href="blog-post.html">Voluptatum deleniti atque corrupti</a>
-                                                    </h2>
-                                                    <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                                                    convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra
-                                                    ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet,
-                                                    consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-
-                                                <p><a href="#" class="btn btn-primary">Continue reading <i
-                                                            class="fa fa-long-arrow-right"></i></a></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item post">
-                                        <div class="row">
-                                            <div class="col-md-4"><a href="blog-post.html" class="media-box"> <img
-                                                        src="images/blog-image2.jpg" alt="" class="img-thumbnail"> </a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="post-title">
-                                                    <h2><a href="blog-post.html">Voluptatum deleniti atque corrupti</a>
-                                                    </h2>
-                                                    <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                                                    convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra
-                                                    ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet,
-                                                    consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-
-                                                <p><a href="#" class="btn btn-primary">Continue reading <i
-                                                            class="fa fa-long-arrow-right"></i></a></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>-->
                         </div>
                 </div>
 

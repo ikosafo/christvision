@@ -62,49 +62,10 @@ $random = rand(1,10000).date("Ymd");
         }
 
         if (error == "") {
+
             $('#slider_image').uploadifive('upload');
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/forms/addslider_form.php",
-                        beforeSend: function () {
-                            KTApp.blockPage({
-                                overlayColor: "#000000",
-                                type: "v2",
-                                state: "success",
-                                message: "Please wait..."
-                            })
-                        },
-                        success: function (text) {
-                            $('#sliderform_div').html(text);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                        complete: function () {
-                            KTApp.unblockPage();
-                        },
-                    });
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/tables/addslider_table.php",
-                        beforeSend: function () {
-                            KTApp.blockPage({
-                                overlayColor: "#000000",
-                                type: "v2",
-                                state: "success",
-                                message: "Please wait..."
-                            })
-                        },
-                        success: function (text) {
-                            $('#slidertable_div').html(text);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                        complete: function () {
-                            KTApp.unblockPage();
-                        },
-                    });
+            location.reload();
+
                 }
         else {
             $.notify(error, {position: "top center"});

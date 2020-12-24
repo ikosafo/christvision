@@ -39,6 +39,13 @@ $random = rand(1,10000).date("Ymd");
                        placeholder="Select End Period">
             </div>
         </div>
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="start_period">Description</label>
+                <textarea class="form-control" id="description" rows="4"
+                       placeholder="Enter Description"></textarea>
+            </div>
+        </div>
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
@@ -89,6 +96,7 @@ $random = rand(1,10000).date("Ymd");
         var selected = $("#selected").val();
         var start_period = $("#start_period").val();
         var end_period = $("#end_period").val();
+        var description = $("#description").val();
         var imageid = '<?php echo $random; ?>';
 
         var error = '';
@@ -99,6 +107,10 @@ $random = rand(1,10000).date("Ymd");
         if (venue == "") {
             error += 'Please enter venue \n';
             $("#venue").focus();
+        }
+        if (description == "") {
+            error += 'Please enter description \n';
+            $("#description").focus();
         }
         if (selected == "") {
             error += 'Please upload image\n';
@@ -117,7 +129,6 @@ $random = rand(1,10000).date("Ymd");
             $("#end_period").focus();
         }
 
-
         if (error == "") {
             $.ajax({
                 type: "POST",
@@ -135,53 +146,13 @@ $random = rand(1,10000).date("Ymd");
                     venue: venue,
                     start_period: start_period,
                     end_period: end_period,
-                    imageid:imageid
+                    imageid:imageid,
+                    description:description
                 },
                 success: function (text) {
                     //alert(text);
                     $('#event_image').uploadifive('upload');
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/forms/events_form.php",
-                        beforeSend: function () {
-                            KTApp.blockPage({
-                                overlayColor: "#000000",
-                                type: "v2",
-                                state: "success",
-                                message: "Please wait..."
-                            })
-                        },
-                        success: function (text) {
-                            $('#eventsform_div').html(text);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                        complete: function () {
-                            KTApp.unblockPage();
-                        },
-                    });
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/tables/events_table.php",
-                        beforeSend: function () {
-                            KTApp.blockPage({
-                                overlayColor: "#000000",
-                                type: "v2",
-                                state: "success",
-                                message: "Please wait..."
-                            })
-                        },
-                        success: function (text) {
-                            $('#eventstable_div').html(text);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                        complete: function () {
-                            KTApp.unblockPage();
-                        },
-                    });
+                    location.reload();
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);

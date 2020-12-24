@@ -24,13 +24,13 @@ $pinq = $mysqli->query("select * from website_image_slider ORDER BY id DESC");
         <div class="table-responsive">
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Image Type</th>
-                    <th>Image Size</th>
-                    <th>Date Uploaded</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>Image</th>
+                        <th>Image Type</th>
+                        <th>Image Size</th>
+                        <th>Date Uploaded</th>
+                        <th>Action</th>
+                    </tr>
                 </thead>
 
                 <tbody>

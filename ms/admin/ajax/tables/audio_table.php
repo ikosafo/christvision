@@ -73,7 +73,7 @@ $pinq = $mysqli->query("select * from website_audio_sermon ORDER BY id DESC");
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete audio!',
+            title: 'Delete Audio!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {

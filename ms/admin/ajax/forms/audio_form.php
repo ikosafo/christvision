@@ -28,6 +28,7 @@ $random = rand(1,10000).date("Ymd");
         'auto': false,
         'method': 'post',
         'buttonText': 'Upload Audio',
+        'fileType': 'audio/*',
         'multi': false,
         'width': 180,
         'formData': {'randno': '<?php echo $random?>'},

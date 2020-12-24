@@ -4,7 +4,6 @@
 <div class="kt-subheader  kt-grid__item" id="kt_subheader"></div>
 <!-- end:: Subheader -->
 
-
 <!-- begin:: Content -->
 <div class="kt-container  kt-grid__item kt-grid__item--fluid">
     <!--Begin::Dashboard 3-->
@@ -16,7 +15,6 @@
                 <div class="kt-portlet__body">
                     <div class="kt-portlet__body">
 
-
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
@@ -25,7 +23,6 @@
                                 </h3>
                             </div>
                         </div>
-
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
@@ -74,7 +71,6 @@
 
     });
 
-
     $.ajax({
         url: "ajax/tables/addslider_table.php",
         beforeSend: function () {
@@ -94,7 +90,6 @@
         complete: function () {
             KTApp.unblockPage();
         },
-
     });
 
 </script>
