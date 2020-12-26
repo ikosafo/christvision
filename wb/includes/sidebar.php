@@ -3,7 +3,7 @@
         <div class="sidebar-widget-title">
             <h3>Featured Event</h3>
         </div>
-        <img src="assets/img/donateimg.jpg" alt="" class="featured-event-image">
+        <img src="../ms/<?php echo $resevent['image_location'] ?>" alt="" class="featured-event-image">
         <div class="featured-event-container">
             <label class="label label-danger">Upcoming</label> <!-- Replace class label-danger to label-default for passed events -->
             <div class="featured-event-time">

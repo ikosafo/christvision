@@ -106,7 +106,6 @@ if (!isset($_SESSION['username'])) {
 
 </head>
 
-
 <!-- end::Head -->
 
 <!-- begin::Body -->
@@ -272,6 +271,14 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Social Media</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Sermons</span></a>
                                                         </li>
 
 
