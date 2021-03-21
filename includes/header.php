@@ -25,15 +25,20 @@
     <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
     <!-- Color Style -->
     <link class="alt" href="assets/css/color1.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
     <!-- SCRIPTS
       ================================================== -->
     <script src="assets/js/modernizr.js"></script><!-- Modernizr -->
 </head>
-<body>
+<body style="font-family: Muli !important;">
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="UpWd51lC"></script>
 <!--[if lt IE 7]>
-<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<p class="chromeframe">You are using an outdated browser.
+    <a href="http://browsehappy.com/">Upgrade your browser today</a> or
+    <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
+</p>
 <![endif]-->
 
     <div class="body header-style3">
@@ -60,16 +65,16 @@
                         <nav class="top-menus pull-right">
                             <ul>
                                 <li>
-                                    <a href="#" class="topheader-txt">Visit a Branch</a>
+                                    <a href="visitbranch" class="topheader-txt">Visit a Branch</a>
                                 </li>
                                 <li>
-                                    <a href="../ms/" class="topheader-txt">ADMIN PORTAL</a>
+                                    <a href="../ms/" class="topheader-txt" target="_blank">ADMIN PORTAL</a>
                                 </li>
                                 <li>
                                     <a href="#" class="topheader-txt">VIM TV</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="topheader-txt livetext">WATCH LIVE</a>
+                                    <a href="live/" class="topheader-txt livetext">WATCH LIVE</a>
                                 </li>
                             </ul>
                         </nav>
@@ -173,7 +178,6 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact">Contact</a></li>
-
 
                                 </ul>
                             </nav>

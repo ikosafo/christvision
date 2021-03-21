@@ -187,6 +187,7 @@ background-size: 100% 350px;"
                                <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel  <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
@@ -194,6 +195,7 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"
 
                                     ? "kt-menu__item--here" : ""); ?>
@@ -209,9 +211,11 @@ background-size: 100% 350px;"
                                             <li class="kt-menu__item kt-menu__item--submenu   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>"
@@ -239,6 +243,22 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Events</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wnews"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Latest News/Articles</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wrsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Recent Sermon (Youtube)</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php"
