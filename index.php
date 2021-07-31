@@ -1,207 +1,270 @@
-<?php include('includes/header.php');
-?>
-    <!-- Start Hero Slider -->
-    <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes"
-         data-style="fade" data-pause="yes">
+<?php include("includes/header.php") ?>
 
-        <!--Get Slider-->
-        <ul class="slides">
-            <?php $getslider = $mysqli->query("select * from website_image_slider");
-            while ($resslider = $getslider->fetch_assoc()){ ?>
-            <li class=" parallax" style="background-image:url('../ms/<?php echo $resslider['image_location'] ?>');"></li>
-            <?php } ?>
-        </ul>
-    </div>
-    <!-- End Hero Slider -->
-    <!-- Start Notice Bar -->
-    <div class="notice-bar latest-sermon">
+    <!-- Slider/Intro Section Start -->
+    <div class="intro4-section section section-fluid" data-bg-image="assets/images/banner/banner.jpg">
+
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-4 hidden-xs">
-                    <h3><i class="fa fa-microphone"></i> Latest Audio</h3>
+
+                <!-- Intro One Content Start -->
+                <div class="col-12" data-aos="fade-up">
+                    <div class="intro4-content headline-active text-center">
+                        <h1 class="title ah-headline">CVSI is a house of
+                                <span class="ah-words-wrapper">
+                                    <b class="is-visible">Prayer</b>
+                                    <b>Unity</b>
+                                    <b>Growth</b>
+                                </span>
+                        </h1>
+                        <p>Join this prayer army and remember everyday is a plus</p>
+                        <a href="https://www.youtube.com/watch?v=JHKCofpUosk"
+                           class="btn btn-outline-light btn-hover-primary  video-popup" style="font-weight: 300">
+                            <i class="fas fa-play me-3"></i>Message from Prophet Macaiah</a>
+                    </div>
                 </div>
-                <div class="col-md-7 col-sm-8 col-xs-12">
-                    <audio class="audio-player" src="assets/audio/Precious%20Jesus.mp3" type="audio/mp3" controls></audio>
+                <!-- Intro One Content End -->
+
+            </div>
+        </div>
+
+        <!-- Section Bottom Shape Start -->
+        <div class="section-bottom-shape fill-color-gray">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="100">
+                <path class="elementor-shape-fill" d="M 0 0 L0 100 L100 100 L100 0 Q 50 200 0 0"></path>
+            </svg>
+        </div>
+        <!-- Section Bottom Shape End -->
+
+    </div>
+    <!-- Slider/Intro Section End -->
+
+    <!-- About Section Start -->
+    <div class="learners-section section bg-pattern" data-bg-image="assets/images/bg/background-pattern-grid-line.png" data-bg-color="#f8f8f8">
+        <div class="container mt-minus-125">
+
+            <!-- Feature Wrapper Start -->
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 max-mb-n30">
+
+                <!-- Feature Start (Icon Box) -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <a href="branches" class="icon-box text-center" data-bg-color="#fff">
+                        <div class="content">
+                            <h3 class="title fz-20">Visit any of our branches</h3>
+                            <div class="desc">
+                                <p>Welcome to Christ Vision Sanctuary International. You can freely join
+                                   any of the branches across the globe.
+                                </p>
+                            </div>
+                            <span class="link">View Branches <i class="far fa-long-arrow-right"></i></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2 hidden-sm hidden-xs">
-                    <a href="sermons" class="btn btn-block btn-primary">All Sermons</a>
+                <!-- Feature Start (Icon Box) -->
+
+                <!-- Feature Start (Icon Box) -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <a href="donate" class="icon-box text-center" data-bg-color="#fff">
+                        <div class="content">
+                            <h3 class="title fz-20">Donate</h3>
+                            <div class="desc">
+                                <p>Give and partner to support the ministry. Pay your tithes, offerings and contributions
+                                online. God bless you for your donation
+                                </p>
+                            </div>
+                            <span class="link">Click to Donate <i class="far fa-long-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Feature Start (Icon Box) -->
+
+                <!-- Feature Start (Icon Box) -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <a href="prayerrequest" class="icon-box text-center" data-bg-color="#fff">
+                        <div class="content">
+                            <h3 class="title fz-20">Prayer Request</h3>
+                            <div class="desc">
+                                <p>Send in your prayer request and we are ready to stand with you. Contact us
+                                 and the prayer army will be pleased to answer you. </p>
+                            </div>
+                            <span class="link">Start here <i class="far fa-long-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Feature Start (Icon Box) -->
+
+            </div>
+            <!-- Feature Wrapper End -->
+
+            <div class="row max-mt-40 max-mb-40">
+                <div class="text-center col-lg-7 mx-auto">
+                    <a class="link link-lg" href="contact">
+                        Christ Vision Sanctuary International is a vibrant Spirit filled Church waiting to share fellowship with you. The Word of
+                        God is preached powerfully with warmth and affection. Why not visit us and be a part of this great experience?
+                        Come now, call the contact below for direction and you shall be a blessing as you worship with us.
+                        <mark>Join the army.. <i class="far fa-long-arrow-right"></i></mark></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Notice Bar -->
-    <!-- Start Content -->
-    <div class="main" role="main">
-        <div id="content" class="content full">
-            <div class="container">
+    <!-- About Section End -->
 
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <!-- Latest Sermons -->
-                        <div class="listing sermons-listing">
-                            <section>
+    <!-- Event Section Start -->
+    <div class="section section-padding">
+        <div class="container">
 
-                                <div class="featured-blocks clearfix">
-                                    <div class="col-md-4 col-sm-4 featured-block"  style="margin-top: 20px !important;">
-                                        <a href="about" class="img-thumbnail">
-                                            <img src="assets/img/donateimg.jpg" alt="about" style="height: 200px !important;">
-                                            <strong>About CVSI</strong>
-                                            <span class="more">Read more</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 featured-block"  style="margin-top: 20px !important;">
-                                        <a href="donate" class="img-thumbnail">
-                                            <img src="assets/img/donateimg.jpg" alt="staff" style="height: 200px !important;">
-                                            <strong>Donate to Support</strong>
-                                            <span class="more">Read more</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 featured-block"  style="margin-top: 20px !important;">
-                                        <a href="pastors" class="img-thumbnail">
-                                            <img src="assets/img/pastorsimg.jpg" alt="staff" style="height: 200px !important;">
-                                            <strong>Our Pastors</strong>
-                                            <span class="more">Read more</span>
-                                        </a>
-                                    </div>
+            <!-- Section Title Start -->
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="sub-title">Join our thrilling events</span>
+                <h2 class="title fz-48">Upcoming <span>Events</span></h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Event Wrapper Start -->
+            <div class="event-slider swiper-container" data-aos="fade-up">
+
+                <div class="swiper-wrapper">
+                    <!-- Event Start -->
+                    <div class="swiper-slide">
+                        <div class="event max-mb-30">
+                            <div class="thumbnail">
+                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event1.jpg" alt="Event Image"></a>
+                                <div class="event-overlay-background"></div>
+                                <div class="event-overlay-content">
+                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
                                 </div>
-
-                            </section>
-                        </div>
-                    </div>
-                </div>
-                <div class="margin-20"></div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-6">
-                        <!-- Latest News -->
-                        <div class="listing post-listing">
-                            <header class="listing-header">
-                                <h3>Latest News</h3>
-                            </header>
-                            <section class="listing-cont">
-                                <ul>
-                                    <?php $getnews = $mysqli->query("select * from website_image_news i JOIN website_news n ON
-                                                                     i.imageid = n.newsid");
-                                    while ($resnews = $getnews->fetch_assoc()){ ?>
-                                    <li class="item post">
-                                        <div class="row">
-                                            <div class="col-md-4"> <a href="#" class="media-box">
-                                                    <img src="../ms/<?php echo $resnews['image_location'] ?>" alt=""
-                                                          class="img-thumbnail"> </a></div>
-                                            <div class="col-md-8">
-                                                <div class="post-title">
-                                                    <?php $newsid = $resnews['newsid']; ?>
-                                                    <h2><a href="news?id=<?php echo lock($newsid); ?>"><?php echo $resnews['title'] ?></a></h2>
-                                                    <span class="meta-data"><i class="fa fa-calendar"></i> on
-                                                     <?php echo date("l, jS F Y",strtotime($resnews['periodupdated'])); ?>
-                                                    </span></div>
-                                                <p><?php
-                                                    $sentences = 2;
-                                                    echo implode('. ', array_slice(explode('.', $resnews['description']), 0, $sentences)) . '.';
-                                                    ?>
-                                                </p>
-                                                <p>
-                                                    <a href="news?id=<?php echo lock($newsid); ?>" class="btn btn-primary">Read More
-                                                        <i class="fa fa-chevron-right"></i>
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <?php } ?>
-
+                            </div>
+                            <div class="info">
+                                <span class="date">Nov 22, 2020</span>
+                                <h3 class="title"><a href="event-details.html">Storytelling Workshop</a></h3>
+                                <ul class="event-location">
+                                    <li><i class="far fa-map-marker-alt"></i>Texas, US</li>
                                 </ul>
-                            </section>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
-                        <!-- Latest Sermons -->
-                        <div class="listing sermons-listing">
-                            <header class="listing-header">
-                                <h3>Recent Sermons</h3>
-                            </header>
-                            <section class="listing-cont">
-                                <ul>
-                                    <?php $getlink = $mysqli->query("select * from website_youtubelink");
-                                    while ($reslink = $getlink->fetch_assoc()){ ?>
-                                    <li class="item sermon featured-sermon">
-                                        <span class="date"><?php echo date("F j, Y",strtotime($reslink['dateuploaded']))  ?></span>
-                                        <h4><a href="#"><?php echo $reslink['title'] ?></a></h4>
-                                        <div class="featured-sermon-video">
-                                            <div class="fluid-width-video-wrapper" style="padding-top: 60%;">
-                                                <?php echo $reslink['link'] ?>
-                                            </div>
-                                        </div>
-                                        <p><?php echo $reslink['description'] ?></p>
-                                        <div class="sermon-actions"> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Video"><i class="fa fa-video-camera"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Audio"><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Read online"><i class="fa fa-file-text-o"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF"><i class="fa fa-book"></i></a> </div>
-                                    </li>
-                                        <?php } ?>
+                    <!-- Event End -->
+
+                    <!-- Event Start -->
+                    <div class="swiper-slide">
+                        <div class="event max-mb-30">
+                            <div class="thumbnail">
+                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event2.jpg" alt="Event Image"></a>
+                                <div class="event-overlay-background"></div>
+                                <div class="event-overlay-content">
+                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="date">Oct 10, 2020</span>
+                                <h3 class="title"><a href="event-details.html">Painting Art Contest 2020</a></h3>
+                                <ul class="event-location">
+                                    <li><i class="far fa-map-marker-alt"></i>New York, US</li>
                                 </ul>
-                            </section>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="margin-40"></div>
-                <div class="row">
-                    <div class="listing">
-                        <header class="listing-header">
-                            <a href="events" class="btn btn-primary pull-right push-btn">All Events</a>
-                            <h3>Upcoming Events</h3>
-                        </header>
-                        <section class="listing-cont">
-                            <ul class="event-blocks row">
-                                <?php $getvent = $mysqli->query("select * from website_events e JOIN website_image_events i
-                                                        ON i.imageid = e.eventid ORDER BY e.id DESC LIMIT 4");
-                                while ($resevent = $getvent->fetch_assoc()){
-                                    $eventid = $resevent['eventid'];
-                                    ?>
+                    <!-- Event End -->
 
-                                    <li class="col-md-3 format-standard">
-                                        <div class="grid-item-inner">
-                                            <a href="eventdetails?id=<?php echo lock($eventid) ?>" class="media-box">
-                                                <img src="../ms/<?php echo $resevent['image_location'] ?>"
-                                                     style="width: 230px;height: 150px" alt=""></a>
-
-                                            <div class="grid-content">
-                                                <?php
-                                                $now = date('Y-m-d H:i:s');
-                                                $startperiod = $resevent['startperiod'];
-                                                $endperiod = $resevent['endperiod'];
-
-                                                if ($endperiod > $now && $startperiod < $now) { ?>
-                                                    <div class="label label-warning event-cat ml-2"><< Ongoing >></div>
-                                                <?php } else if ($endperiod < $now ) { ?>
-                                                    <div class="label label-danger event-cat ml-2"><< Recent >></div>
-                                                <?php } else if ($startperiod > $now ) { ?>
-                                                    <div class="label label-success event-cat ml-2"><< Incoming >></div>
-                                                <?php }
-                                                ?>
-                                                <hr/>
-
-                                                <h5><a href="eventdetails?id=<?php echo lock($eventid) ?>"><?php echo $resevent['title'] ?></a></h5>
-                                            <span class="meta-data"><i class="fa fa-calendar"></i>
-                                                <?php
-                                                $date=date_create($resevent['startperiod']);
-                                                echo date_format($date,"l, F j, Y");
-                                                ?>
-                                            </span>
-                                             <span class="meta-data"><i class="fa fa-map-marker"></i>
-                                                 <?php echo $resevent['venue'] ?>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                <?php }
-                                ?>
-                            </ul>
-                        </section>
+                    <!-- Event Start -->
+                    <div class="swiper-slide">
+                        <div class="event max-mb-30">
+                            <div class="thumbnail">
+                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event3.jpg" alt="Event Image"></a>
+                                <div class="event-overlay-background"></div>
+                                <div class="event-overlay-content">
+                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="date">Nov 23, 2020</span>
+                                <h3 class="title"><a href="event-details.html">International Art Fair 2020</a></h3>
+                                <ul class="event-location">
+                                    <li><i class="far fa-map-marker-alt"></i>Hamburg, Germany</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="margin-20"></div>
+                    <!-- Event End -->
 
+                    <!-- Event Start -->
+                    <div class="swiper-slide">
+                        <div class="event max-mb-30">
+                            <div class="thumbnail">
+                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event4.jpg" alt="Event Image"></a>
+                                <div class="event-overlay-background"></div>
+                                <div class="event-overlay-content">
+                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="date">Dec 15, 2020</span>
+                                <h3 class="title"><a href="event-details.html">Street Performance: Call for Artist</a></h3>
+                                <ul class="event-location">
+                                    <li><i class="far fa-map-marker-alt"></i>Illinois, US</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event End -->
+
+                    <!-- Event Start -->
+                    <div class="swiper-slide">
+                        <div class="event max-mb-30">
+                            <div class="thumbnail">
+                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event5.jpg" alt="Event Image"></a>
+                                <div class="event-overlay-background"></div>
+                                <div class="event-overlay-content">
+                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="date">Jul 22, 2020</span>
+                                <h3 class="title"><a href="event-details.html">Consumer Food Safety Education Conference</a></h3>
+                                <ul class="event-location">
+                                    <li><i class="far fa-map-marker-alt"></i>Illinois, US</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event End -->
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <!-- Event Wrapper End -->
+
+            <div class="row max-mt-40">
+                <div class="text-center col-lg-7 mx-auto">
+                    <a class="link link-lg" href="event.html">We love to see you at our events.?? <mark>Check out events <i class="far fa-long-arrow-right"></i></mark></a>
+                </div>
             </div>
 
         </div>
     </div>
+    <!-- Event Section End -->
 
-<?php include('includes/footer.php'); ?>
+    <!-- Newsletter Section Start -->
+    <div class="newsletter-section section section-padding position-relative" data-bg-image="assets/images/bg/subscribe-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsletter-content light-color">
+                        <h2 class="title fz-48">Subscribe <span>Newsletters</span></h2>
+                        <p>Enter your email address to register to our newsletter subscription <br class="d-none d-md-block">delivered on a regular basis! </p>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="Your E-mail">
+                                <button class="btn btn-primary btn-hover-secondary">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Section End -->
+
+   <?php include ("includes/footer.php"); ?>

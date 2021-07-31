@@ -1,189 +1,204 @@
-<?php include ('config.php'); ?>
-<!DOCTYPE HTML>
-<html class="no-js">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
+
+<!-- hasthemes.com/maxcoach/maxcoach/index-4.html-->
 <head>
-    <!-- Basic Page Needs
-      ================================================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Christ Vision Sanctuary International</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <!-- Mobile Specific Metas
-      ================================================== -->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <!-- CSS
-      ================================================== -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
-    <!--<link href="assets/css/custom.css" rel="stylesheet" type="text/css">-->
-    <link href="assets/plugins/css/prettyPhoto.css" rel="stylesheet" type="text/css">
-    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
-    <!-- Color Style -->
-    <link class="alt" href="assets/css/color1.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
-    <!-- SCRIPTS
-      ================================================== -->
-    <script src="assets/js/modernizr.js"></script><!-- Modernizr -->
-</head>
-<body style="font-family: Muli !important;">
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="UpWd51lC"></script>
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an outdated browser.
-    <a href="http://browsehappy.com/">Upgrade your browser today</a> or
-    <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
-</p>
-<![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Christ Vision Sanctuary International | House of Prayer</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="Christ Vision Sanctuary International">
+    <meta name="keywords" content="christ vision sanctuary international house of prayer army cvsiworld cvsiworld.net" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/logo.png">
 
-    <div class="body header-style3">
-        <!-- Start Top Row -->
-        <div class="toprow">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <nav class="top-menus">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <nav class="top-menus pull-right">
-                            <ul>
-                                <li>
-                                    <a href="visitbranch" class="topheader-txt">Visit a Branch</a>
-                                </li>
-                                <li>
-                                    <a href="../ms/" class="topheader-txt" target="_blank">ADMIN PORTAL</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="topheader-txt">VIM TV</a>
-                                </li>
-                                <li>
-                                    <a href="live/" class="topheader-txt livetext">WATCH LIVE</a>
-                                </li>
-                            </ul>
-                        </nav>
+    <!-- CSS
+	============================================ -->
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome-pro.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/font-gilroy.css"> -->
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <!-- <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css">
+    <link rel="stylesheet" href="assets/css/plugins/photoswipe-default-skin.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css"> -->
+
+    <!-- Main Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+</head>
+
+<body>
+
+<div id="page">
+    <!-- Header Top Section Start -->
+    <div class="header-top-section section" data-bg-color="#f5f5f5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="header-top-content">
+                        <p>CHRIST VISION SANCTUARY INTERNATIONAL | HOUSE OF PRAYER</p>
+                        <div class="header-top-countdown">
+                            <div class="ht-icon"><i class="far fa-clock"></i></div>
+                            <div class="pro-countdown-2 d-flex" data-countdown="2021/10/17"></div>
+                            <span> to next event</span>
+                        </div>
+                        <a class="btn btn-primary btn-hover-secondary btn-xs" href="ms">Admin Portal</a>
+                        <a class="btn btn-danger btn-hover-primary btn-xs" href="live" style="margin-left: 2px">Live</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Top Row -->
-        <!-- Start Site Header -->
-        <header class="site-header">
-            <div class="topbar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-8">
-                            <h1 class="logo"> <a href="/"><img src="assets/img/logo.png"
-                                                                 alt="Logo" style="width:30%;
-                                                                 margin-top: -10px !important;
-                                                                 border-radius: 15%"></a> </h1>
+    </div>
+    <!-- Header Top Section Start -->
+
+    <!-- Header Section Start -->
+    <div class="header-section sticky-header section">
+        <div class="header-inner">
+            <div class="container position-relative">
+                <div class="row justify-content-between align-items-center">
+
+                    <!-- Header Logo Start -->
+                    <div class="col-xl-1 col-auto">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img class="dark-logo" src="assets/images/logo/logo.png" alt="Logo" style="width: 80%">
+                                <img class="light-logo" src="assets/images/logo/logo.png" alt="Logo">
+                            </a>
                         </div>
-                        <div class="col-md-8 col-sm-6 col-xs-4">
-                            <div class="top-search hidden-sm hidden-xs">
-                                <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search...">
-                                        <span class="input-group-addon" style="cursor: pointer"><i class="fa fa-search"></i></span>
-                                    </div>
-                                </form>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- Header Main Menu Start -->
+                    <div class="col d-none d-xl-block position-static">
+                        <nav class="site-main-menu menu-hover-1">
+                            <ul>
+                                <li class="position-static">
+                                    <a href="/"><span class="menu-text">Home</span></a>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">About</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="aboutus"><span class="menu-text">About CVSI</span></a></li>
+                                        <li><a href="founder"><span class="menu-text">Founder</span></a></li>
+                                        <li><a href="history"><span class="menu-text">History</span></a></li>
+                                        <li><a href="vision_mission"><span class="menu-text">Vision and Mission</span></a></li>
+                                        <li><a href="branches"><span class="menu-text">Branches</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">Events</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="recentevents"><span class="menu-text">Recent Events</span></a></li>
+                                        <li><a href="upcomingevents"><span class="menu-text">Upcoming Events</span></a></li>
+                                        <li><a href="eventgallery"><span class="menu-text">Events Gallery</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">Media</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="sermons"><span class="menu-text">Sermons</span></a></li>
+                                        <li><a href="testimonies"><span class="menu-text">Testimonies</span></a></li>
+                                        <li><a href="gallery"><span class="menu-text">Gallery</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">Ministries</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="lmp"><span class="menu-text">LM Partners</span></a></li>
+                                        <li><a href="menministry"><span class="menu-text">Men</span></a></li>
+                                        <li><a href="womenministry"><span class="menu-text">Women</span></a></li>
+                                        <li><a href="youthministry"><span class="menu-text">Youth</span></a></li>
+                                        <li><a href="childrenministry"><span class="menu-text">Children</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">Departments</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="choirdept"><span class="menu-text">Choir</span></a></li>
+                                        <li><a href="welfaredept"><span class="menu-text">Welfare</span></a></li>
+                                        <li><a href="prayerdept"><span class="menu-text">Prayer</span></a></li>
+                                        <li><a href="evangelismdept"><span class="menu-text">Evangelism</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="position-static">
+                                    <a href="#"><span class="menu-text">A Week at CVSI</span></a>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Header Main Menu End -->
+
+                    <!-- Header Right Start -->
+                    <div class="col-xl-2 col-auto">
+                        <div class="header-right">
+                            <div class="inner">
+
+                                <!-- Header Social Start -->
+                                <div class="header-social d-none d-sm-flex">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <!-- Header Social End -->
+
+                                <!-- Header Fullscreen Search Start -->
+                                <button class="header-fs-search-toggle"><i class="far fa-search"></i></button>
+                                <!-- Header Fullscreen Search End -->
+
+                                <!-- Header Mobile Menu Toggle Start -->
+                                <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                                    <button class="toggle">
+                                        <i class="icon-top"></i>
+                                        <i class="icon-middle"></i>
+                                        <i class="icon-bottom"></i>
+                                    </button>
+                                </div>
+                                <!-- Header Mobile Menu Toggle End -->
                             </div>
-                            <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-menu-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <nav class="navigation">
-                                <ul class="sf-menu">
-                                    <li><a href="/">Home</a>
-                                    </li>
-                                    <li><a href="#">About Us</a>
-                                        <ul class="dropdown">
-                                            <li><a href="founder">Founder</a></li>
-                                            <li><a href="history">History</a></li>
-                                            <li><a href="mission_vision">Mission & Vision</a></li>
-                                            <li><a href="about">About CVSI</a></li>
-                                            <li><a href="branches">Branches</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="megamenu"><a href="#">Ministries & Departments</a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <div class="megamenu-container container">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <h3>Get Involved</h3>
-                                                            <p class="droptxt">
-                                                                About Departments/Ministries
-                                                            </p>
-                                                            <a href="#" class="btn btn-primary">Join a ministry or department</a>
-
-                                                        </div>
-                                                        <div class="col-md-3"> <span class="megamenu-sub-title"> Our Ministries</span>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="lmm">LMM</a></li>
-                                                                <li><a href="youthministry">Youth Ministry</a></li>
-                                                                <li><a href="childrenministry">Children's Ministry</a></li>
-                                                                <li><a href="menministry">Men's Ministry</a></li>
-                                                                <li><a href="womenministry">Women's Ministry</a></li>
-                                                                <li><a href="welfare    ">Welfare</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-3"> <span class="megamenu-sub-title"> Our Departments</span>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="media">Media</a></li>
-                                                                <li><a href="music">Music</a></li>
-                                                                <li><a href="ushering">Ushering</a></li>
-                                                                <li><a href="prayertower">Prayer Tower</a></li>
-                                                                <li><a href="protocol">Protocol</a></li>
-                                                                <li><a href="administrators">Administrators</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Events</a>
-                                        <ul class="dropdown">
-                                            <li><a href="upcomingevents">Upcoming Events</a></li>
-                                            <li><a href="recentevents">Recent Events</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Media</a>
-                                        <ul class="dropdown">
-                                            <li><a href="gallery">Gallery</a></li>
-                                            <li><a href="videogallery">Video Gallery</a></li>
-                                            <li><a href="sermon">Sermon</a></li>
-                                            <li><a href="testimonies">Testimonies</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact">Contact</a></li>
-
-                                </ul>
-                            </nav>
                         </div>
                     </div>
+                    <!-- Header Right End -->
+
                 </div>
             </div>
-        </header>
-        <!-- End Site Header -->
+        </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Full Screen Search Start -->
+    <div id="fullscreen-search" class="fullscreen-search">
+        <div class="fullscreen-search-close">
+            <button class="toggle">
+                <i class="icon-top"></i>
+                <i class="icon-bottom"></i>
+            </button>
+        </div>
+        <div class="fullscreen-search-form">
+            <form action="#">
+                <input type="text" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
