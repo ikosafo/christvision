@@ -482,14 +482,14 @@ svg:not(:root) {
 
 [data-bg-image] {
     background-repeat: repeat;
-    background-position: top center
+    background-position: top center;
 }
 
 [data-bg-image]:not(.bg-pattern) {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .bg-pattern-one {
@@ -10080,7 +10080,17 @@ textarea:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 95px 0 248px
+    padding: 95px 0 248px;
+    background-repeat: no-repeat !important;
+    background-position: center center;
+    background-size: cover !important;
+    overflow: hidden;
+    background:linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+    ),
+    url('../images/banner/banner.jpg')
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

@@ -1,7 +1,7 @@
 <?php include("includes/header.php") ?>
 
     <!-- Slider/Intro Section Start -->
-    <div class="intro4-section section section-fluid" data-bg-image="assets/images/banner/banner.jpg">
+    <div class="intro4-section section section-fluid">
 
         <div class="container">
             <div class="row">
@@ -123,110 +123,45 @@
             <div class="event-slider swiper-container" data-aos="fade-up">
 
                 <div class="swiper-wrapper">
-                    <!-- Event Start -->
-                    <div class="swiper-slide">
-                        <div class="event max-mb-30">
-                            <div class="thumbnail">
-                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event1.jpg" alt="Event Image"></a>
-                                <div class="event-overlay-background"></div>
-                                <div class="event-overlay-content">
-                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <span class="date">Nov 22, 2020</span>
-                                <h3 class="title"><a href="event-details.html">Storytelling Workshop</a></h3>
-                                <ul class="event-location">
-                                    <li><i class="far fa-map-marker-alt"></i>Texas, US</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Event End -->
 
-                    <!-- Event Start -->
-                    <div class="swiper-slide">
-                        <div class="event max-mb-30">
-                            <div class="thumbnail">
-                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event2.jpg" alt="Event Image"></a>
-                                <div class="event-overlay-background"></div>
-                                <div class="event-overlay-content">
-                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <span class="date">Oct 10, 2020</span>
-                                <h3 class="title"><a href="event-details.html">Painting Art Contest 2020</a></h3>
-                                <ul class="event-location">
-                                    <li><i class="far fa-map-marker-alt"></i>New York, US</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Event End -->
+                    <!-- Get events from dv -->
+                    <?php $getevents = $mysqli->query("select * from website_events e
+                                                                       JOIN website_image_events i
+                                                                       ON i.imageid = e.eventid ORDER BY e.id DESC");
+                    while ($resevents = $getevents->fetch_assoc()) { ?>
 
-                    <!-- Event Start -->
-                    <div class="swiper-slide">
-                        <div class="event max-mb-30">
-                            <div class="thumbnail">
-                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event3.jpg" alt="Event Image"></a>
-                                <div class="event-overlay-background"></div>
-                                <div class="event-overlay-content">
-                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
+                        <!-- Event Start -->
+                        <div class="swiper-slide">
+                            <div class="event max-mb-30">
+                                <div class="thumbnail">
+                                    <a href="eventdetails" class="image">
+                                        <img src="../ms/<?php echo $resevents['image_location'] ?>"
+                                             style="width: 391px;height: 181px"
+                                             alt="Event Image">
+                                    </a>
+                                    <div class="event-overlay-background"></div>
+                                    <div class="event-overlay-content">
+                                        <a class="btn btn-md btn-light btn-hover-light theme-color" href="eventdetails">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span class="date">
+                                        <?php $date=date_create($resevents['startperiod']);
+                                        echo date_format($date,"l F j, Y"); ?></span>
+                                    <h3 class="title">
+                                        <a href="eventdetails"><?php echo $resevents['title'] ?></a>
+                                    </h3>
+                                    <ul class="event-location">
+                                        <li><i class="far fa-map-marker-alt"></i><?php echo $resevents['venue']; ?></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="info">
-                                <span class="date">Nov 23, 2020</span>
-                                <h3 class="title"><a href="event-details.html">International Art Fair 2020</a></h3>
-                                <ul class="event-location">
-                                    <li><i class="far fa-map-marker-alt"></i>Hamburg, Germany</li>
-                                </ul>
-                            </div>
                         </div>
-                    </div>
-                    <!-- Event End -->
+                        <!-- Event End -->
 
-                    <!-- Event Start -->
-                    <div class="swiper-slide">
-                        <div class="event max-mb-30">
-                            <div class="thumbnail">
-                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event4.jpg" alt="Event Image"></a>
-                                <div class="event-overlay-background"></div>
-                                <div class="event-overlay-content">
-                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <span class="date">Dec 15, 2020</span>
-                                <h3 class="title"><a href="event-details.html">Street Performance: Call for Artist</a></h3>
-                                <ul class="event-location">
-                                    <li><i class="far fa-map-marker-alt"></i>Illinois, US</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Event End -->
 
-                    <!-- Event Start -->
-                    <div class="swiper-slide">
-                        <div class="event max-mb-30">
-                            <div class="thumbnail">
-                                <a href="event-details.html" class="image"><img src="assets/images/event/370/event5.jpg" alt="Event Image"></a>
-                                <div class="event-overlay-background"></div>
-                                <div class="event-overlay-content">
-                                    <a class="btn btn-md btn-light btn-hover-light theme-color" href="event-details.html">Get ticket</a>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <span class="date">Jul 22, 2020</span>
-                                <h3 class="title"><a href="event-details.html">Consumer Food Safety Education Conference</a></h3>
-                                <ul class="event-location">
-                                    <li><i class="far fa-map-marker-alt"></i>Illinois, US</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Event End -->
+                    <?php  }
+                    ?>
 
                 </div>
 
@@ -237,7 +172,8 @@
 
             <div class="row max-mt-40">
                 <div class="text-center col-lg-7 mx-auto">
-                    <a class="link link-lg" href="event.html">We love to see you at our events.?? <mark>Check out events <i class="far fa-long-arrow-right"></i></mark></a>
+                    <a class="link link-lg" href="events">
+                        <mark>Check out all events <i class="far fa-long-arrow-right"></i></mark></a>
                 </div>
             </div>
 
@@ -245,26 +181,5 @@
     </div>
     <!-- Event Section End -->
 
-    <!-- Newsletter Section Start -->
-    <div class="newsletter-section section section-padding position-relative" data-bg-image="assets/images/bg/subscribe-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="newsletter-content light-color">
-                        <h2 class="title fz-48">Subscribe <span>Newsletters</span></h2>
-                        <p>Enter your email address to register to our newsletter subscription <br class="d-none d-md-block">delivered on a regular basis! </p>
-                        <div class="newsletter-form">
-                            <form action="#">
-                                <input type="email" placeholder="Your E-mail">
-                                <button class="btn btn-primary btn-hover-secondary">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Newsletter Section End -->
 
    <?php include ("includes/footer.php"); ?>

@@ -1,3 +1,27 @@
+
+<!-- Newsletter Section Start -->
+<div class="newsletter-section section section-padding position-relative" data-bg-image="assets/images/bg/subscribe-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="newsletter-content light-color">
+                    <h2 class="title fz-48">Subscribe</h2>
+                    <p>Enter your email address to register to our newsletter subscription <br class="d-none d-md-block">
+                        delivered on a quatterly basis! </p>
+                    <div class="newsletter-form">
+                        <form action="#">
+                            <input type="email" placeholder="Your E-mail">
+                            <button class="btn btn-primary btn-hover-secondary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter Section End -->
+
 <div class="footer-section section">
     <div class="container">
 
@@ -5,14 +29,15 @@
         <div class="row">
 
             <!-- Footer Widget Start -->
-            <div class="col-xl-6 col-md-5 col-12 max-mb-50">
+            <div class="col-xl-3 col-md-3 col-12 max-mb-50">
                 <div class="footer-widget">
                     <h4 class="footer-widget-title">Address</h4>
                     <div class="footer-widget-content">
                         <div class="content">
-                            <p>382 NE 191st St # 87394 Miami, FL 33179-3899</p>
-                            <p>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday) </p>
-                            <p><a href="#">info@example.com </a></p>
+                            <p>Christ Vision Sanctuary International (Betphillah) </p>
+                            <p>Kisseman - Accra </p>
+                            <p><i class="fa fa-envelope"></i> <a href="#">info@cvsiworld.net </a></p>
+                            <p><i class="fa fa-phone-alt"></i> 024 414 3212</p>
                         </div>
                         <div class="footer-social-inline">
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -26,15 +51,15 @@
             <!-- Footer Widget End -->
 
             <!-- Footer Widget Start -->
-            <div class="col-xl-3 col-md-4 col-sm-7 col-12 max-mb-50">
+            <div class="col-xl-3 col-md-3 col-sm-7 col-12 max-mb-50">
                 <div class="footer-widget">
                     <h4 class="footer-widget-title">Explore</h4>
                     <div class="footer-widget-content">
                         <ul class="column-2">
-                            <li><a href="#">Start here</a></li>
-                            <li><a href="#">Success story</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Branches</a></li>
+                            <li><a href="#">Pastors</a></li>
+                            <li><a href="#">Sermons</a></li>
+                            <li><a href="#">Gallery</a></li>
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Contact us</a></li>
                         </ul>
@@ -44,17 +69,14 @@
             <!-- Footer Widget End -->
 
             <!-- Footer Widget Start -->
-            <div class="col-xl-3 col-md-3 col-sm-5 col-12 max-mb-50">
+            <div class="col-xl-6 col-md-6 col-sm-6 col-12 max-mb-50">
                 <div class="footer-widget">
-                    <h4 class="footer-widget-title">Information</h4>
-                    <div class="footer-widget-content">
-                        <ul>
-                            <li><a href="#">Membership</a></li>
-                            <li><a href="#">Purchase guide</a></li>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Terms of service</a></li>
-                        </ul>
-                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/christvisionsanctuaryofficial/"
+                         data-tabs="timeline" data-width="600" data-height="250" data-small-header="true"
+                         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/christvisionsanctuaryofficial/"
+                                    class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/christvisionsanctuaryofficial/">
+                                Christ Vision Sanctuary</a></blockquote></div>
                 </div>
             </div>
             <!-- Footer Widget End -->
@@ -65,7 +87,7 @@
         <!-- Footer Copyright Start -->
         <div class="row max-mt-20">
             <div class="col">
-                <p class="copyright">&copy; 2020 Maxcoach. <a href="https://hasthemes.com/">All Rights Reserved</a></p>
+                <p class="copyright">&copy; <?php echo date("Y") ?> CVSI</p>
             </div>
         </div>
         <!-- Footer Copyright End -->
@@ -110,5 +132,5 @@
 </body>
 
 
-<!-- Mirrored from template.hasthemes.com/maxcoach/maxcoach/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jul 2021 16:56:27 GMT -->
+
 </html>

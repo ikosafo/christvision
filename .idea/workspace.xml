@@ -2,398 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c8f1d1b-bb8e-4260-8302-d88cc5f408f1" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\audio\Miaow-02-Hidden.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\audio\Precious Jesus.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\animations.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\color1.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\custom.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\extralayers.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfontd41d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfonte0a5.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfonte0a5.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfonte0a5.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfonte0a5.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\fonts\fontawesome-webfonte0a5.woff2" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\img\bannerimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\img\donateimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\img\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\img\pastorsimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\helper-plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\init.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\jquery-2.0.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\js\waypoints.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\css\prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_rounded\contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_square\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\dark_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\default\sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\facebook\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\images\light_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\js\jquery.countdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\js\jquery.flexslider.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\js\prettyphoto.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\bigplay.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\bigplay.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\controls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\mediaelement-and-player.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\assets\plugins\mediaelement\mediaelementplayer.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\config.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\donate.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\eventdetails.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\events.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\files.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\functions.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\includes\sidebar.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\pastors.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\countdown\js\jquery.countdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\fullcalendar.print.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\jquery-ui.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\fullcalendar\lib\moment.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\bigplay.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\bigplay.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\controls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\mediaelement\mediaelement-and-player.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\jquery.nivo.slider.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\nivo-slider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\themes\default\arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\themes\default\bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\themes\default\default.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\nivoslider\themes\default\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\css\prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_rounded\contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_square\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\dark_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\default\sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\facebook\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\prettyphoto\images\light_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrow_left2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrow_right2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrowleft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\arrowright.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\boxed_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\bullet_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\bullets2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\coloredbg.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\gridtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\gridtile_3x3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\gridtile_3x3_white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\gridtile_white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\large_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\large_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\navigdots.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\navigdots_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\shadow1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\shadow2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\shadow3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\small_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\small_left_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\small_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\small_right_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\assets\timer.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\css\settings.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\font\revicons90c6.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\font\revicons90c6.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\font\revicons90c6.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\font\revicons90c6.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\images\gradient\g30.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\images\gradient\g40.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\js\jquery.themepunch.revolution.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\plugins\rs-plugin\js\jquery.themepunch.tools.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\sermons.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\singleevent.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\upload.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\about.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\audio\Miaow-02-Hidden.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\animations.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\color1.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\custom.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\extralayers.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfontd41d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfonte0a5.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfonte0a5.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfonte0a5.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfonte0a5.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\fonts\fontawesome-webfonte0a5.woff2" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\img\bannerimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\img\donateimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\img\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\img\pastorsimg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\helper-plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\init.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\jquery-2.0.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\js\waypoints.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\css\prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_rounded\contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_square\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\dark_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\default\sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\facebook\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\images\light_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\js\jquery.countdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\js\jquery.flexslider.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\js\prettyphoto.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\bigplay.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\bigplay.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\controls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\mediaelement-and-player.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\assets\plugins\mediaelement\mediaelementplayer.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\blog-full-width.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\blog-masonry.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\blog-medium-thumbnails.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\blog-post.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\blog-timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\causes-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\causes.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\contact.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\donate.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\donateold.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\eventdetails.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\events-calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\events-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\events-timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\events.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\events2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-2cols-filter.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-2cols-pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-3cols-filter.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-3cols-pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-4cols-filter.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-4cols-pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\gallery-masonry.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\google-calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\header-style2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\header-style3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\header-style4.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\includes\footer.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\includes\header.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\includes\sidebar.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index-nivoslider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index-rev-slider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index2.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index4.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\index5.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\indexold.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\ministry.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\our-staff.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\pastors.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plan-visit.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\countdown\js\jquery.countdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\fullcalendar.print.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\jquery-ui.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\fullcalendar\lib\moment.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\bigplay.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\bigplay.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\controls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\mediaelement\mediaelement-and-player.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\jquery.nivo.slider.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\nivo-slider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\themes\default\arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\themes\default\bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\themes\default\default.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\nivoslider\themes\default\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\css\prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_rounded\contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_square\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\dark_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\default\sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\facebook\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_rounded\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_rounded\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_rounded\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_rounded\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_square\btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_square\btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\prettyphoto\images\light_square\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrow_left2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrow_right2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrowleft.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\arrowright.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\boxed_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\bullet_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\bullets2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\coloredbg.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\gridtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\gridtile_3x3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\gridtile_3x3_white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\gridtile_white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\large_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\large_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\navigdots.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\navigdots_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\shadow1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\shadow2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\shadow3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\small_left.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\small_left_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\small_right.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\small_right_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\assets\timer.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\css\settings.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\font\revicons90c6.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\font\revicons90c6.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\font\revicons90c6.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\font\revicons90c6.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\images\gradient\g30.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\images\gradient\g40.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\js\jquery.themepunch.revolution.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\plugins\rs-plugin\js\jquery.themepunch.tools.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\sermon-albums.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\sermons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\shop-product.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\shop-sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\shop.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\shortcodes.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\single-cause.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\single-event.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\single-sermon.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\singleevent.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\christvision\wb\typography.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.php" />
+      <change type="MOVED" beforePath="C:\wamp64\www\christvision\old\.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MOVED" beforePath="C:\wamp64\www\christvision\old\.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/footer.php" afterPath="$PROJECT_DIR$/includes/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.min.css" afterPath="$PROJECT_DIR$/assets/css/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="christvision.iws" />
@@ -416,25 +31,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new/index.html">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1104" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="-16.23077">
+              <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+              <folding>
+                <element signature="e#1008#1032#0#HTML" expanded="true" />
+                <element signature="e#6917#6951#0#HTML" expanded="true" />
+                <marker date="1627747328477" expanded="true" signature="6167:6411" placeholder="select * fro..website_events..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="events.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.423077">
-              <caret line="103" column="45" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
+            <state vertical-scroll-proportion="-20.807692">
+              <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
               <folding>
-                <element signature="e#1056#1080#0#HTML" expanded="true" />
-                <element signature="e#5560#12873#0#HTML" expanded="false" />
-                <element signature="e#12948#13929#0#HTML" expanded="false" />
+                <marker date="1608228854982" expanded="true" signature="1849:2101" placeholder="select * fro..website_events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventdetails.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/eventdetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="46" column="89" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="89" />
+              <folding>
+                <marker date="1608863170797" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
               </folding>
             </state>
           </provider>
@@ -443,8 +72,8 @@
       <file leaf-file-name="style.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3560.753">
-              <caret line="22814" column="18" selection-start-line="22814" selection-start-column="18" selection-end-line="22814" selection-end-column="18" />
+            <state vertical-scroll-proportion="6.888889">
+              <caret line="10085" column="38" selection-start-line="10085" selection-start-column="38" selection-end-line="10085" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -491,25 +120,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index-4.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new/index-4.html">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="1281" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="-16.346153">
+              <caret line="49" column="140" selection-start-line="49" selection-start-column="140" selection-end-line="49" selection-end-column="140" />
+              <folding>
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1627747788328" expanded="true" signature="2961:3133" placeholder="select * fro..website_events..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48387095">
-              <caret line="61" column="66" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
-              <folding>
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -526,15 +156,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.153847">
-              <caret line="113" column="7" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-                <element signature="n#a#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.42114696">
+              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -547,12 +174,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/includes/mobile.php" />
         <option value="$PROJECT_DIR$/assets/css/vendor/vendor.min.css" />
         <option value="$PROJECT_DIR$/assets/css/style.min.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/includes/footer.php" />
       </list>
     </option>
   </component>
@@ -636,6 +263,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\christvision" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -728,17 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.153847">
-          <caret line="113" column="7" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
@@ -776,26 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3560.753">
-          <caret line="22814" column="18" selection-start-line="22814" selection-start-column="18" selection-end-line="22814" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.423077">
-          <caret line="103" column="45" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
-          <folding>
-            <element signature="e#1056#1080#0#HTML" expanded="true" />
-            <element signature="e#5560#12873#0#HTML" expanded="false" />
-            <element signature="e#12948#13929#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/old/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="41.192307">
@@ -806,14 +407,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.888889">
+          <caret line="10085" column="38" selection-start-line="10085" selection-start-column="38" selection-end-line="10085" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.807692">
+          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+          <folding>
+            <marker date="1608228854982" expanded="true" signature="1849:2101" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/eventdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="46" column="89" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="89" />
+          <folding>
+            <marker date="1608863170797" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.23077">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <element signature="e#1008#1032#0#HTML" expanded="true" />
+            <element signature="e#6917#6951#0#HTML" expanded="true" />
+            <marker date="1627747328477" expanded="true" signature="6167:6411" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48387095">
-          <caret line="61" column="66" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="49" column="140" selection-start-line="49" selection-start-column="140" selection-end-line="49" selection-end-column="140" />
           <folding>
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1627747788328" expanded="true" signature="2961:3133" placeholder="select * fro..website_events..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42114696">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

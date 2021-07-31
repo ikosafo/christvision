@@ -1,3 +1,4 @@
+<?php include("config.php") ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -45,6 +46,9 @@
 
 <body>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="ivz77jCm"></script>
+
 <div id="page">
     <!-- Header Top Section Start -->
     <div class="header-top-section section" data-bg-color="#f5f5f5">
@@ -55,11 +59,20 @@
                         <p>CHRIST VISION SANCTUARY INTERNATIONAL | HOUSE OF PRAYER</p>
                         <div class="header-top-countdown">
                             <div class="ht-icon"><i class="far fa-clock"></i></div>
-                            <div class="pro-countdown-2 d-flex" data-countdown="2021/10/17"></div>
+                              <?php $getevent = $mysqli->query("select * from website_events e
+                               JOIN website_image_events i
+                               ON i.imageid = e.eventid ORDER BY e.id DESC LIMIT 1");
+                              $resevent = $getevent->fetch_assoc();
+                              $getnextdate = $resevent['startperiod'];
+
+                              $timestamp = strtotime($getnextdate);
+                              $new_date_format = date('Y/m/d', $timestamp);
+                              ?>
+                            <div class="pro-countdown-2 d-flex" data-countdown="<?php echo $new_date_format; ?>"></div>
                             <span> to next event</span>
                         </div>
-                        <a class="btn btn-primary btn-hover-secondary btn-xs" href="ms">Admin Portal</a>
-                        <a class="btn btn-danger btn-hover-primary btn-xs" href="live" style="margin-left: 2px">Live</a>
+                        <a class="btn btn-primary btn-hover-secondary btn-xs" href="ms" target="_blank">Admin Portal</a>
+                        <a class="btn btn-danger btn-hover-danger btn-xs" href="live" style="margin-left: 2px">Live</a>
                     </div>
                 </div>
             </div>
