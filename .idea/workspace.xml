@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c8f1d1b-bb8e-4260-8302-d88cc5f408f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MOVED" beforePath="C:\wamp64\www\christvision\old\.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MOVED" beforePath="C:\wamp64\www\christvision\old\.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/footer.php" afterPath="$PROJECT_DIR$/includes/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old/eventdetails.php" afterPath="$PROJECT_DIR$/old/eventdetails.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.min.css" afterPath="$PROJECT_DIR$/assets/css/style.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="christvision.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +27,56 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/old/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.23077">
-              <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="146" column="12" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
               <folding>
-                <element signature="e#1008#1032#0#HTML" expanded="true" />
-                <element signature="e#6917#6951#0#HTML" expanded="true" />
-                <marker date="1627747328477" expanded="true" signature="6167:6411" placeholder="select * fro..website_events..." />
+                <marker date="1616299878755" expanded="true" signature="328:362" placeholder="select * fro..website_image_slider..." />
+                <marker date="1616299878755" expanded="true" signature="4246:4393" placeholder="select * fro..website_image_news..." />
+                <marker date="1616299878755" expanded="true" signature="7147:7180" placeholder="select * fro..website_youtubelink..." />
+                <marker date="1616299878755" expanded="true" signature="9385:9551" placeholder="select * fro..website_events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventdetails.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eventdetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-56.76923">
+              <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
+              <folding>
+                <marker date="1627869636640" expanded="true" signature="113:252" placeholder="select * fro..website_events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1627942445704" expanded="true" signature="1720:1908" placeholder="select * fro..website_events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventlist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eventlist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1627941443075" expanded="true" signature="165:481" placeholder="select * fro..website_events..." />
+                <marker date="1627941443075" expanded="true" signature="559:871" placeholder="select * fro..website_events..." />
+                <marker date="1627941443075" expanded="true" signature="949:1337" placeholder="select * fro..website_events..." />
+                <marker date="1627941443075" expanded="true" signature="1384:1616" placeholder="select * fro..website_events..." />
               </folding>
             </state>
           </provider>
@@ -48,8 +85,8 @@
       <file leaf-file-name="events.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old/events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.807692">
-              <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+            <state vertical-scroll-proportion="28.76923">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
                 <marker date="1608228854982" expanded="true" signature="1849:2101" placeholder="select * fro..website_events..." />
               </folding>
@@ -60,62 +97,11 @@
       <file leaf-file-name="eventdetails.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old/eventdetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="46" column="89" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="89" />
+            <state vertical-scroll-proportion="-27.346153">
+              <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
               <folding>
-                <marker date="1608863170797" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
+                <marker date="1627940645463" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/style.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.888889">
-              <caret line="10085" column="38" selection-start-line="10085" selection-start-column="38" selection-end-line="10085" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vendor.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/vendor/vendor.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="17574.371">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-              <folding>
-                <element signature="e#37395#37618#2" expanded="true" />
-                <element signature="e#39725#39946#2" expanded="true" />
-                <element signature="e#40012#40145#2" expanded="true" />
-                <element signature="e#40278#40493#2" expanded="true" />
-                <element signature="e#40844#40994#2" expanded="true" />
-                <element signature="e#41288#41424#2" expanded="true" />
-                <element signature="e#41530#41663#2" expanded="true" />
-                <element signature="e#48833#49067#2" expanded="true" />
-                <element signature="e#49957#50180#1" expanded="true" />
-                <element signature="e#50182#50416#1" expanded="true" />
-                <element signature="e#52421#52735#2" expanded="true" />
-                <element signature="e#53645#53868#1" expanded="true" />
-                <element signature="e#53870#54184#1" expanded="true" />
-                <element signature="e#89267#89502#2" expanded="true" />
-                <element signature="e#90402#90643#2" expanded="true" />
-                <element signature="e#95043#95314#2" expanded="true" />
-                <element signature="e#95500#95771#2" expanded="true" />
-                <element signature="e#112275#112588#1" expanded="true" />
-                <element signature="e#128937#129184#2" expanded="true" />
-                <element signature="e#129240#129488#2" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/mobile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="89" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,44 +109,48 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="49" column="140" selection-start-line="49" selection-start-column="140" selection-end-line="49" selection-end-column="140" />
+            <state vertical-scroll-proportion="-13.307693">
+              <caret line="119" column="89" selection-start-line="119" selection-start-column="89" selection-end-line="119" selection-end-column="89" />
               <folding>
                 <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1627747788328" expanded="true" signature="2961:3133" placeholder="select * fro..website_events..." />
+                <marker date="1627941717331" expanded="true" signature="2907:3079" placeholder="select * fro..website_events..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
+      <file leaf-file-name="branches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/branches.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.884615">
+              <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old/includes/header.php">
+      <file leaf-file-name="aboutus.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aboutus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="41.192307">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27419356">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding>
-                <marker date="1615698525215" expanded="true" signature="2033:2271" placeholder="..." />
+                <element signature="e#702#3101#0#HTML" expanded="false" />
+                <element signature="e#3177#5814#0#HTML" expanded="false" />
+                <element signature="e#5896#11151#0#HTML" expanded="false" />
+                <element signature="e#11225#12593#0#HTML" expanded="false" />
+                <element signature="e#12660#26026#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/footer.php">
+      <file leaf-file-name="about-us-1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new/about-us-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42114696">
-              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="928" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -177,9 +167,15 @@
         <option value="$PROJECT_DIR$/includes/mobile.php" />
         <option value="$PROJECT_DIR$/assets/css/vendor/vendor.min.css" />
         <option value="$PROJECT_DIR$/assets/css/style.min.css" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/includes/footer.php" />
+        <option value="$PROJECT_DIR$/eventdetails.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/old/eventdetails.php" />
+        <option value="$PROJECT_DIR$/eventlist.php" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/events.php" />
+        <option value="$PROJECT_DIR$/branches.php" />
+        <option value="$PROJECT_DIR$/aboutus.php" />
       </list>
     </option>
   </component>
@@ -308,7 +304,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18229954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19591528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -373,26 +369,26 @@
         <state vertical-scroll-proportion="17574.371">
           <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
-            <element signature="e#37395#37618#2" expanded="true" />
-            <element signature="e#39725#39946#2" expanded="true" />
-            <element signature="e#40012#40145#2" expanded="true" />
-            <element signature="e#40278#40493#2" expanded="true" />
-            <element signature="e#40844#40994#2" expanded="true" />
-            <element signature="e#41288#41424#2" expanded="true" />
-            <element signature="e#41530#41663#2" expanded="true" />
-            <element signature="e#48833#49067#2" expanded="true" />
-            <element signature="e#49957#50180#1" expanded="true" />
-            <element signature="e#50182#50416#1" expanded="true" />
-            <element signature="e#52421#52735#2" expanded="true" />
-            <element signature="e#53645#53868#1" expanded="true" />
-            <element signature="e#53870#54184#1" expanded="true" />
-            <element signature="e#89267#89502#2" expanded="true" />
-            <element signature="e#90402#90643#2" expanded="true" />
-            <element signature="e#95043#95314#2" expanded="true" />
-            <element signature="e#95500#95771#2" expanded="true" />
-            <element signature="e#112275#112588#1" expanded="true" />
-            <element signature="e#128937#129184#2" expanded="true" />
-            <element signature="e#129240#129488#2" expanded="true" />
+            <element signature="e#37395#37618#2" expanded="false" />
+            <element signature="e#39725#39946#2" expanded="false" />
+            <element signature="e#40012#40145#2" expanded="false" />
+            <element signature="e#40278#40493#2" expanded="false" />
+            <element signature="e#40844#40994#2" expanded="false" />
+            <element signature="e#41288#41424#2" expanded="false" />
+            <element signature="e#41530#41663#2" expanded="false" />
+            <element signature="e#48833#49067#2" expanded="false" />
+            <element signature="e#49957#50180#1" expanded="false" />
+            <element signature="e#50182#50416#1" expanded="false" />
+            <element signature="e#52421#52735#2" expanded="false" />
+            <element signature="e#53645#53868#1" expanded="false" />
+            <element signature="e#53870#54184#1" expanded="false" />
+            <element signature="e#89267#89502#2" expanded="false" />
+            <element signature="e#90402#90643#2" expanded="false" />
+            <element signature="e#95043#95314#2" expanded="false" />
+            <element signature="e#95500#95771#2" expanded="false" />
+            <element signature="e#112275#112588#1" expanded="false" />
+            <element signature="e#128937#129184#2" expanded="false" />
+            <element signature="e#129240#129488#2" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -402,7 +398,7 @@
         <state vertical-scroll-proportion="41.192307">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1615698525215" expanded="true" signature="2033:2271" placeholder="..." />
+            <marker date="1615698525215" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -423,55 +419,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old/events.php">
+    <entry file="file://$PROJECT_DIR$/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.807692">
-          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+        <state vertical-scroll-proportion="-31.923077">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3846154">
+          <caret line="222" column="35" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
           <folding>
-            <marker date="1608228854982" expanded="true" signature="1849:2101" placeholder="select * fro..website_events..." />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/event-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="747" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.807693">
+          <caret line="150" column="78" selection-start-line="149" selection-start-column="39" selection-end-line="150" selection-end-column="78" />
+          <folding>
+            <element signature="e#1008#1032#0#HTML" expanded="true" />
+            <element signature="e#6977#7011#0#HTML" expanded="true" />
+            <marker date="1627872215778" expanded="true" signature="-1:-1" placeholder="select * fro..website_events..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old/eventdetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="46" column="89" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="89" />
+        <state vertical-scroll-proportion="-27.346153">
+          <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
           <folding>
-            <marker date="1608863170797" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
+            <marker date="1627940645463" expanded="true" signature="111:250" placeholder="select * fro..website_events..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.23077">
-          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="146" column="12" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
           <folding>
-            <element signature="e#1008#1032#0#HTML" expanded="true" />
-            <element signature="e#6917#6951#0#HTML" expanded="true" />
-            <marker date="1627747328477" expanded="true" signature="6167:6411" placeholder="select * fro..website_events..." />
+            <marker date="1616299878755" expanded="true" signature="328:362" placeholder="select * fro..website_image_slider..." />
+            <marker date="1616299878755" expanded="true" signature="4246:4393" placeholder="select * fro..website_image_news..." />
+            <marker date="1616299878755" expanded="true" signature="7147:7180" placeholder="select * fro..website_youtubelink..." />
+            <marker date="1616299878755" expanded="true" signature="9385:9551" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="28.76923">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <marker date="1608228854982" expanded="true" signature="1849:2101" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-56.76923">
+          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
+          <folding>
+            <marker date="1627869636640" expanded="true" signature="113:252" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1627941443075" expanded="true" signature="165:481" placeholder="select * fro..website_events..." />
+            <marker date="1627941443075" expanded="true" signature="559:871" placeholder="select * fro..website_events..." />
+            <marker date="1627941443075" expanded="true" signature="949:1337" placeholder="select * fro..website_events..." />
+            <marker date="1627941443075" expanded="true" signature="1384:1616" placeholder="select * fro..website_events..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="49" column="140" selection-start-line="49" selection-start-column="140" selection-end-line="49" selection-end-column="140" />
+        <state vertical-scroll-proportion="-13.307693">
+          <caret line="119" column="89" selection-start-line="119" selection-start-column="89" selection-end-line="119" selection-end-column="89" />
           <folding>
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1627747788328" expanded="true" signature="2961:3133" placeholder="select * fro..website_events..." />
+            <marker date="1627941717331" expanded="true" signature="2907:3079" placeholder="select * fro..website_events..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/footer.php">
+    <entry file="file://$PROJECT_DIR$/events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42114696">
-          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1627942445704" expanded="true" signature="1720:1908" placeholder="select * fro..website_events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/branches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.884615">
+          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/about-us-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="928" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aboutus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27419356">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#702#3101#0#HTML" expanded="false" />
+            <element signature="e#3177#5814#0#HTML" expanded="false" />
+            <element signature="e#5896#11151#0#HTML" expanded="false" />
+            <element signature="e#11225#12593#0#HTML" expanded="false" />
+            <element signature="e#12660#26026#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

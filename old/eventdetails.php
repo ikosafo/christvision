@@ -39,7 +39,15 @@ $resevent = $getevent->fetch_assoc();
                 <div class="row">
                     <div class="col-md-9">
                         <header class="single-post-header clearfix">
-                            <nav class="btn-toolbar pull-right"> <a href="#" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" data-original-title="Print" ><i class="fa fa-print"></i></a> <a href="#" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" data-original-title="Contact us" ><i class="fa fa-envelope"></i></a> <a href="#" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" data-original-title="Share event" ><i class="fa fa-location-arrow"></i></a> </nav>
+                            <nav class="btn-toolbar pull-right"> <a href="#" class="btn btn-default"
+                                                                    data-placement="bottom" data-toggle="tooltip"
+                                                                    data-original-title="Print" >
+                                    <i class="fa fa-print"></i></a> <a href="#" class="btn btn-default"
+                                                                       data-placement="bottom" data-toggle="tooltip"
+                                                                       data-original-title="Contact us" ><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="btn btn-default" data-placement="bottom" data-toggle="tooltip"
+                                   data-original-title="Share event" ><i class="fa fa-location-arrow"></i></a>
+                            </nav>
                             <h2 class="post-title"><?php echo $resevent['title'] ?></h2>
                         </header>
                         <article class="post-content">

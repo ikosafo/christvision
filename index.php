@@ -97,11 +97,11 @@
 
             <div class="row max-mt-40 max-mb-40">
                 <div class="text-center col-lg-7 mx-auto">
-                    <a class="link link-lg" href="contact">
+                    <a class="link link-lg" href="aboutus">
                         Christ Vision Sanctuary International is a vibrant Spirit filled Church waiting to share fellowship with you. The Word of
                         God is preached powerfully with warmth and affection. Why not visit us and be a part of this great experience?
                         Come now, call the contact below for direction and you shall be a blessing as you worship with us.
-                        <mark>Join the army.. <i class="far fa-long-arrow-right"></i></mark></a>
+                        <mark>Learn More <i class="far fa-long-arrow-right"></i></mark></a>
                 </div>
             </div>
         </div>
@@ -128,20 +128,21 @@
                     <?php $getevents = $mysqli->query("select * from website_events e
                                                                        JOIN website_image_events i
                                                                        ON i.imageid = e.eventid ORDER BY e.id DESC");
-                    while ($resevents = $getevents->fetch_assoc()) { ?>
+                    while ($resevents = $getevents->fetch_assoc()) { $eventid = $resevents['eventid'];?>
 
                         <!-- Event Start -->
                         <div class="swiper-slide">
                             <div class="event max-mb-30">
                                 <div class="thumbnail">
-                                    <a href="eventdetails" class="image">
+                                    <a href="eventdetails?id=<?php echo lock($eventid) ?>" class="image">
                                         <img src="../ms/<?php echo $resevents['image_location'] ?>"
                                              style="width: 391px;height: 181px"
                                              alt="Event Image">
                                     </a>
                                     <div class="event-overlay-background"></div>
                                     <div class="event-overlay-content">
-                                        <a class="btn btn-md btn-light btn-hover-light theme-color" href="eventdetails">View Details</a>
+                                        <a class="btn btn-md btn-light btn-hover-light theme-color"
+                                           href="eventdetails?id=<?php echo lock($eventid) ?>">View Details</a>
                                     </div>
                                 </div>
                                 <div class="info">
@@ -149,7 +150,9 @@
                                         <?php $date=date_create($resevents['startperiod']);
                                         echo date_format($date,"l F j, Y"); ?></span>
                                     <h3 class="title">
-                                        <a href="eventdetails"><?php echo $resevents['title'] ?></a>
+                                        <a href="eventdetails?id=<?php echo lock($eventid) ?>">
+                                            <?php echo $resevents['title'] ?>
+                                        </a>
                                     </h3>
                                     <ul class="event-location">
                                         <li><i class="far fa-map-marker-alt"></i><?php echo $resevents['venue']; ?></li>

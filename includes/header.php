@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
-
-<!-- hasthemes.com/maxcoach/maxcoach/index-4.html-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -119,8 +117,7 @@
                                     <a href="#"><span class="menu-text">Events</span></a>
                                     <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
                                     <ul class="sub-menu">
-                                        <li><a href="recentevents"><span class="menu-text">Recent Events</span></a></li>
-                                        <li><a href="upcomingevents"><span class="menu-text">Upcoming Events</span></a></li>
+                                        <li><a href="events"><span class="menu-text">View Events</span></a></li>
                                         <li><a href="eventgallery"><span class="menu-text">Events Gallery</span></a></li>
                                     </ul>
                                 </li>
