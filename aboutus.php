@@ -1,19 +1,22 @@
 <?php include("includes/header.php") ?>
 
-    <!-- Page Banner Section Start -->
-    <div class="page-banner-section section section-padding-200" data-bg-image="assets/images/page-banner/about-us-01-hero-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-banner-title">
-                        <h1 class="title">Grow strong to take up the challenges of life. The
-                            top lessons for getting you back on track.</h1>
+        <!-- Page Banner Section Start -->
+        <div class="page-banner-section section section-padding-200" 
+        data-bg-image="assets/img/about2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-banner-title">
+                            <h1 class="title">
+                            We are a Holy Spirit-filled, Christ-centered Charismatic and Prophetic Ministry
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Page Banner Section End -->
+        <!-- Page Banner Section End -->
+
 
     <!-- About Section Start -->
     <div class="about-section section section-padding-top-190 section-padding-bottom">
@@ -21,32 +24,45 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 order-lg-1 order-2">
                     <div class="about-content mt-sm-50 mt-xs-50">
-                        <span class="sub-title">Get to know about <strong>MaxCoach</strong></span>
-                        <h2 class="title">Learn about our <span>Work Culture</span> at MaxCoach</h2>
-                        <p>Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month. </p>
-                        <a class="link link-lg" href="JavaScript:Void(0);"> Have questions?? <mark>Get Free Form <i class="far fa-long-arrow-right"></i></mark></a>
+                        <span class="sub-title">Get to know about <strong>CVSI</strong></span>
+                            <p>
+                            Our mission is to prepare God’s people and place them at the highest level 
+                            in life where God has ordained them to be. Our ultimate goal is to win as 
+                            many souls as possible for Christ. We are a family church where people are 
+                            trained and equipped to be part of God's Kingdom to reach the world with God’s 
+                            word and God’s supernatural power. Under the leadership of Prophet Louis 
+                            Macaiah, CVSI is reaching millions by the power of God.
+                            </p>
+                            <p>
+                            We believe in the power of the Word of God, Prayer and the Gifts of the 
+                            Holy Spirit. Our Ministry is proven by the demonstration of the Power of 
+                            God through Word of Knowledge, Healing, Deliverance, Prophecy, Signs and 
+                            Wonders and Godly-living. No matter what your problems are, we believe the 
+                            power of God is available to set you free. You are warmly welcome to worship 
+                            with us at any of our branches throughout the country. God bless you! 
+                            </p>
+                            <p>
+                            JOIN THIS GREAT ARMY AND REMEMBER EVERYDAY IS A PLUS Christ Vision Sanctuary 
+                            International is a vibrant Spirit filled Church waiting to share fellowship with
+                             you. The Word of God is preached powerfully with warmth and affection. 
+                             Why not visit us and be a part of this great experience? Come now, call the 
+                             contact below for direction and you shall be a blessing as you worship with us.
+
+                            </p>
+                        <a class="link link-lg" href="contactus">  <mark>Contact Us Today <i class="far fa-long-arrow-right"></i></mark></a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12 order-lg-1 order-1">
                     <div class="about-image">
                         <div class="about-image-one">
-                            <img src="assets/images/about/about01/about1.jpg" alt="about01">
+                            <img src="assets/img/about1.jpg" alt="about01">
                         </div>
-                        <div class="about-image-two">
-                            <img src="assets/images/about/about01/about2.jpg" alt="about02">
-                        </div>
-
-
+                      
                         <!-- Animation Shape Start -->
-                        <div class="shape shape-1 scene">
-                            <span data-depth="4">shape 1</span>
-                        </div>
+                        
                         <div class="shape shape-2 scene">
                             <span data-depth="4"><img src="assets/images/shape-animation/about-shape-1.png" alt=""></span>
-                        </div>
-                        <div class="shape shape-3 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/nwesletter-shape-2.png" alt=""></span>
                         </div>
                         <div class="shape shape-4 scene">
                             <span data-depth="4"><img src="assets/images/shape-animation/shape-1.png" alt=""></span>
@@ -59,160 +75,20 @@
     </div>
     <!-- About Section End -->
 
-    <!-- About Video Section Start -->
-    <div class="about-video-section section section-padding-bottom">
-
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <!-- About Me Video Wrapper Start -->
-                    <div class="about-me-video-wrapper about-us-one-video pr-55 pr-sm-0 pr-xs-0">
-
-                        <!-- About Me Video Start -->
-                        <a href="https://www.youtube.com/watch?v=eS9Qm4AOOBY" class="about-me-video video-popup" data-aos="fade-up">
-                            <img class="image" src="assets/images/video/about-video.jpg" alt="">
-                            <img class="icon" src="assets/images/icons/icon-youtube-play.png" alt="">
-                        </a>
-                        <!-- About Me Video End -->
-
-                        <!-- Animation Shape Start -->
-                        <div class="shape shape-1 scene">
-                                <span data-depth="3">
-                                    <img src="assets/images/shape-animation/shape-2.svg" alt="" class="svgInject">
-                                </span>
-                        </div>
-                        <div class="shape shape-2 scene">
-                            <span data-depth="-3"><img src="assets/images/shape-animation/shape-3.png" alt=""></span>
-                        </div>
-                        <div class="shape shape-3 scene">
-                            <span data-depth="4">shape 3</span>
-                        </div>
-                        <div class="shape shape-4 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/shape-1.png" alt=""></span>
-                        </div>
-                        <!-- Animation Shape End -->
-
-                    </div>
-                    <!-- About Me Video Wrapper End -->
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="about-content mt-sm-50 mt-xs-50">
-                        <span class="sub-title">how we work</span>
-                        <h2 class="title">Upgrade Your Skills <span>Upgrade Your Life</span> </h2>
-                        <p>Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month. </p>
-                        <a class="link link-lg" href="JavaScript:Void(0);"><mark>Download free guidebook <i class="far fa-long-arrow-right"></i></mark></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- About Video Section End -->
-
-    <!-- Testimonial Section Start -->
-    <div class="testimonial-section section section-padding" data-bg-color="#f5f5f5">
-        <div class="container-fluid pl-80 pl-lg-15 pl-md-15 pl-sm-15 pl-xs-15 pr-80 pr-lg-15 pr-md-15 pr-sm-15 pr-xs-15">
-            <!-- Section Title Start -->
-            <div class="section-title text-center" data-aos="fade-up">
-                <span class="sub-title">Wanna transform your life?</span>
-                <h2 class="title fz-48">Our <span> learners'</span> verbatim</h2>
-            </div>
-            <!-- Section Title End -->
-
-            <!--Testimonial Slider Start -->
-            <div class="testimonial-slider-two swiper-container" data-aos="fade-up">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-two testimonial-three">
-                            <div class="content">
-                                <h4 class="title">High level of efficiency and scientific teaching methods</h4>
-                                <p>I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.</p>
-                            </div>
-                            <div class="author-info">
-                                <div class="image">
-                                    <img src="assets/images/testimonial/70/testimonial-1.jpg" alt="">
-                                </div>
-                                <div class="cite">
-                                    <h6 class="name">Florence Themes</h6>
-                                    <span class="position">/ Multimedia Admin</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-two testimonial-three">
-                            <div class="content">
-                                <h4 class="title">Professional team of specialists and passionate mentors at reach </h4>
-                                <p>I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</p>
-                            </div>
-                            <div class="author-info">
-                                <div class="image">
-                                    <img src="assets/images/testimonial/70/testimonial-2.jpg" alt="">
-                                </div>
-                                <div class="cite">
-                                    <h6 class="name">Madley Pondor</h6>
-                                    <span class="position">/ IT Specialist</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-two testimonial-three">
-                            <div class="content">
-                                <h4 class="title">Highly recommend their courses and teaching system</h4>
-                                <p>I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.</p>
-                            </div>
-                            <div class="author-info">
-                                <div class="image">
-                                    <img src="assets/images/testimonial/70/testimonial-3.jpg" alt="">
-                                </div>
-                                <div class="cite">
-                                    <h6 class="name">Luvic Dubble</h6>
-                                    <span class="position">/ Private Tutor</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-two testimonial-three">
-                            <div class="content">
-                                <h4 class="title">It's a choice of quality for people who need specialized study programs</h4>
-                                <p>I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.</p>
-                            </div>
-                            <div class="author-info">
-                                <div class="image">
-                                    <img src="assets/images/testimonial/70/testimonial-4.jpg" alt="">
-                                </div>
-                                <div class="cite">
-                                    <h6 class="name">Florence Themes</h6>
-                                    <span class="position">/ Multimedia Admin</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <!--Testimonial Slider End -->
-        </div>
-    </div>
-    <!-- Testimonial Section End -->
 
     <!-- CTA Section Start -->
     <div class="cta-section section section-padding-bottom" data-bg-color="#f5f5f5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="cta-content text-center">
-                        <span class="sub-title">Start today for getting <span>Online Certification</span></span>
-                        <h2 class="title">You can be your own guiding star with our help!</h2>
-                        <a href="JavaScript:Void(0);" class="btn btn-primary btn-hover-secondary btn-width-300"> Get started for free</a>
+                    <div class="cta-content text-center mt-5">
+                        <span class="sub-title">Join Us Today by
+                            <span>Visiting any of our branches</span>
+                        </span>
+                        <h2 class="title">You will be blessed by this prayer army</h2>
+                        <a href="branches" class="btn btn-primary btn-hover-secondary btn-width-300"> 
+                            Join a branch 
+                        </a>
 
                         <!-- Animation Shape Start -->
                         <div class="shape shape-1 scene">
@@ -233,12 +109,11 @@
     <!-- CTA Section End -->
 
     <!-- Team Section Start -->
-    <div class="team-section section section-padding-top">
+    <div class="team-section section section-padding-top mb-5">
         <div class="container">
             <!-- Section Title Start -->
             <div class="section-title text-center" data-aos="fade-up">
-                <span class="sub-title">The guys behind the curtains</span>
-                <h2 class="title fz-48">Whose <span> Inspirations</span> You Love</h2>
+                <span class="sub-title">Our Pastors</span>
             </div>
             <!-- Section Title End -->
             <div class="row ht-team-member-style-two">

@@ -98,10 +98,11 @@
             <div class="row max-mt-40 max-mb-40">
                 <div class="text-center col-lg-7 mx-auto">
                     <a class="link link-lg" href="aboutus">
-                        Christ Vision Sanctuary International is a vibrant Spirit filled Church waiting to share fellowship with you. The Word of
-                        God is preached powerfully with warmth and affection. Why not visit us and be a part of this great experience?
-                        Come now, call the contact below for direction and you shall be a blessing as you worship with us.
-                        <mark>Learn More <i class="far fa-long-arrow-right"></i></mark></a>
+                        Christ Vision Sanctuary International is a vibrant Spirit filled Church waiting to 
+                        share fellowship with you. The Word of God is preached powerfully with warmth and 
+                        affection.
+                        <mark>Learn More <i class="far fa-long-arrow-right"></i></mark>
+                    </a>
                 </div>
             </div>
         </div>

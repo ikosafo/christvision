@@ -7,7 +7,7 @@
                 <div class="newsletter-content light-color">
                     <h2 class="title fz-48">Subscribe</h2>
                     <p>Enter your email address to register to our newsletter subscription <br class="d-none d-md-block">
-                        delivered on a quatterly basis! </p>
+                        delivered on a quarterly basis! </p>
                     <div class="newsletter-form">
                         <form action="#">
                             <input type="email" placeholder="Your E-mail">
@@ -124,9 +124,6 @@
 
 <!-- Main Activation JS -->
 <script src="assets/js/main.js"></script>
-
-
-
 
 
 </body>
