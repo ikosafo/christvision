@@ -23,36 +23,15 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-6 offset-xl-1">
+                    
                         <div class="profile-info">
                             <h3 class="profile-name">Prophet Louis Hemman Cobbinah Macaiah</h3>
                             <div class="author-career">Founder/General Overseer</div>
-                            <p class="author-bio">
-                                Prophet Louis Macaiah is the President of the Louis Macaiah Ministries (LMM) headquartered
-                                at Christian Village off Achimota School and Gimpa road, Greater Accra Region of Ghana. 
-                                LMM seeks to reposition's God’s people through revival for the return of our Lord Jesus 
-                                Christ. 
-                            </p>
-                            <p class="author-bio">He is also the Founder of Christ Vision Sanctuary international, a church with many branches
-                                 around the world. One of the end-time Ministry Gifts to the Body of Christ, he is a strong 
-                                 and forthright Prophet of God, a preacher of the word, a mentor and father to those God has 
-                                 placed under his ministry. His message centers on the Holy Ghost, righteousness, discipline 
-                                 and order in the Body of Christ. He has a strong desire for the manifestation of the gifts 
-                                 of the Holy Spirit and the power of God in the body of Christ. 
-                            </p>
-                            <p class="author-bio">       
-                                 He currently stood on his 
-                                 feet for long All-nights (27 DAYS all nights, 37 DAYS all-nights, 40nights, 50 DAYS 
-                                 all-nights and currently, 55 DAYS all-nights) continuously. Because of this, his fellow 
-                                 men of God and many people call him, "THE MAN OF PRAYER AND ALL-NIGHT”. Currently he is 
-                                 on a campaign for the Love Revolution, a spiritual effort which seeks to release an outbreak
-                                  of the Love of God in the Church and the world at large. He is a great prophet, whom God 
-                                  sees through his eyes to reveal hidden and secret things to his children and delivers 
-                                  them from all destruction. The gifts of our dear Lord JESUS who performed many miracles 
-                                  IN 2000 years ago have been imparted on him and he is really maximizing his gifts. 
-                                  Uncountable Miracles God is using him for. 
-                                  MAY GOD TAKE ALL THE GLORY!!!!!!!
-                            </p>                            
-
+                            <?php
+                        $getfounder = $mysqli->query("select * from website_founder ORDER BY id DESC LIMIT 1");
+                        $resfounder = $getfounder->fetch_assoc();
+                        echo $resfounder['page_text'];
+                        ?>
                             <h5 class="profile-contact-title">Contact</h5>
                             <span class="contact-info-text">
                                 <span class="phone">Phone number: <strong>(+88) - 1990 - 8668</strong> </span>
