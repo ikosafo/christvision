@@ -39,7 +39,7 @@
                             ?>
                             <h5 class="profile-contact-title">Contact</h5>
                             <span class="contact-info-text">
-                                <span class="phone">Phone number: <strong>Telephone here</strong> </span>
+                                <span class="phone">Phone number: <strong>Telephone number here</strong> </span>
                             <br>
                             <span class="email">Email: <strong>info@cvsiworld.net</strong></span>
                             </span>
