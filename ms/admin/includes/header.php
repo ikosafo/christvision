@@ -193,6 +193,7 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
@@ -310,6 +311,7 @@ background-size: 100% 350px;"
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>"
@@ -345,6 +347,15 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Mission and Vision</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wbranches"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Branches</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"

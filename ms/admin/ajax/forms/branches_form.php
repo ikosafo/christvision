@@ -6,17 +6,34 @@ $random = rand(1,10000).date("Ymd");
 <form class="" autocomplete="off">
     <div class="kt-portlet__body">
 
-
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
-                <label for="page_text">Page Text</label>
-                <textarea class="form-control summernote" id="page_text"
-                          placeholder="Enter Page Text"></textarea>
+                <label for="branch_name">Select User Branch</label>
+                <select id="branch_name" style="width: 100%">
+                    <option value="">Select User Branch</option>
+                    <?php $getbranch = $mysqli->query("select * from branch order by name");
+                       while ($resbranch = $getbranch->fetch_assoc()) { ?>
+                           <option value="<?php echo $resbranch['id'] ?>"><?php echo $resbranch['name'] ?></option>
+                      <?php } ?>
+                </select>
             </div>
         </div>
-
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="pastor">Branch Pastor</label>
+                <input type="text" class="form-control" id="pastor"
+                       placeholder="Enter Pastor's Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="telephone">Telephone</label>
+                <input type="text" class="form-control" id="telephone"
+                       placeholder="Enter Telephone">
+            </div>
+        </div>
         <div class="form-group">
-            <label>Page Image</label>
+            <label>Branch Image</label>
             <input type="file" class="form-control" id="page_image">
             <input type="hidden" id="selected"/>
         </div>
@@ -24,7 +41,7 @@ $random = rand(1,10000).date("Ymd");
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="savemissionvision">Submit</button>
+            <button type="button" class="btn btn-primary" id="savebranches">Submit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>
@@ -32,6 +49,8 @@ $random = rand(1,10000).date("Ymd");
 <!--end::Form-->
 
 <script>
+    $("#branch_name").select2({placeholder:'Select Branch'});
+
     $(".summernote").summernote({
         placeholder: 'Enter Page text here',
         tabsize: 2,
@@ -47,7 +66,7 @@ $random = rand(1,10000).date("Ymd");
         'width': 180,
         'formData': {'randno': '<?php echo $random?>'},
         'dnd': false,
-        'uploadScript': 'ajax/queries/upload_missionvision_image.php',
+        'uploadScript': 'ajax/queries/upload_branches_image.php',
         'onUploadComplete': function (file, data) {
             console.log(data);
         },
@@ -61,25 +80,37 @@ $random = rand(1,10000).date("Ymd");
         }
     });
 
-    $("#savemissionvision").click(function () {
-        var page_text = $("#page_text").val();
+    $("#savebranches").click(function () {
+        var branchid = $("#branch_name").val();
+        var pastor = $("#pastor").val();
+        var telephone = $("#telephone").val();
         var selected = $("#selected").val();
         var imageid = '<?php echo $random; ?>';
+        
 
         var error = '';
-        if (page_text == "") {
-            error += 'Please enter page text\n';
-            $("#page_text").focus();
+        if (branchid == "") {
+            error += 'Please select branch \n';
+            $("#branchid").focus();
+        }
+        if (pastor == "") {
+            error += 'Please enter name of pastor \n';
+            $("#pastor").focus();
+        }
+        if (telephone == "") {
+            error += 'Please enter telephone \n';
+            $("#telephone").focus();
         }
         if (selected == "") {
             error += 'Please upload image\n';
             $("#page_text").focus();
         }
+        //alert(branchid);
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_missionvision.php",
+                url: "ajax/queries/saveform_branches.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -89,15 +120,17 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    page_text: page_text,
-                    imageid:imageid
+                    pastor: pastor,
+                    telephone: telephone,
+                    imageid:imageid,
+                    branchid:branchid
                 },
                 success: function (text) {
-                    //alert(text);
+                    alert(text);
                     $('#page_image').uploadifive('upload');
                     $.ajax({
                         type: "POST",
-                        url: "ajax/forms/missionvision_form.php",
+                        url: "ajax/forms/branches_form.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -107,7 +140,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#missionvisionform_div').html(text);
+                            $('#branchesform_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -119,7 +152,7 @@ $random = rand(1,10000).date("Ymd");
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/tables/missionvision_table.php",
+                        url: "ajax/tables/branches_table.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -129,7 +162,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#missionvisiontable_div').html(text);
+                            $('#branchestable_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);

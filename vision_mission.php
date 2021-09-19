@@ -20,10 +20,12 @@
                     <div class="col-xl-5 col-md-6">
                         <div class="profile-image">
                             <?php
-                             $getvisionmission = $mysqli->query("select * from website_visionmission ORDER BY id DESC LIMIT 1");
+                             $getvisionmission = $mysqli->query("select * from website_missionvision 
+                                                                    ORDER BY id DESC LIMIT 1");
                              $resvisionmission = $getvisionmission->fetch_assoc();
                              $imageid = $resvisionmission['imageid'];
-                             $getimage = $mysqli->query("select * from `website_image_visionmission` where imageid = '$imageid'");
+                             $getimage = $mysqli->query("select * from `website_image_missionvision` 
+                                                            where imageid = '$imageid'");
                              $resimage = $getimage->fetch_assoc();
                              $theimage = $resimage['image_location'];
                             ?>

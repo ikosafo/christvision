@@ -10,7 +10,6 @@ $use = substr($filename,strpos($filename,"/")+1);
 unlink("../../../uploads/".$use);
 
 $mysqli->query("delete from website_image_missionvision where imageid = '$id'") or die(mysqli_error($mysqli));
-$mysqli->query("delete from website_missionvision where eventid = '$id'") or die(mysqli_error($mysqli));
+$mysqli->query("delete from website_missionvision where imageid = '$id'") or die(mysqli_error($mysqli));
 
 echo 1;
-?>
