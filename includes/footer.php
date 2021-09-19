@@ -1,6 +1,6 @@
 
 <!-- Newsletter Section Start -->
-<div class="newsletter-section section section-padding position-relative" data-bg-image="assets/images/bg/subscribe-bg.jpg">
+<div class="newsletter-section section section-padding position-relative" data-bg-image="assets/img/bg/subscribe-bg.jpg">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -39,7 +39,7 @@
     <!-- Slider/Intro Section End -->
 
     <!-- About Section Start -->
-    <div class="learners-section section bg-pattern" data-bg-image="assets/images/bg/background-pattern-grid-line.png" data-bg-color="#f8f8f8">
+    <div class="learners-section section bg-pattern" data-bg-image="assets/img/bg/background-pattern-grid-line.png" data-bg-color="#f8f8f8">
         <div class="container mt-minus-125">
 
             <!-- Feature Wrapper Start -->

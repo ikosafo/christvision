@@ -11,7 +11,7 @@
     <meta name="keywords" content="christ vision sanctuary international house of prayer army cvsiworld cvsiworld.net" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
 
     <!-- CSS
 	============================================ -->
@@ -88,8 +88,8 @@
                     <div class="col-xl-1 col-auto">
                         <div class="header-logo">
                             <a href="/">
-                                <img class="dark-logo" src="assets/images/logo/logo.png" alt="Logo" style="width: 80%">
-                                <img class="light-logo" src="assets/images/logo/logo.png" alt="Logo">
+                                <img class="dark-logo" src="assets/img/logo/logo.png" alt="Logo" style="width: 80%">
+                                <img class="light-logo" src="assets/img/logo/logo.png" alt="Logo">
                             </a>
                         </div>
                     </div>

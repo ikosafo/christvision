@@ -2,7 +2,7 @@
     <div class="site-main-mobile-menu-inner">
         <div class="mobile-menu-header">
             <div class="mobile-menu-logo">
-                <a href="/"><img src="assets/images/logo/logo.png" alt="" style="width: 30%"></a>
+                <a href="/"><img src="assets/img/logo/logo.png" alt="" style="width: 30%"></a>
             </div>
             <div class="mobile-menu-close">
                 <button class="toggle">

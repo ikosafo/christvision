@@ -62,10 +62,10 @@
                         <!-- Animation Shape Start -->
                         
                         <div class="shape shape-2 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/about-shape-1.png" alt=""></span>
+                            <span data-depth="4"><img src="assets/img/shape-animation/about-shape-1.png" alt=""></span>
                         </div>
                         <div class="shape shape-4 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/shape-1.png" alt=""></span>
+                            <span data-depth="4"><img src="assets/img/shape-animation/shape-1.png" alt=""></span>
                         </div>
                         <!-- Animation Shape End -->
                     </div>
@@ -95,10 +95,10 @@
                             <span data-depth="4">shape 1</span>
                         </div>
                         <div class="shape shape-2 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/cta-shape-01.png" alt=""></span>
+                            <span data-depth="4"><img src="assets/img/shape-animation/cta-shape-01.png" alt=""></span>
                         </div>
                         <div class="shape shape-3 scene">
-                            <span data-depth="4"><img src="assets/images/shape-animation/nwesletter-shape-2.png" alt=""></span>
+                            <span data-depth="4"><img src="assets/img/shape-animation/nwesletter-shape-2.png" alt=""></span>
                         </div>
                         <!-- Animation Shape End -->
                     </div>

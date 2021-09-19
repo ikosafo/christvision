@@ -30,7 +30,7 @@
                 <div class="course">
                     <div class="thumbnail">
                         <a href="branchdetails" class="image">
-                            <img src="assets/images/courses/370/course-2.jpg" alt="Branch Image"></a>
+                            <img src="assets/img/courses/370/course-2.jpg" alt="Branch Image"></a>
                     </div>
                     <div class="info">
                         <h3 class="title"><a href="branchdetails">Branch Name</a></h3>
