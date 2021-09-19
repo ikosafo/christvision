@@ -41,7 +41,7 @@
                             <span class="contact-info-text">
                                 <span class="phone">Phone number: <strong>(+88) - 1990 - 8668</strong> </span>
                             <br>
-                            <span class="email">Email: <strong>loiusmacaiah@cvsiworld.net</strong></span>
+                            <span class="email">Email: <strong>info@cvsiworld.net</strong></span>
                             </span>
                             <ul class="author-social-networks">
                                 <li class="item">
