@@ -51,8 +51,8 @@
                         <div class="content">
                             <h3 class="title fz-20">Visit any of our branches</h3>
                             <div class="desc">
-                                <p>Welcome to Christ Vision Sanctuary International. You can freely join
-                                   any of the branches across the globe.
+                                <p>Welcome to Christ Vision Sanctuary International. 
+                                    You can freely join any of the branches across the globe.
                                 </p>
                             </div>
                             <span class="link">View Branches <i class="far fa-long-arrow-right"></i></span>
