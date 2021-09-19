@@ -67,7 +67,7 @@ $pinq = $mysqli->query("select * from website_missionvision ORDER BY id DESC");
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete missionvision!',
+            title: 'Delete mission and vision statement!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -91,6 +91,7 @@ $pinq = $mysqli->query("select * from website_missionvision ORDER BY id DESC");
                             },
                             dataType: "html",
                             success: function (text) {
+                                alert(text);
                                 $.ajax({
                                     url: "ajax/tables/missionvision_table.php",
                                     beforeSend: function () {

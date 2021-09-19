@@ -15,6 +15,12 @@ $random = rand(1,10000).date("Ymd");
             </div>
         </div>
 
+        <div class="form-group">
+            <label>Page Image</label>
+            <input type="file" class="form-control" id="page_image">
+            <input type="hidden" id="selected"/>
+        </div>
+
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
@@ -30,6 +36,29 @@ $random = rand(1,10000).date("Ymd");
         placeholder: 'Enter Page text here',
         tabsize: 2,
         height: 100
+    });
+
+    $('#page_image').uploadifive({
+        'auto': false,
+        'method': 'post',
+        'buttonText': 'Upload image',
+        'fileType': 'image/*',
+        'multi': false,
+        'width': 180,
+        'formData': {'randno': '<?php echo $random?>'},
+        'dnd': false,
+        'uploadScript': 'ajax/queries/upload_missionvision_image.php',
+        'onUploadComplete': function (file, data) {
+            console.log(data);
+        },
+        'onSelect': function (file) {
+            // Update selected so we know they have selected a file
+            $("#selected").val('yes');
+        },
+        'onCancel': function (file) {
+            // Update selected so we know they have no file selected
+            $("#selected").val('');
+        }
     });
 
     $("#savemissionvision").click(function () {
