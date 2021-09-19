@@ -20,10 +20,10 @@
                     <div class="col-xl-5 col-md-6">
                         <div class="profile-image">
                             <?php
-                             $gethistory = $mysqli->query("select * from website_history ORDER BY id DESC LIMIT 1");
-                             $reshistory = $gethistory->fetch_assoc();
-                             $imageid = $reshistory['imageid'];
-                             $getimage = $mysqli->query("select * from `website_image_history` where imageid = '$imageid'");
+                             $getvisionmission = $mysqli->query("select * from website_visionmission ORDER BY id DESC LIMIT 1");
+                             $resvisionmission = $getvisionmission->fetch_assoc();
+                             $imageid = $resvisionmission['imageid'];
+                             $getimage = $mysqli->query("select * from `website_image_visionmission` where imageid = '$imageid'");
                              $resimage = $getimage->fetch_assoc();
                              $theimage = $resimage['image_location'];
                             ?>
@@ -35,7 +35,7 @@
                         <div class="profile-info">
                             <h3 class="profile-name">Christ Vision Sanctuary International</h3>
                             <?php
-                                echo $reshistory['page_text'];
+                                echo $resvisionmission['page_text'];
                             ?>
                             <h5 class="profile-contact-title">Contact</h5>
                             <span class="contact-info-text">
