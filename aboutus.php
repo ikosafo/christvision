@@ -25,30 +25,15 @@
                 <div class="col-lg-6 col-md-12 order-lg-1 order-2">
                     <div class="about-content mt-sm-50 mt-xs-50">
                         <span class="sub-title">Get to know about <strong>CVSI</strong></span>
-                            <p>
-                            Our mission is to prepare God’s people and place them at the highest level 
-                            in life where God has ordained them to be. Our ultimate goal is to win as 
-                            many souls as possible for Christ. We are a family church where people are 
-                            trained and equipped to be part of God's Kingdom to reach the world with God’s 
-                            word and God’s supernatural power. Under the leadership of Prophet Louis 
-                            Macaiah, CVSI is reaching millions by the power of God.
-                            </p>
-                            <p>
-                            We believe in the power of the Word of God, Prayer and the Gifts of the 
-                            Holy Spirit. Our Ministry is proven by the demonstration of the Power of 
-                            God through Word of Knowledge, Healing, Deliverance, Prophecy, Signs and 
-                            Wonders and Godly-living. No matter what your problems are, we believe the 
-                            power of God is available to set you free. You are warmly welcome to worship 
-                            with us at any of our branches throughout the country. God bless you! 
-                            </p>
-                            <p>
-                            JOIN THIS GREAT ARMY AND REMEMBER EVERYDAY IS A PLUS Christ Vision Sanctuary 
-                            International is a vibrant Spirit filled Church waiting to share fellowship with
-                             you. The Word of God is preached powerfully with warmth and affection. 
-                             Why not visit us and be a part of this great experience? Come now, call the 
-                             contact below for direction and you shall be a blessing as you worship with us.
-
-                            </p>
+                        <?php
+                             $getabout = $mysqli->query("select * from website_about ORDER BY id DESC LIMIT 1");
+                             $resabout = $getabout->fetch_assoc();
+                             $imageid = $resabout['imageid'];
+                             $getimage = $mysqli->query("select * from `website_image_about` where imageid = '$imageid'");
+                             $resimage = $getimage->fetch_assoc();
+                             $theimage = $resimage['image_location'];
+                             echo $resabout['page_text'];
+                            ?>
                         <a class="link link-lg" href="contactus">  <mark>Contact Us Today <i class="far fa-long-arrow-right"></i></mark></a>
                     </div>
                 </div>
@@ -56,7 +41,7 @@
                 <div class="col-lg-6 col-md-12 order-lg-1 order-1">
                     <div class="about-image">
                         <div class="about-image-one">
-                            <img src="assets/img/about1.jpg" alt="about01">
+                            <img src="ms/<?php echo $theimage ?>" alt="about01">
                         </div>
                       
                         <!-- Animation Shape Start -->
