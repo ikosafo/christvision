@@ -22,31 +22,52 @@
 <div class="section section-padding-bottom">
     <div class="container">
 
-        <!-- Courses Wrapper Start -->
+        <!-- Branches Wrapper Start -->
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
 
-            <!-- Course Start -->
-            <div class="col max-mb-30 aos-init aos-animate" data-aos="fade-up">
+        <?php
+        //get branches
+        $getbranches = $mysqli->query("select * from website_branches w JOIN branch b ON w.branchid = b.id");
+        while ($resbranches = $getbranches->fetch_assoc()) { ?>
+
+        <!-- Branch Start -->
+        <div class="col max-mb-30 aos-init aos-animate" data-aos="fade-up">
                 <div class="course">
                     <div class="thumbnail">
                         <a href="branchdetails" class="image">
-                            <img src="assets/img/courses/370/course-2.jpg" alt="Branch Image"></a>
+                            <?php
+                            $imageid = $resbranches['imageid'];
+                            $getimage = $mysqli->query("select * from `website_image_branches` where imageid = '$imageid'");
+                            $resimage = $getimage->fetch_assoc();
+                            $theimage = $resimage['image_location'];
+                            ?>
+                            <img src="ms/<?php echo $theimage ?>" alt="Branch Image"></a>
                     </div>
                     <div class="info">
-                        <h3 class="title"><a href="branchdetails">Branch Name</a></h3>
+                        <h3 class="title">
+                            <a href="branchdetails">
+                                <?php 
+                                echo $resbranches['name']; ?>
+                            </a>
+                        </h3>
                         <ul class="meta">
-                            <li><i class="far fa-map-marker"></i>Venue</li>
-                            <li><i class="far fa-user"></i>Pastor's Name</li>
-                            <li><i class="far fa-phone"></i>Pastor's Telephone</li>
+                            <li><i class="far fa-map-marker"></i><?php echo $resbranches['location']; ?></li>
+                            <li><i class="far fa-user"></i><?php echo $resbranches['pastor']; ?></li>
+                            <li><i class="far fa-phone"></i><?php echo $resbranches['telephone']; ?></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- Course End -->
+            <!-- Branch End -->
 
+        <?php } ?>
+
+            
 
         </div>
-        <!-- Courses Wrapper End -->
+        <!-- Branches Wrapper End -->
+
+        
 
         <div class="row max-mt-50">
             <div class="col text-center">
