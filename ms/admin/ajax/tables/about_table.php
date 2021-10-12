@@ -47,7 +47,7 @@ $pinq = $mysqli->query("select * from website_about ORDER BY id DESC");
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_slider"
+                                    class="btn btn-danger delete_about"
                                     i_index="<?php echo $imageid; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
@@ -71,11 +71,11 @@ $pinq = $mysqli->query("select * from website_about ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_slider').on('click', '.delete_slider', function () {
+    $(document).off('click', '.delete_about').on('click', '.delete_about', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Slider!',
+            title: 'Delete About Content!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -93,14 +93,14 @@ $pinq = $mysqli->query("select * from website_about ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_slider.php",
+                            url: "ajax/queries/delete_about.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/addslider_table.php",
+                                    url: "ajax/tables/about_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -110,7 +110,7 @@ $pinq = $mysqli->query("select * from website_about ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#slidertable_div').html(text);
+                                        $('#abouttable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
