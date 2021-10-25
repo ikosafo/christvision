@@ -197,7 +197,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
 
                                     ? "kt-menu__item--here" : ""); ?>
                                 " data-ktmenu-submenu-toggle="click"
@@ -217,7 +218,8 @@ background-size: 100% 350px;"
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
-                                            $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php"
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>"
                                                 data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -244,6 +246,14 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Events</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="weventsgallery"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Events Gallery</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php"
