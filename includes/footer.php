@@ -56,12 +56,11 @@
                     <h4 class="footer-widget-title">Explore</h4>
                     <div class="footer-widget-content">
                         <ul class="column-2">
-                            <li><a href="#">Branches</a></li>
-                            <li><a href="#">Pastors</a></li>
+                            <li><a href="branches">Branches</a></li>
                             <li><a href="#">Sermons</a></li>
                             <li><a href="#">Gallery</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="aboutus">About us</a></li>
+                            <li><a href="contactus">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
