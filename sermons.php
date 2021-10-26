@@ -92,25 +92,3 @@
 
 
 <?php include ("includes/footer.php"); ?>
-
-
-<script>
-    $("#eventsort").change(function(){
-        var eventtype = $("#eventsort").val();
-        //alert(eventtype);
-        $.ajax({
-            type: "POST",
-            url: "eventlist.php",
-            data: {
-                eventtype: eventtype
-            },
-            success: function (text) {
-                $('#eventlist').html(text);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + " " + thrownError);
-            }
-        });
-
-    })
-</script>

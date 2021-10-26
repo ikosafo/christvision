@@ -311,6 +311,14 @@ background-size: 100% 350px;"
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Sermons</span></a>
                                                         </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wtestimonies"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Testimonies</span></a>
+                                                        </li>
 
 
                                                     </ul>
