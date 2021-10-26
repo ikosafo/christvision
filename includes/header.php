@@ -127,20 +127,19 @@
                                     <ul class="sub-menu">
                                         <li><a href="sermons"><span class="menu-text">Sermons</span></a></li>
                                         <li><a href="testimonies"><span class="menu-text">Testimonies</span></a></li>
-                                        <li><a href="gallery"><span class="menu-text">Gallery</span></a></li>
+                                        <li><a href="eventgallery"><span class="menu-text">Gallery</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">
-                                    <a href="#"><span class="menu-text">Ministries</span></a>
+                                    <a href="#"><span class="menu-text">Join a group</span></a>
                                     <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
                                     <ul class="sub-menu">
-                                        <li><a href="lmp"><span class="menu-text">LM Partners</span></a></li>
-                                        <li><a href="menministry"><span class="menu-text">Men</span></a></li>
-                                        <li><a href="womenministry"><span class="menu-text">Women</span></a></li>
-                                        <li><a href="youthministry"><span class="menu-text">Youth</span></a></li>
-                                        <li><a href="childrenministry"><span class="menu-text">Children</span></a></li>
+                                        <li><a href="ministries"><span class="menu-text">Ministries</span></a></li>
+                                        <li><a href="departments"><span class="menu-text">Departments</span></a></li>
+                                        <li><a href="weeklyactivities"><span class="menu-text">A Week at CVSI</span></a></li>
                                     </ul>
                                 </li>
+                               
                                 <li class="has-children">
                                     <a href="#"><span class="menu-text">Departments</span></a>
                                     <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
@@ -152,7 +151,7 @@
                                     </ul>
                                 </li>
                                 <li class="position-static">
-                                    <a href="#"><span class="menu-text">A Week at CVSI</span></a>
+                                    <a href="contactus"><span class="menu-text">Contact Us</span></a>
                                 </li>
 
 
