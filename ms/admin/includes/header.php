@@ -269,7 +269,7 @@ background-size: 100% 350px;"
                                                                 href="wrsermon"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Recent Sermon (Youtube)</span></a>
+                                                                    class="kt-menu__link-text">Recent Sermons (Youtube)</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php"

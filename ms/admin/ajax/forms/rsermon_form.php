@@ -25,6 +25,28 @@ $random = rand(1,10000).date("Ymd");
 
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
+                <label for="branch">Select Branch</label>
+                <select id="branch" style="width: 100%">
+                    <option value="">Select Branch</option>
+                    <?php $getbranch = $mysqli->query("select * from branch order by name");
+                       while ($resbranch = $getbranch->fetch_assoc()) { ?>
+                           <option value="<?php echo $resbranch['id'] ?>"><?php echo $resbranch['name'] ?></option>
+                      <?php } ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="date_ministered">Date Ministered</label>
+                <input type="text" class="form-control" id="date_ministered"
+                       placeholder="Select Date">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" rows="3"
                        placeholder="Enter Description"></textarea>
@@ -44,9 +66,23 @@ $random = rand(1,10000).date("Ymd");
 
 <script>
 
+    $("#branch").select2({placeholder:'Select Branch'});
+
+    $('#date_ministered').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom",
+        templates: {
+            leftArrow: '<i class="la la-angle-left"></i>',
+            rightArrow: '<i class="la la-angle-right"></i>'
+        }
+    });
+
     $("#savesermon").click(function () {
         var title = $("#title").val();
         var link = $("#link").val();
+        var branch = $("#branch").val();
+        var date_ministered = $("#date_ministered").val();
         var description = $("#description").val();
 
         var error = '';
@@ -58,9 +94,17 @@ $random = rand(1,10000).date("Ymd");
             error += 'Please enter link \n';
             $("#link").focus();
         }
+        if (branch == "") {
+            error += 'Please select branch \n';
+            $("#branch").focus();
+        }
         if (description == "") {
             error += 'Please enter description \n';
             $("#description").focus();
+        }
+        if (date_ministered == "") {
+            error += 'Please select date \n';
+            $("#date_ministered").focus();
         }
 
         if (error == "") {
@@ -78,7 +122,9 @@ $random = rand(1,10000).date("Ymd");
                 data: {
                     title: title,
                     link: link,
-                    description: description
+                    description: description,
+                    branch:branch,
+                    date_ministered:date_ministered
                 },
                 success: function (text) {
                     //alert(text);

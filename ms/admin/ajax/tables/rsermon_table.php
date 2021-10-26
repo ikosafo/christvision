@@ -28,6 +28,7 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                     <th>Title</th>
                     <th>Link</th>
                     <th>Date</th>
+                    <th>Branch</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
@@ -40,7 +41,14 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                     <tr>
                         <td><?php echo $fetch['title']; ?></td>
                         <td><?php echo $fetch['link']; ?></td>
-                        <td><?php echo $fetch['dateuploaded']; ?></td>
+                        <td><?php echo $fetch['dateministered']; ?></td>
+                        <td>
+                            <?php $id = $fetch['branch'];
+                                $getbranch = $mysqli->query("select * from branch where id='$id'");
+                                $resbranch = $getbranch->fetch_assoc();
+                                echo $resbranch['name'];
+                            ?>
+                        </td>
                         <td><?php echo $fetch['description']; ?></td>
                         <td>
                             <button type="button"

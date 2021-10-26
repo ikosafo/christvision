@@ -18,7 +18,8 @@
                         </h1>
                         <p>Join this prayer army and remember everyday is a plus</p>
                         <a href="https://www.youtube.com/watch?v=JHKCofpUosk"
-                           class="btn btn-outline-light btn-hover-primary  video-popup" style="font-weight: 300">
+                           class="btn btn-outline-light btn-hover-primary video-popup" 
+                           style="font-weight: 300">
                             <i class="fas fa-play me-3"></i>Message from Prophet Macaiah</a>
                     </div>
                 </div>
