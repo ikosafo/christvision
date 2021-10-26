@@ -1,5 +1,5 @@
 <?php include('../../../../config.php');
-$pinq = $mysqli->query("select * from website_youtubelink");
+$pinq = $mysqli->query("select * from website_bannertext ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,11 +25,7 @@ $pinq = $mysqli->query("select * from website_youtubelink");
             <table id="datatable" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Link</th>
-                    <th>Date</th>
-                    <th>Branch</th>
-                    <th>Description</th>
+                    <th>Text</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -39,21 +35,11 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['title']; ?></td>
-                        <td><?php echo $fetch['link']; ?></td>
-                        <td><?php echo $fetch['dateministered']; ?></td>
+                        <td><?php echo $fetch['bannertext']; ?></td>
                         <td>
-                            <?php $id = $fetch['branch'];
-                                $getbranch = $mysqli->query("select * from branch where id='$id'");
-                                $resbranch = $getbranch->fetch_assoc();
-                                echo $resbranch['name'];
-                            ?>
-                        </td>
-                        <td><?php echo $fetch['description']; ?></td>
-                        <td>
-                            <button type="button"
+                        <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
+                                    class="btn btn-danger delete_text"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
@@ -69,19 +55,33 @@ $pinq = $mysqli->query("select * from website_youtubelink");
 </div>
 
 <script>
-    oTable = $('#datatable').DataTable({
-        "bLengthChange": false,"order": []
+    oTable =  $("#datatable").DataTable({
+        responsive: !0,
+        dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
+        buttons: ["print", "copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
+        "bLengthChange": false,"order": [],
+
+    }), $("#export_print").on("click", function (e) {
+        e.preventDefault(), t.button(0).trigger()
+    }), $("#export_copy").on("click", function (e) {
+        e.preventDefault(), t.button(1).trigger()
+    }), $("#export_excel").on("click", function (e) {
+        e.preventDefault(), t.button(2).trigger()
+    }), $("#export_csv").on("click", function (e) {
+        e.preventDefault(), t.button(3).trigger()
+    }), $("#export_pdf").on("click", function (e) {
+        e.preventDefault(), t.button(4).trigger()
     });
 
     $('#data_search').keyup(function () {
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_link').on('click', '.delete_link', function () {
+    $(document).off('click', '.delete_text').on('click', '.delete_text', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Youtube Link!',
+            title: 'Delete Text!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -99,14 +99,14 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_youtubelink.php",
+                            url: "ajax/queries/delete_bannertext.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/rsermon_table.php",
+                                    url: "ajax/tables/bannertext_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -116,7 +116,7 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#rsermontable_div').html(text);
+                                        $('#bannertexttable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
@@ -126,6 +126,7 @@ $pinq = $mysqli->query("select * from website_youtubelink");
                                     },
                                 });
                             },
+
                             complete: function () {
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
@@ -137,4 +138,5 @@ $pinq = $mysqli->query("select * from website_youtubelink");
             }
         });
     });
+
 </script>

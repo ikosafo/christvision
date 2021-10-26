@@ -184,23 +184,23 @@ background-size: 100% 350px;"
                                     </a>
                                 </li>
 
-                                <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel
-                                <?php echo(
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wbannertext.php" ||
+                               <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel  <?php echo(
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
-
-
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
 
                                     ? "kt-menu__item--here" : ""); ?>
-                                
                                 " data-ktmenu-submenu-toggle="click"
                                     aria-haspopup="true"><a href="javascript:;"
                                                             class="kt-menu__link kt-menu__toggle"><span
@@ -208,22 +208,23 @@ background-size: 100% 350px;"
                                                 class="fa fa-caret-down ml-2"></i> </span><i
                                             class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
-                                    <div class="kt-menu__submenu kt-menu__submenu--classic 
-                                    kt-menu__submenu--left">
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item kt-menu__item--submenu
-                                            <?php echo(
-                                           $_SERVER['PHP_SELF'] == "/ms/admin/wbannertext.php" ||
-                                           $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
-                                           $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
+                                            <li class="kt-menu__item kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
 
-                                                ? "kt-menu__item--here" : ""); ?>
-                                            "
-                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true">
-                                                <a
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
                                                     href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-icon"></span>
-                                                        <span class="kt-menu__link-text">Home Page</span><i
+                                                        class="kt-menu__link-icon"></span><span class="kt-menu__link-text">Home Page</span><i
                                                         class="kt-menu__hor-arrow la la-angle-right"></i><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
@@ -231,12 +232,12 @@ background-size: 100% 350px;"
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
                                                         <li class="kt-menu__item  <?php echo(
-                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wbannertext.php"
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wslider.php"
                                                             ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                href="wbannertext"
+                                                                href="wslider"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Banner Text</span></a>
+                                                                    class="kt-menu__link-text">Slider</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php"
@@ -254,13 +255,77 @@ background-size: 100% 350px;"
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Events Gallery</span></a>
                                                         </li>
-                                                       
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wnews.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wnews"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Latest News/Articles</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wrsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Recent Sermons (Youtube)</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wrecentsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wrecentsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Recent Sermon (Audio)</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wpastors.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wpastors"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Pastors</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdonate"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Donate</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsmedia"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Social Media</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsermon.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsermon"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Sermons</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wtestimonies"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Testimonies</span></a>
+                                                        </li>
+
 
                                                     </ul>
                                                 </div>
                                             </li>
 
-                                            <li class="kt-menu__item kt-menu__item--submenu <?php echo(
+                                            <li class="kt-menu__item kt-menu__item--submenu   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/whistory.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wmissionvision.php" ||
@@ -277,14 +342,6 @@ background-size: 100% 350px;"
                                                 <div
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
-                                                        <li class="kt-menu__item   <?php echo(
-                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"
-                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                href="wabout"
-                                                                class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">About CVSI</span></a>
-                                                        </li>
                                                         <li class="kt-menu__item  <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wfounder.php"
                                                             ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
@@ -318,44 +375,32 @@ background-size: 100% 350px;"
                                                                     <span></span></i><span
                                                                     class="kt-menu__link-text">Branches</span></a>
                                                         </li>
-                                                       
-                                                    
-                                                    </ul>
-                                                </div>
-                                            </li>
-
-                                            <li class="kt-menu__item kt-menu__item--submenu  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
-                                            $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
-
-                                                ? "kt-menu__item--here" : ""); ?>"
-                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-icon"></span><span class="kt-menu__link-text">
-                                                            Media</span><i
-                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-                                                <div
-                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                    <ul class="kt-menu__subnav">
                                                         <li class="kt-menu__item   <?php echo(
-                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php"
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php"
                                                             ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                href="wrsermon"
+                                                                href="wabout"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Sermons</span></a>
+                                                                    class="kt-menu__link-text">About</span></a>
                                                         </li>
-                                                        <li class="kt-menu__item  <?php echo(
-                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php"
                                                             ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                href="wtestimonies"
+                                                                href="wdonate"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                    class="kt-menu__link-text">Testimonies</span></a>
+                                                                    class="kt-menu__link-text">Donate</span></a>
                                                         </li>
-                                                       
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsmedia"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Social Media</span></a>
+                                                        </li>
+
+
                                                     </ul>
                                                 </div>
                                             </li>
@@ -363,6 +408,7 @@ background-size: 100% 350px;"
                                         </ul>
                                     </div>
                                 </li>
+
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/ms/admin/documents.php" ||

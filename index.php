@@ -12,8 +12,13 @@
                         <h1 class="title ah-headline">CVSI is a house of
                                 <span class="ah-words-wrapper">
                                     <b class="is-visible">Prayer</b>
-                                    <b>Unity</b>
-                                    <b>Growth</b>
+                                <?php
+                                $getbannertext = $mysqli->query("select * from website_bannertext");
+                                while ($restext = $getbannertext->fetch_assoc()) {
+                                    echo '<b>'.$restext['bannertext'].'</b>';
+                                }
+                                ?>
+                                    
                                 </span>
                         </h1>
                         <p>Join this prayer army and remember everyday is a plus</p>
