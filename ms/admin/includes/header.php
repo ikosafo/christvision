@@ -434,7 +434,7 @@ background-size: 100% 350px;"
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdchoir.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdwelfare.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdprayer.php" ||
-                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdevangelism.php" ||
                                             $_SERVER['PHP_SELF'] == "/ms/admin/wdprotocol.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>"
