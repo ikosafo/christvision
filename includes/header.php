@@ -61,10 +61,10 @@
                                JOIN website_image_events i
                                ON i.imageid = e.eventid ORDER BY e.startperiod DESC LIMIT 1");
                               $resevent = $getevent->fetch_assoc();
-                              echo $getnextdate = $resevent['startperiod'];
+                              $getnextdate = $resevent['startperiod'];
 
                               $timestamp = strtotime($getnextdate);
-                              echo $new_date_format = date('Y/m/d', $timestamp);
+                              $new_date_format = date('Y/m/d', $timestamp);
                               ?>
                             <div class="pro-countdown-2 d-flex" data-countdown="<?php echo $new_date_format; ?>"></div>
                             <span> to next event</span>

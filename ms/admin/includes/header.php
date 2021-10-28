@@ -195,7 +195,12 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wbranches.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wabout.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wrsermon.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php"
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wtestimonies.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmlmp.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmmen.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmwomen.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php"
 
 
 
@@ -356,6 +361,71 @@ background-size: 100% 350px;"
                                                                     class="kt-menu__link-text">Testimonies</span></a>
                                                         </li>
                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <li class="kt-menu__item kt-menu__item--submenu <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmlmp.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmmen.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmwomen.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php"
+
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
+                                                        class="kt-menu__link-icon"></span><span class="kt-menu__link-text">Ministries</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wmlmp.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wmlmp"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">LMP</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wmmen.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wmmen"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Men</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wmwomen.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wmwomen"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Women</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wmyouth"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Youth</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wmchildren"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Children</span></a>
+                                                        </li>
+                                                       
+                                                    
                                                     </ul>
                                                 </div>
                                             </li>

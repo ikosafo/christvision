@@ -65,10 +65,10 @@
                                             <div class="col-xl-12 col-md-12">
                                                 <div class="profile-image">
                                                     <?php
-                                                    $getdeptlmp = $mysqli->query("select * from website_deptlmp ORDER BY id DESC LIMIT 1");
-                                                    $resdeptlmp = $getdeptlmp->fetch_assoc();
-                                                    $imageid = $resdeptlmp['imageid'];
-                                                    $getimage = $mysqli->query("select * from `website_image_deptlmp` where imageid = '$imageid'");
+                                                    $getmlmp = $mysqli->query("select * from website_mlmp ORDER BY id DESC LIMIT 1");
+                                                    $resmlmp = $getmlmp->fetch_assoc();
+                                                    $imageid = $resmlmp['imageid'];
+                                                    $getimage = $mysqli->query("select * from `website_image_mlmp` where imageid = '$imageid'");
                                                     $resimage = $getimage->fetch_assoc();
                                                     $theimage = $resimage['image_location'];
                                                     ?>
@@ -80,7 +80,7 @@
                         <div class="profile-info">
                             
                             <?php
-                                echo $resdeptlmp['page_text'];
+                                echo $resmlmp['page_text'];
                             ?>
                             <h5 class="profile-contact-title">Contact</h5>
                             <span class="contact-info-text">
