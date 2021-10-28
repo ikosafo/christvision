@@ -430,6 +430,71 @@ background-size: 100% 350px;"
                                                 </div>
                                             </li>
 
+                                            <li class="kt-menu__item kt-menu__item--submenu <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdchoir.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdwelfare.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdprayer.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php" ||
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wdprotocol.php"
+
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
+                                                        class="kt-menu__link-icon"></span><span class="kt-menu__link-text">Departments</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdchoir.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdchoir"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Choir</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdwelfare.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdwelfare"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Welfare</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdprayer.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdprayer"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Prayer</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdevangelism.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdevangelism"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Evangelism</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdprotocol.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdprotocol"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Ushering/Protocol</span></a>
+                                                        </li>
+                                                       
+                                                    
+                                                    </ul>
+                                                </div>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </li>
