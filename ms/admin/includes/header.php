@@ -200,7 +200,10 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmmen.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmwomen.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmyouth.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php"
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wsmedialinks.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"
 
 
 
@@ -220,7 +223,10 @@ background-size: 100% 350px;"
                                             <?php echo(
                                            $_SERVER['PHP_SELF'] == "/ms/admin/wbannertext.php" ||
                                            $_SERVER['PHP_SELF'] == "/ms/admin/wevents.php" ||
-                                           $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php"
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php" ||
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/wsmedialinks.php" ||
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>
                                             "
@@ -258,6 +264,30 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Events Gallery</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsmedialinks.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsmedialinks"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Social Media Links</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wsmedia"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Social Media Embed Code</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wcontactus"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Contact Us</span></a>
                                                         </li>
                                                        
 
@@ -493,6 +523,16 @@ background-size: 100% 350px;"
                                                     
                                                     </ul>
                                                 </div>
+                                            </li>
+                                            
+                                            <li class="kt-menu__item <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/ms/admin/wweeklyactivities.php"
+
+                                                ? "kt-menu__item--here" : ""); ?>"><a
+                                                    href="wweeklyactivities" class="kt-menu__link"><span
+                                                        class="kt-menu__link-icon"></span><span class="kt-menu__link-text">
+                                                            Weekly Activities</span></a>
+
                                             </li>
 
                                         </ul>

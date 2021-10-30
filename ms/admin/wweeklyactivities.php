@@ -20,7 +20,7 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Website
-                                    <small>Social Media Embed Codes</small>
+                                    <small>Weekly Activities</small>
                                 </h3>
                             </div>
                         </div>
@@ -29,10 +29,10 @@
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="smediaform_div"></div>
+                                <div id="wwaform_div"></div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="smediatable_div"></div>
+                                <div id="wwatable_div"></div>
                             </div>
                         </div>
                         <!--end::Form-->
@@ -54,7 +54,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/smedia_form.php",
+        url: "ajax/forms/wa_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -64,7 +64,7 @@
             })
         },
         success: function (text) {
-            $('#smediaform_div').html(text);
+            $('#wwaform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -77,7 +77,7 @@
 
 
     $.ajax({
-        url: "ajax/tables/smedia_table.php",
+        url: "ajax/tables/wa_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -87,7 +87,7 @@
             })
         },
         success: function (text) {
-            $('#smediatable_div').html(text);
+            $('#wwatable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

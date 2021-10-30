@@ -153,11 +153,18 @@
                     <div class="col-xl-2 col-auto">
                         <div class="header-right">
                             <div class="inner">
+                                <?php
+                                //get social media
+                                $getsocial = $mysqli->query("selEct * from website_smedialinks ORDER BY id DESC LIMIT 1");
+                                $ressocial = $getsocial->fetch_assoc();
+
+                                ?>
 
                                 <!-- Header Social Start -->
                                 <div class="header-social d-none d-sm-flex">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="<?php echo $ressocial['facebook'] ?>"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="<?php echo $ressocial['twitter'] ?>"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="<?php echo $ressocial['youtube'] ?>"><i class="fab fa-youtube"></i></a>
                                 </div>
                                 <!-- Header Social End -->
 
