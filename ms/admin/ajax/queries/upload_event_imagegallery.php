@@ -5,7 +5,7 @@ $randno = $_POST['randno'];
 $today = date('Y-m-d H:i:s');
 $target_path = "../../../uploads/eventsgallery/";
 $rand = rand(1,100000);
-//$allowed =  array('gif','png' ,'jpg', 'jpeg');
+$allowed =  array('gif','png' ,'jpg', 'jpeg');
 $ext = pathinfo($_FILES['Filedata']['name'], PATHINFO_EXTENSION);
 
 $filename =  $_FILES['Filedata']['name'];
@@ -23,8 +23,8 @@ else
     echo $error = "There was an error uploading the file, please try again!";
 }
 
-$chk = $mysqli->query("select * from website_image_eventsgallery where imageid = '$randno'");
-$count = mysqli_num_rows($chk);
+/* $chk = $mysqli->query("select * from website_image_eventsgallery where imageid = '$randno'");
+$count = mysqli_num_rows($chk); */
 
 $insertfile  = $mysqli->query("INSERT INTO `website_image_eventsgallery`
 (`image_name`,
