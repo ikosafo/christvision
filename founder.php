@@ -5,7 +5,7 @@
             <div class="page-breadcrumb position-static">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="current">Founder</li>
                     </ul>
                 </div>

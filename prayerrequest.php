@@ -6,7 +6,7 @@
                 <div class="container">
                     <ul class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="current">History</li>
+                        <li class="current">Prayer Request</li>
                     </ul>
                 </div>
             </div>
@@ -20,10 +20,12 @@
                     <div class="col-xl-5 col-md-6">
                         <div class="profile-image">
                             <?php
-                             $gethistory = $mysqli->query("select * from website_history ORDER BY id DESC LIMIT 1");
-                             $reshistory = $gethistory->fetch_assoc();
-                             $imageid = $reshistory['imageid'];
-                             $getimage = $mysqli->query("select * from `website_image_history` where imageid = '$imageid'");
+                             $getprayerrequest = $mysqli->query("select * from website_prayerrequest 
+                                                                    ORDER BY id DESC LIMIT 1");
+                             $resprayerrequest = $getprayerrequest->fetch_assoc();
+                             $imageid = $resprayerrequest['imageid'];
+                             $getimage = $mysqli->query("select * from `website_image_prayerrequest` 
+                                                            where imageid = '$imageid'");
                              $resimage = $getimage->fetch_assoc();
                              $theimage = $resimage['image_location'];
                             ?>
@@ -35,8 +37,9 @@
                         <div class="profile-info">
                             <h3 class="profile-name">Christ Vision Sanctuary International</h3>
                             <?php
-                                echo $reshistory['page_text'];
-                            ?>                         
+                                echo $resprayerrequest['page_text'];
+                            ?>
+                            
                         </div>
                     </div>
                 </div>

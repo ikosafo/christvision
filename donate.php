@@ -5,7 +5,7 @@
             <div class="page-breadcrumb position-static">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="current">Donate</li>
                     </ul>
                 </div>
@@ -20,10 +20,10 @@
                     <div class="col-xl-5 col-md-6">
                         <div class="profile-image">
                             <?php
-                             $getvisionmission = $mysqli->query("select * from website_donate 
+                             $getdonate = $mysqli->query("select * from website_donate 
                                                                     ORDER BY id DESC LIMIT 1");
-                             $resvisionmission = $getvisionmission->fetch_assoc();
-                             $imageid = $resvisionmission['imageid'];
+                             $resdonate = $getdonate->fetch_assoc();
+                             $imageid = $resdonate['imageid'];
                              $getimage = $mysqli->query("select * from `website_image_donate` 
                                                             where imageid = '$imageid'");
                              $resimage = $getimage->fetch_assoc();
@@ -37,7 +37,7 @@
                         <div class="profile-info">
                             <h3 class="profile-name">Christ Vision Sanctuary International</h3>
                             <?php
-                                echo $resvisionmission['page_text'];
+                                echo $resdonate['page_text'];
                             ?>
                             
                         </div>
