@@ -203,7 +203,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wmchildren.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
                                 $_SERVER['PHP_SELF'] == "/ms/admin/wsmedialinks.php" ||
-                                $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php" ||
+                                $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php"
 
 
 
@@ -226,7 +227,8 @@ background-size: 100% 350px;"
                                            $_SERVER['PHP_SELF'] == "/ms/admin/weventsgallery.php" ||
                                            $_SERVER['PHP_SELF'] == "/ms/admin/wsmedia.php" ||
                                            $_SERVER['PHP_SELF'] == "/ms/admin/wsmedialinks.php" ||
-                                           $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php" ||
+                                           $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php"
 
                                                 ? "kt-menu__item--here" : ""); ?>
                                             "
@@ -280,6 +282,14 @@ background-size: 100% 350px;"
                                                                 class="kt-menu__link "><i
                                                                     class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                     class="kt-menu__link-text">Social Media Embed Code</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/ms/admin/wdonate.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="wdonate"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Donate</span></a>
                                                         </li>
                                                         <li class="kt-menu__item   <?php echo(
                                                         $_SERVER['PHP_SELF'] == "/ms/admin/wcontactus.php"

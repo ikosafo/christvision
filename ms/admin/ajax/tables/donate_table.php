@@ -22,7 +22,7 @@ $pinq = $mysqli->query("select * from website_donate ORDER BY id DESC");
         </div>
 
         <div class="table-responsive">
-            <table id="data-table" class="table" style="margin-top: 3% !important;">
+            <table id="datatable" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
                     <th>Page Text</th>
@@ -63,7 +63,7 @@ $pinq = $mysqli->query("select * from website_donate ORDER BY id DESC");
 </div>
 
 <script>
-    oTable = $('#data-table').DataTable({
+    oTable = $('#datatable').DataTable({
         "bLengthChange": false,"order": []
     });
 

@@ -39,34 +39,7 @@
                             <?php
                                 echo $resvisionmission['page_text'];
                             ?>
-                            <h5 class="profile-contact-title">Contact</h5>
-                            <span class="contact-info-text">
-                                <span class="phone">Phone number: <strong>Telephone number here</strong> </span>
-                            <br>
-                            <span class="email">Email: <strong>info@cvsiworld.net</strong></span>
-                            </span>
-                            <ul class="author-social-networks">
-                                <li class="item">
-                                    <a href="JavaScript:Void(0);" target="_blank" 
-                                    class="social-link"> <i class="fab fa-twitter social-link-icon"></i> </a>
-                                </li>
-                                <li class="item">
-                                    <a href="JavaScript:Void(0);" target="_blank" 
-                                    class="social-link"> <i class="fab fa-facebook-f social-link-icon"></i> </a>
-                                </li>
-                                <li class="item">
-                                    <a href="JavaScript:Void(0);" target="_blank" 
-                                    class="social-link"> <i class="fab fa-instagram social-link-icon"></i> </a>
-                                </li>
-                                <li class="item">
-                                    <a href="https://linkedin.com/in/prophet-louis-hemman-cobbinah-macaiah-717558110" target="_blank" 
-                                    class="social-link"> <i class="fab fa-linkedin social-link-icon"></i> </a>
-                                </li>
-                                <li class="item">
-                                    <a href="JavaScript:Void(0);" target="_blank" 
-                                    class="social-link"> <i class="fab fa-youtube social-link-icon"></i> </a>
-                                </li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
