@@ -251,14 +251,6 @@
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->
-
-                                    <h5 class="profile-contact-title">Contact</h5>
-                                        <span class="contact-info-text">
-                                            <span class="phone">Phone number: <strong>(+88) - 1990 - 8668</strong> </span>
-                                                        <br>
-                                            <span class="email">Email: <strong>loiusmacaiah@cvsiworld.net</strong></span>
-                                        </span>
-
                                   
                                 </div>
                             </div>

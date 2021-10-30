@@ -32,6 +32,11 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                //get contact detaisls
+                $getcontact = $mysqli->query("select * from website_contactus LIMIT 1");
+                $rescontact = $getcontact->fetch_assoc();
+                ?>
                 <div class="row row-30 row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
                     <div class="col max-mb-30">
                         <!-- Single Contact Info Start -->
@@ -41,9 +46,8 @@
                             </div>
                             <div class="info">
                                 <h4 class="title"> Address</h4>
-                                <span class="info-text"> Christian Villiage, <br>Kisseman - Accra 
-                                 
-
+                                <span class="info-text"> 
+                                       <?php echo $rescontact['address'] ?>    
                                 </span>
                             </div>
                         </div>
@@ -57,9 +61,9 @@
                             </div>
                             <div class="info">
                                 <h4 class="title"> Contact</h4>
-                                <span class="info-text"> Mobile: <strong>024 479 7713 / 024 414 3212</strong> 
+                                <span class="info-text"> Mobile: <strong><?php echo $rescontact['telephone'] ?></strong> 
                                     <br> 
-                                    telephone: <strong>	0302 410008</strong>
+                                    telephone: <strong>	<?php echo $rescontact['alttelephone'] ?></strong>
                                   
                                 </span>
                             </div>
@@ -75,8 +79,7 @@
                             <div class="info">
                                 <h4 class="title"> Mail</h4>
                                 <span class="info-text">  
-                                    P.O Box KT 258, Kotobabi - Accra <br>
-                                    <a href="mailto:info@cvsiworld.net">info@cvsiworld.net</a> 
+                                    <?php echo $rescontact['mail'] ?>
                                   <br>
 
                                 </span>

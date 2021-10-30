@@ -35,22 +35,10 @@
                                     <a href="#lmp" class="active" data-bs-toggle="tab">
                                         Louis Macaiah Partners
                                     </a>
-
-                                    <a href="#menministry" data-bs-toggle="tab" class="">
-                                        Men 
-                                    </a>
-
-                                    <a href="#womenministry" data-bs-toggle="tab" class="">
-                                        Women
-                                    </a>
-
-                                    <a href="#youthministry" data-bs-toggle="tab" class="">
-                                        Youth
-                                    </a>
-
-                                    <a href="#childrenministry" data-bs-toggle="tab" class="">
-                                         Children
-                                        </a>
+                                    <a href="#menministry" data-bs-toggle="tab" class="">Men</a>
+                                    <a href="#womenministry" data-bs-toggle="tab" class="">Women</a>
+                                    <a href="#youthministry" data-bs-toggle="tab" class="">Youth</a>
+                                    <a href="#childrenministry" data-bs-toggle="tab" class="">Children</a>
                                 </div>
                             </div>
                             <!-- My Account Tab Menu End -->
@@ -76,13 +64,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-md-12 offset-xl-1">
-                                                
-                                                    <div class="profile-info">
-                                                        
+                                                    <div class="profile-info"> 
                                                         <?php
                                                             echo $resmin['page_text'];
                                                         ?>
-                                                       
                                                     </div>
                                                 </div>
                                             </div>
@@ -206,13 +191,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-md-12 offset-xl-1">
-                                                
-                                                    <div class="profile-info">
-                                                        
+                                                    <div class="profile-info">  
                                                         <?php
                                                             echo $resmin['page_text'];
                                                         ?>
-                                                       
                                                     </div>
                                                 </div>
                                             </div>
@@ -220,13 +202,7 @@
                                     </div>
                                     <!-- Single Tab Content End -->
 
-                                    <h5 class="profile-contact-title">Contact</h5>
-                                        <span class="contact-info-text">
-                                            <span class="phone">Phone number: <strong>(+88) - 1990 - 8668</strong> </span>
-                                                        <br>
-                                            <span class="email">Email: <strong>loiusmacaiah@cvsiworld.net</strong></span>
-                                        </span>
-
+                                   
                                   
                                 </div>
                             </div>

@@ -34,16 +34,15 @@
                     <h4 class="footer-widget-title">Address</h4>
                     <div class="footer-widget-content">
                         <div class="content">
-                            <p>Christ Vision Sanctuary International (Betphillah) </p>
-                            <p>Kisseman - Accra </p>
-                            <p><i class="fa fa-envelope"></i> <a href="#">info@cvsiworld.net </a></p>
-                            <p><i class="fa fa-phone-alt"></i> 024 414 3212</p>
-                        </div>
-                        <div class="footer-social-inline">
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <?php
+                        //get contact detaisls
+                        $getcontact = $mysqli->query("select * from website_contactus LIMIT 1");
+                        $rescontact = $getcontact->fetch_assoc(); ?>
+                        <p><i class="fa fa-map-marker"></i>  Christ Vision Sanctuary International (Betphillah) <br>
+                            <?php echo $rescontact['address'] ?>
+                        </p>
+                        <p><i class="fa fa-envelope"></i> <?php echo $rescontact['mail'] ?></p>
+                        <p><i class="fa fa-phone-alt"></i> <?php echo $rescontact['telephone'] ?></p>
                         </div>
                     </div>
                 </div>
@@ -57,12 +56,17 @@
                     <div class="footer-widget-content">
                         <ul class="column-2">
                             <li><a href="branches">Branches</a></li>
-                            <li><a href="#">Sermons</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="sermons">Sermons</a></li>
+                            <li><a href="eventgallery">Gallery</a></li>
                             <li><a href="aboutus">About us</a></li>
                             <li><a href="contactus">Contact us</a></li>
                         </ul>
                     </div>
+                    <div class="footer-social-inline">
+                            <a target="_blank" href="<?php echo $ressocial['facebook'] ?>"><i class="fab fa-facebook-square"></i></a>
+                            <a target="_blank" href="<?php echo $ressocial['twitter'] ?>"><i class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="<?php echo $ressocial['youtube'] ?>"><i class="fab fa-youtube"></i></a>
+                        </div>
                 </div>
             </div>
             <!-- Footer Widget End -->
