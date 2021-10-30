@@ -38,21 +38,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Sunday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Sunday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Sunday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/><br>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -61,25 +73,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Monday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
+                            ?>
+                        </td>
+                        <td>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Monday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
                             ?>
                         </td>
                         <td>
                             <?php 
-                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['time'].'<br/>';
-                            }
-                            ?>
-                        </td>
-                        <td>
-                            <button type="button"
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Monday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/><br>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -88,21 +108,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Tuesday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Tuesday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Tuesday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -111,21 +143,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Wednesday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Wednesday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Wednesday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -134,21 +178,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Thursday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Thursday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Thursday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -157,21 +213,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Friday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Friday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Friday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                     <tr>
@@ -180,21 +248,33 @@
                             <?php //get activities
                             $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Saturday'");
                             while ($resprog = $getprog->fetch_assoc()) {
-                                echo $resprog['program'].'<br/>';
+                                echo $resprog['program'].'<br/><br>';
                             }
                             ?>
                         </td>
                         <td>
-                            <?php echo $resprog['time'];?>
+                            <?php //get time
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Saturday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo $resprog['time'].'<br/><br>';
+                                }
+                            ?>
                         </td>
                         <td>
-                            <button type="button"
+                            <?php 
+                            //get delete
+                                $getprog = $mysqli->query("select * from website_weeklyactivities where day = 'Saturday'");
+                                while ($resprog = $getprog->fetch_assoc()) {
+                                    echo '<button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_link"
-                                    i_index="<?php echo $resprog['id']; ?>"
+                                    class="btn btn-sm btn-danger delete_wa"
+                                    i_index="'.$resprog['id'].'"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
-                            </button>
+                            </button><br/>';
+                                }
+                            ?>
+                            
                         </td>
                     </tr>
                
@@ -215,11 +295,11 @@
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_mmen').on('click', '.delete_mmen', function () {
+    $(document).off('click', '.delete_wa').on('click', '.delete_wa', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Men Ministry Content!',
+            title: 'Delete Weekly Activity!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -237,14 +317,14 @@
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_mmen.php",
+                            url: "ajax/queries/delete_wa.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/mmen_table.php",
+                                    url: "ajax/tables/wa_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -254,7 +334,7 @@
                                         })
                                     },
                                     success: function (text) {
-                                        $('#wmmentable_div').html(text);
+                                        $('#wwatable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
